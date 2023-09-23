@@ -1,0 +1,13 @@
+Title: Home
+
+----
+
+Headline: Welcome to Stapl
+
+----
+
+Subheadline: A portfolio featuring a variety of architecture projects.
+
+----
+
+Uuid: 99omV41FzICgFhrm

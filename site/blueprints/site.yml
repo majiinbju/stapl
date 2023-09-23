@@ -1,0 +1,10 @@
+title: Stapl
+icon: page
+sections:
+  published:
+    headline: Published
+    type: pages
+    layout: cards
+    info: "{{ page.year }}"
+unlisted: true
+

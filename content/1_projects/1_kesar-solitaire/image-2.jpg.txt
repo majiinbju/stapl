@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption: With the shorter side facing the view, it was essential to locate all the offices facing the prominent viewing direction and positioning the service core towards the rear. However with a car parking requirement of 450 cars, it was essential to build three basements and a few upper floors for car parking.
+
+----
+
+Heading: 
+
+----
+
+License: 
+
+----
+
+Sort: 3
+
+----
+
+Uuid: zmxr8BLFfa0LKM8i
+
+----
+
+Template: gallery-image

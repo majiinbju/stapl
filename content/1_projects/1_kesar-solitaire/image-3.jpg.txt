@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption: Kesar Solitaire is a clean-cut, neat, straight line building. Hidden behind this essentially simple aesthetics, is an integrated structural and spatial design. The typical floor-plate spans 28 floors of column-free office space. This gives flexibility to accommodate small and large offices both. The RCC frame structure in M70 grade of self-compacting concrete, provides the necessary column-free space. The structural system follows a repetitive grid with sleeves left for easy integration of other ancillary systems like air-conditioning, fire-fighting and electrical; directly connecting it to the service areas at the rear.
+
+----
+
+Heading: 
+
+----
+
+License: 
+
+----
+
+Sort: 4
+
+----
+
+Uuid: 9T7JjXcGFNz75csu
+
+----
+
+Template: gallery-image

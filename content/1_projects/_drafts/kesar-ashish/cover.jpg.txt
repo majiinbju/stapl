@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption: The project is strategically located between two roads; the main 36 meter wide Linking road and the 18 meter wide service road. This dichotomy of the roads around the plot has defined the mixed use design, distinctly segregating the circulation required for the retail & residential sections.
+
+----
+
+Heading: 
+
+----
+
+License: 
+
+----
+
+Sort: 2
+
+----
+
+Uuid: 1eor7l5VqHhmdzXX
+
+----
+
+Template: gallery-image

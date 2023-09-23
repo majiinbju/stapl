@@ -1,0 +1,24 @@
+.card {
+    height: 500px;
+    width: 900px;
+    border-radius: 5px;
+}
+
+.slider-container {
+    width: 80%;
+    min-height: 500px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.inner-slider {
+    width: 150%;
+    display: flex;
+    gap: 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
