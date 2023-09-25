@@ -34,8 +34,8 @@ sliderContainer.addEventListener("mousemove", (e) => {
 	x = e.offsetX;
 
 	innerSlider.style.left = `${x - startX}px`;
-	
-	
+
+  checkBoundary();
 });
 
 const checkBoundary = () => {
@@ -47,6 +47,6 @@ const checkBoundary = () => {
 	}
 
 	if (inner.right < outer.right) {
-		innerSlider.style.left = `-${inner.width - outer.width}px`;
+		innerSlider.style.right = `-${inner.width - outer.width}px`;
 	}
 };

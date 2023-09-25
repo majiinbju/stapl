@@ -1,16 +1,15 @@
 <?php snippet('header') ?>
 
-<div class="container mx-auto my-4 flex justify-center min-w-full">
+<div class="container mx-auto flex justify-center min-w-full">
 	<?php if ($projectsPage = page('projects')): ?>
 	<ul>
 		<?php foreach ($projectsPage->children()->listed() as $project): ?>
-		<li class="my-5">
-			<a href="" class="">
-				<figure class="flex flex-col justify-center">
-					<?php snippet('project-info') ?>
-					<?php snippet('project-gallery') ?>
-				</figure>
-			</a>
+		<li class="my-5 section">
+				
+					
+						<?php snippet('project-gallery') ?>
+					
+				
 		</li>
 		<?php endforeach ?>
 	</ul>
