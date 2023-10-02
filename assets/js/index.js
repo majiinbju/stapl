@@ -50,3 +50,14 @@ const checkBoundary = () => {
 		innerSlider.style.right = `-${inner.width - outer.width}px`;
 	}
 };
+
+const sections = document.querySelectorAll('.section')
+sections.forEach(section => {
+  section.addEventListener('click', e => {
+    section.classList.add('active')
+    if (e.target !== e.currentTarget) return
+    section.classList.remove('active')
+  })
+
+})
+

@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption: It is a corner facing plot flanked by road on two adjacent sides. The site is located on the landmass that is protruding out into the north western direction towards Mumbai into the creek. It has dynamic views of the city around; the north-west front overlooks the Sion-Panvel highway and the south-east overlooks the sea. Maximising the view of the cityscape, the footprint of the building reflects the shape of the land-mass.
+
+----
+
+Heading: 
+
+----
+
+License: 
+
+----
+
+Sort: 1
+
+----
+
+Uuid: 8IuRA6TUtPzSkYaP
+
+----
+
+Template: gallery-image

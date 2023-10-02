@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption: The location of this site is in Kandivali, in the western suburbs of Mumbai. Over the last 2 decades the locality has grown in leaps and bounds supported by the city’s ever changing infrastructure. This has invited a significant proliferation of residents.
+
+----
+
+Heading: 
+
+----
+
+License: 
+
+----
+
+Sort: 2
+
+----
+
+Uuid: 1eor7l5VqHhmdzXX
+
+----
+
+Template: gallery-image
