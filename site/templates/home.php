@@ -8,8 +8,8 @@
 			<div class="slider-container ">
 				<ul class="inner-slider">
 					<!-- Project Tags -->
-					<div class="min-w-fit min-h-fit px-10">
-						<span class="flex flex-col">
+					<div class="min-h-fit flex">
+						<span class="flex flex-col px-10">
 							<span class="flex mb-2">
 								<div class="w-10 h-10 bg-black"></div>
 							</span>
@@ -42,13 +42,23 @@
 								<?php endif ?>
 							</ul>
 						</span>
-
+						
+						<figure class="flex card">
+							<?php if ($cover = $project->cover()): ?>
+								<img src="<?= $cover->crop(500, 500)->url() ?>" alt="<?= $cover->alt()->esc() ?>">
+							<?php endif ?>
+							<figcaption class="px-10 text-sm w-100">
+								<?= $project->text() ?>
+							</figcaption>
+						</figure>
+						
+						
 					</div>
 					<!-- End of Project Tags -->
 					
 					<!-- Project Images -->
-					<?php foreach ($project->images() as $image) : ?>
-					<li class="min-w-fit">
+					<?php foreach ($project->images()->offset(1) as $image) : ?>
+					<li class="min-w-fit hidden">
 						<?php if ($image->caption()->isNotEmpty()) : ?>
 						<figure class="flex card">
 							<img src="<?= $image->crop(900, 900)->url() ?>" class="" alt="<?= $image->alt() ?>" />

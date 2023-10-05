@@ -1,3 +1,44 @@
+* {
+
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  transition: all 1s ease-in-out;
+  animation: loadIn 3s ease-in-out;
+  background: none;
+  color: black;
+}
+
+.header:before {
+  content: ' ';
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: gray;
+  /* background: black; */
+}
+
+@keyframes loadIn {
+  0% {
+    height: 100%;
+    background: black;
+    color: black;
+
+  }
+  100% {
+    height: 0%;
+    background: black;
+    color: gray;
+  }
+}
+
+
 .section {
   height: 75vh;
   width: 70vw;
@@ -41,6 +82,18 @@
   object-fit: cover;
   width: 100%;
   height: 500px;
+  transition: all 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+  transition: all 1s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  display: block;
 }
 
 
