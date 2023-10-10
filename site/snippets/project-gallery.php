@@ -3,7 +3,6 @@
 <div class="slider-container ">
 	<ul class="inner-slider">
 	<div class="min-w-max min-h-fit px-10">
-		<?php snippet('project-info') ?>
 	</div>
 	<?php foreach ($project->images() as $image) : ?>
 		<li class="min-w-fit">

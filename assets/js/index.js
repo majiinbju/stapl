@@ -7,8 +7,9 @@ let startX;
 let x;
 
 sliderContainer.forEach(slider => {
+  let sliderContainer = document.querySelector('.slider-container');
   let innerSlider = slider.querySelector('.inner-slider');
-  console.log(innerSlider.innerHTML)
+  // console.log(innerSlider.innerHTML)
   slider.addEventListener("mousedown", (e) => {
     pressed = true;
     startX = e.offsetX - innerSlider.offsetLeft;
@@ -39,21 +40,27 @@ sliderContainer.forEach(slider => {
 
     innerSlider.style.left = `${x - startX}px`;
 
-    checkBoundary();
+    // checkBoundary();
   });
-})
 
 // Function to check boundary of slider
-const checkBoundary = () => {
-  let outer = sliderContainer.getBoundingClientRect();
-  let inner = innerSlider.getBoundingClientRect();
-  if (parseInt(innerSlider.style.left) > 0) {
-    innerSlider.style.left = "0px";
-  }
-  if (inner.right < outer.right) {
-    innerSlider.style.right = `-${inner.width - outer.width}px`;
-  }
-};
+  const checkBoundary = () => {
+
+      let outer = sliderContainer.getBoundingClientRect();
+      let inner = innerSlider.getBoundingClientRect();
+
+
+      if (parseInt(innerSlider.style.left) > 0) {
+          innerSlider.style.left = "0px";
+      }
+
+      if (inner.right < outer.right) {
+          innerSlider.style.left = `-${inner.width - outer.width}px`;
+      }
+  };
+})
+
+
 
 // Looping all the sections
 const sections = document.querySelectorAll('.section')
@@ -70,9 +77,23 @@ sections.forEach(section => {
   })
 })
 
-// Window onLoad function
-//
-// window.addEventListener('load', function() {
-//   const header = document.querySelector('.header')
-//   header.classList.toggle('sticky', window.onload)
-// })
+// Animation on load
+
+const tl = gsap.timeline()
+tl.add('start')
+
+tl.to(".wall", {
+  height: '0vh',
+  duration: 2,
+  delay: 1
+}, 'start')
+tl.to(".animation", {
+  fontSize: '16px',
+  position: 'absolute',
+  height: '100px',
+  width: '150px',
+  color: 'black',
+  duration: 2,
+  delay: 1
+}, 'start')
+

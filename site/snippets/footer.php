@@ -7,7 +7,6 @@
 	<?= js([
 		'assets/js/index.js',
 		'@auto'
-	]) ?>
-
+	], ['async' => true, 'defer' => true]) ?>
 </body>
 </html>

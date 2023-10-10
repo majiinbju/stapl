@@ -1,15 +1,21 @@
 <?php snippet('header') ?>
+<div class="wall"></div>
+<div class="animation">
+	<h1>Stapl</h1>
+	
+</div>
+<?php snippet('sidebar') ?>
 
 <div class="mx-auto flex justify-center align-top min-w-full min-h-fit">
 	<ul>
 		<?php if ($projectsPage = page('projects')): ?>
 		<?php foreach ($projectsPage->children()->listed() as $project): ?>
-		<li class="my-5 section flex align-top">
+		<li class="my-5 section flex align-top mx-auto">
 			<div class="slider-container ">
 				<ul class="inner-slider">
 					<!-- Project Tags -->
-					<div class="min-h-fit flex">
-						<span class="flex flex-col px-10">
+					<div class="min-h-fit flex justify-center">
+						<span class="flex flex-col px-10 information">
 							<span class="flex mb-2">
 								<div class="w-10 h-10 bg-black"></div>
 							</span>
@@ -47,7 +53,7 @@
 							<?php if ($cover = $project->cover()): ?>
 								<img src="<?= $cover->crop(500, 500)->url() ?>" alt="<?= $cover->alt()->esc() ?>">
 							<?php endif ?>
-							<figcaption class="px-10 text-sm w-100">
+							<figcaption class="px-10 text-sm w-100 hidden">
 								<?= $project->text() ?>
 							</figcaption>
 						</figure>

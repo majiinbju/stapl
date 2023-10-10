@@ -2,40 +2,50 @@
 
 }
 
+.animation {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: white;
+  z-index: 10;
+}
+
+.wall {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  postion: absolute;
+  background: black;
+}
+
+@keyframes shrink {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0vh;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 .header {
   position: absolute;
   width: 100%;
-  padding: 1rem;
+  padding-top: 2.6rem;
   transition: all 1s ease-in-out;
-  animation: loadIn 3s ease-in-out;
   background: none;
   color: black;
-}
-
-.header:before {
-  content: ' ';
-  position: absolute;
-  margin: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: gray;
-  /* background: black; */
-}
-
-@keyframes loadIn {
-  0% {
-    height: 100%;
-    background: black;
-    color: black;
-
-  }
-  100% {
-    height: 0%;
-    background: black;
-    color: gray;
-  }
 }
 
 
@@ -51,11 +61,7 @@
   background: white;
 }
 
-.active {
-  width: 100%;
-  /* height: 100%; */
-  transform: scale(1.2);
-}
+
 
 .card {
     height: 500px;
@@ -71,7 +77,7 @@
     overflow: hidden;
 }
 .inner-slider {
-    min-width: 200%;
+    min-width: 100%;
     display: flex;
     gap: 10px;
     pointer-events: none;
@@ -85,14 +91,25 @@
   transition: all 1s ease-in-out;
 }
 
+.information {
+  width: 300px;
+}
+
+.active {
+  width: 100%;
+  /* height: 100%; */
+  transform: scale(1.2);
+}
+
 .hidden {
   opacity: 0;
   display: none;
-  transition: all 1s ease-in-out;
+  animation: fadeOut 1s ease-in-out;
 }
 
 .show {
   opacity: 1;
+  animation: fadeIn 1s ease-in-out;
   display: block;
 }
 
@@ -103,5 +120,14 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
