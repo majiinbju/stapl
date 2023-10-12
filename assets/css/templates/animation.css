@@ -20,7 +20,7 @@
   top: 0;
   left: 0;
   postion: absolute;
-  background: black;
+  background: #c2b98e;
 }
 
 @keyframes shrink {
