@@ -1,0 +1,29 @@
+/* Main carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  max-height: 780px;
+  margin: 5rem 0rem;
+  overflow:hidden;
+}
+
+/* List holding all information and images */
+.ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual list-item/image stylings */
+.li {
+  display: flex;
+  width: auto;
+  height: 100%;
+  background-color: white;
+  transition: all 1s ease-in-out;
+  flex-shrink:0;
+}
+
+

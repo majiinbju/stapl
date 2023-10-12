@@ -1,0 +1,64 @@
+
+
+
+// Draggable carousel function
+let sliderContainer = document.querySelectorAll('.slider-container');
+let innerSlider = document.querySelectorAll('.inner-slider');
+
+let pressed = false;
+let startX;
+let x;
+
+sliderContainer.forEach(slider => {
+  let sliderContainer = document.querySelector('.slider-container');
+  let innerSlider = slider.querySelector('.inner-slider');
+  // console.log(innerSlider.innerHTML)
+  slider.addEventListener("mousedown", (e) => {
+    pressed = true;
+    startX = e.offsetX - innerSlider.offsetLeft;
+    slider.style.cursor = "grabbing";
+  });
+
+  slider.addEventListener("mouseenter", () => {
+    slider.style.cursor = "grab";
+  });
+
+  slider.addEventListener("mouseup", () => {
+    slider.style.cursor = "grab";
+    pressed = false;
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!pressed) return;
+    e.preventDefault();
+
+    x = e.offsetX;
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!pressed) return;
+    e.preventDefault();
+
+    x = e.offsetX;
+
+    innerSlider.style.left = `${x - startX}px`;
+
+    // checkBoundary();
+  });
+
+// Function to check boundary of slider
+  const checkBoundary = () => {
+
+      let outer = sliderContainer.getBoundingClientRect();
+      let inner = innerSlider.getBoundingClientRect();
+
+
+      if (parseInt(innerSlider.style.left) > 0) {
+          innerSlider.style.left = "0px";
+      }
+
+      if (inner.right < outer.right) {
+          innerSlider.style.left = `-${inner.width - outer.width}px`;
+      }
+  };
+})

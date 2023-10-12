@@ -1,0 +1,33 @@
+/* Div to be animated */
+.animation {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: white;
+  z-index: 10;
+}
+
+/* Shrinking black effect */
+.wall {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  postion: absolute;
+  background: black;
+}
+
+@keyframes shrink {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0vh;
+  }
+}

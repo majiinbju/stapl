@@ -1,0 +1,9 @@
+/* Styles for Top header */
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 2.6rem;
+  transition: all 1s ease-in-out;
+  background: none;
+  color: black;
+}

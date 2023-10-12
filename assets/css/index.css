@@ -1,4 +1,2 @@
-body {
-  transition: all 1s ease-in-out;
-}
-
+/* Index Stylesheet */
+@import "./templates/header.css";

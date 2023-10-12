@@ -6,7 +6,9 @@
 
 	<?= js([
 		'assets/js/index.js',
+		'assets/js/carousel.js',
+		'assets/js/animation.js',
 		'@auto'
-	], ['async' => true, 'defer' => true]) ?>
+	], ['async' => true, 'defer' => true, 'model' => true]) ?>
 </body>
 </html>
