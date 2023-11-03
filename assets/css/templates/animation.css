@@ -10,7 +10,14 @@
   align-items: center;
   background: none;
   color: white;
-  z-index: 10;
+  z-index: 20;
+}
+
+/* Shrinking logo transformation */
+.logo-shrink {
+  position: fixed;
+  transform: scale(3);
+  transition: all 0.75s ease-in-out;
 }
 
 /* Shrinking black effect */

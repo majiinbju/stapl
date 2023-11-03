@@ -12,9 +12,6 @@ fields:
   caption:
     type: textarea
     width: 1/2
-  heading:
-    type: text
-    width: 1/2
   license:
     type: text
     width: 1/2

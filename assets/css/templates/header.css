@@ -1,9 +1,24 @@
 /* Styles for Top header */
 .header {
-  position: absolute;
+  left: 25%;
   width: 100%;
   padding-top: 2.6rem;
   transition: all 1s ease-in-out;
   background: none;
-  color: black;
+  color: gray;
+}
+
+.search-bar {
+  position: absolute;
+  justify-self: end;
+  z-index: 10;
+  height: 100px;
+  background: none;
+  right: 1rem;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.nav {
+  width: 50%;
 }

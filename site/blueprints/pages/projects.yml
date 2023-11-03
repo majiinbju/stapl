@@ -1,25 +1,33 @@
 title: Projects
+pages:
+  template: project
+  num: date
+  sortBy: category
 image:
   icon: 📽️
   back: "black"
 sections:
-  published:
+  projects:
     headline: Published
+    label: Published
+    help: The article is online and listed in the blog
     type: pages
     layout: cards
     template: project
-    info: "{{ page.year }}"
     status: published
+    info: "{{ page.category }}"
     image:
       ratio: 4/5
       cover: true
   drafts:
     headline: Drafts
+    label: Drafts
+    help: The article is still in draft mode. It can only be seen by editors with Panel access.
     type: pages
     layout: cards
     template: project
-    info: "{{ page.year }}"
     status: drafts
+    info: "{{ page.category }}"
     image:
       ratio: 4/5
       cover: true

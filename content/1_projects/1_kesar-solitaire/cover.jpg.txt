@@ -1,25 +1,13 @@
-Alt: 
-
-----
-
-Caption: The site is located on a prime stretch of Navi Mumbai, known as the Palm Beach Road; a 10-kilometre-long six-lane road that runs from Vashi in the north to Belapur in the south. Towards the west of this road is located the mangroves and the creek that separates Navi Mumbai from Mumbai. Towards the east where the plot is located, lies a stretch of some of the most luxurious and expensive apartments and condos in the city. This site is very strategically located where the axis of Palm Beach road tilts. The plot faces Palm Beach towards the southwest. The floor space index on the plot was 1.5 and the developers had a choice to build either residential or commercial. Palm Beach road had been known for prime residential development. The luxury office segment in Navi Mumbai did not exist. This is what had to be pursued.
-
-----
-
-Heading: 
-
-----
-
-License: 
-
-----
-
 Sort: 1
 
 ----
 
-Uuid: wNtxTPhuArJ0mgCa
+Caption: 
 
 ----
 
-Template: gallery-image
+Uuid: aTVLixZv1UVL4XGP
+
+----
+
+Template: cover-image

@@ -1,15 +1,21 @@
 @import "carousel.css";
 @import "animation.css";
+@import "filter.css";
+
+/* Variables */
+:root {
+  --animation: all 0.75s ease-in-out;
+}
 
 /* Section for each project */
 .section {
-  height: 70vh;
+  height: 50vh;
   width: 70vw;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: middle;
-  transition: all 1s ease-in-out;
+  transition: var(--animation);
   animation: fadeIn 1s ease-in-out;
   background: white;
 }
@@ -21,12 +27,15 @@
     border-radius: 5px;
 }
 
+/* Summary */
+.summary {
+  width: 500px;
+}
 /* Image properties */
 .img {
   object-fit: cover;
   width: 100%;
-  height: 500px;
-  transition: all 1s ease-in-out;
+  transition: var(--animation);
 }
 
 .fit {
@@ -42,24 +51,29 @@
 
 /* On click, section will expand to 100% width and increase in scale */
 .active {
-  transform: scale(1.1);
-  justify-content: start;
-  transition: all 1s ease-in-out;
+  /* transform: scale(1.1); */
+  height: 80vh;
+  position: relative;
+  transition: var(--animation);
 }
 
+/* On scroll, seciton will slightly expand */
+.expand {
+  transform: scale(1.1);
+}
 /* Toggle class to hide */
 .hidden {
   opacity: 0;
   display: none;
-  transition: all 1s ease-in-out;
+  transition: var(--animation);
 }
 
 /* Toggle class to show */
 .show {
   opacity: 1;
-  animation: fadeIn 1s ease-in-out;
   display: block;
-  width: fit-content;
+  animation: fadeIn 1s ease-in-out;
+
 }
 
 /* Fading in animation for text-align:  */
@@ -71,4 +85,5 @@
     opacity: 1;
   }
 }
+
 

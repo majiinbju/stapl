@@ -1,10 +1,8 @@
 /* Main carousel */
 .carousel {
   display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-  max-height: 780px;
+  width: fit-content;
+  max-height: 100%;
   margin: 5rem 0rem;
   overflow:hidden;
 }
@@ -19,11 +17,13 @@
 /* Individual list-item/image stylings */
 .li {
   display: flex;
-  width: auto;
+  justify-content: center;
+  width: fit-content;
   height: 100%;
   background-color: white;
   transition: all 1s ease-in-out;
   flex-shrink:0;
 }
+
 
 

@@ -2,11 +2,15 @@ Title: Kesar Solitaire
 
 ----
 
-Typology: Commercial
+Icon: 
 
 ----
 
-Plotarea: 6326.27 sq mts.
+Category: Commercial
+
+----
+
+Plotarea: 6326.27 sq. mts.
 
 ----
 
@@ -14,11 +18,11 @@ Builtarea: 39396.76 sq. mts.
 
 ----
 
-Levels: G+27 Floors
+Levels: G+27 FLOORS
 
 ----
 
-Location: Sanpada, Navi Mumbai
+Location: SANPADA, NAVI MUMBAI
 
 ----
 
@@ -26,4 +30,4 @@ Text: The site is located on a prime stretch of Navi Mumbai, known as the Palm B
 
 ----
 
-Uuid: PacnLai8vVTeOXXN
+Uuid: Oq5YVtK2K1u8xv9t

@@ -1,0 +1,12 @@
+title: Category
+pages: true
+files: false
+
+fields:
+  title:
+    label: Title
+    type: text
+
+  description:
+    label: Description
+    type: textarea

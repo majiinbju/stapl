@@ -6,6 +6,7 @@
 
 	<?= js([
 		'assets/js/index.js',
+		'assets/js/scroll.js',
 		'assets/js/carousel.js',
 		'assets/js/animation.js',
 		'@auto'

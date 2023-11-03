@@ -3,6 +3,13 @@
 return [
 	'debug'  => true,
 	'panel' =>[
-		'install' => true
+		'views' => [
+			 'categories' => [
+				 'props' => [
+					 'title' => 'Projects by Category'
+				 ]
+			 ]
+		 ]
 	  ]
+	 
 ];

@@ -1,17 +1,53 @@
 title: Project
 
 columns:
+  - width: 1/5
+    sections:
+      image:
+        type: files
+        headline: Cover Image
+        help: Upload image titled 'cover' to make it the project cover.
+        template: cover-image
+        max: 1
+        layout: cards
+        info: "{{ file.alt }} / {{ file.dimensions }}"
+        image:
+          ratio: 4/3
+          cover: true
+
   - width: 1/2
     sections:
       info:
         type: fields
         fields:
-          typology:
+          icon:
+            label: Icon
+            type: files
+            help: Upload icon
+            max: 1
+            layout: cards
+            info: "{{ file.dimensions }}"
+            image:
+              ratio: 4/3
+              cover: true
+          category:
             label: Typology
-            type: text
+            type: select
+            options:
+              Commercial: Commercial
+              Residential: Residential
+              Retail: Retail
+              Mixed: Mixed Use – Retail & Residential
             width: 1/2
             icon: tag
             required: true
+          status:
+            label: Status
+            type: select
+            options:
+              In Progress: In Progress
+              Complete: Complete
+              Not Started: Not Started
           plotArea:
             label: Plot Area
             type: text
@@ -34,10 +70,11 @@ columns:
             type: text
             icon: location
           text:
-            label: Text
+            label: Summary
             type: textarea
-            help: Introduction to the project
+            help: Short introduction to the project
             icon: text
+            size: large
 
   - width: 1/2
     sections:
@@ -46,7 +83,9 @@ columns:
         type: files
         layout: cards
         template: gallery-image
-        info: "{{ file.summary }} / {{ file.alt }} / {{ file.dimensions }}"
+        info: "{{ file.alt }} / {{ file.dimensions }}"
         image:
           ratio: 1/1
           cover: true
+
+

@@ -16,4 +16,7 @@ tl.to(".animation", {
   duration: 2,
   delay: 1
 }, 'start')
-
+tl.to(".logo-shrink", {
+  scale: 1,
+  duration: 2
+}, 'start')
