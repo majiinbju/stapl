@@ -1,30 +1,53 @@
-<?php if ($projectsPage = page('projects')): ?>
-<?php foreach ($projectsPage->children()->listed() as $project): ?>
-<ul class="my-4">
-	<?php if ($project->typology()->isNotEmpty()): ?>
-	<li class="flex flex-col my-2">
-		<span class="text-sm text-black capitalize">Typology</span>
-		<span class="text-sm text-gray-500"><?= $project->typology() ?></span>
-	</li>
-	<?php endif ?>
-	<?php if ($project->Plotarea()->isNotEmpty()): ?>
-	<li class="flex flex-col my-2">
-		<span class="text-sm text-black capitalize">Plot Area</span>
-		<span class="text-sm text-gray-500"><?= $project->Plotarea() ?></span>
-	</li>
-	<?php endif ?>
-	<?php if ($project->Builtarea()->isNotEmpty()): ?>
-	<li class="flex flex-col my-2">
-		<span class="text-sm text-black capitalize">Built Area</span>
-		<span class="text-sm text-gray-500"><?= $project->Builtarea() ?></span>
-	</li>
-	<?php endif ?>
-	<?php if ($project->levels()->isNotEmpty()): ?>
-	<li class="flex flex-col my-2">
-		<span class="text-sm text-black capitalize">Levels</span>
-		<span class="text-sm text-gray-500"><?= $project->levels() ?></span>
-	</li>
-	<?php endif ?>
-</ul>
-<?php endforeach ?>
-<?php endif ?>
+<!-- Project Tags -->
+<div class="d-flex flex-column align-items-end tagContainer mx-5">
+	<!-- Project Information -->
+		<div class="d-flex flex-column align-items-end">
+			<span class="icon">
+				<?php if ($project->icon()->isNotEmpty()): ?>
+					<?php if ($icon = $project->icon()): ?>
+						<img src="<?= $icon->crop(50)->url() ?>" alt="<?= $icon->alt() ?>">
+					<?php endif ?>
+				<?php endif ?>
+			</span>
+			<span class="project-title"><?= $project->title()->esc() ?></span>
+			<span class="project-location"><?= $project->location() ?></span>
+		</div>
+		<ul class="tags hidden">
+			<?php if ($project->typology()->isNotEmpty()): ?>
+			<li class="d-flex flex-column align-items-end">
+				<span class="sub-heading">Typology</span>
+				<span class="tag"><?= $project->typology() ?></span>
+			</li>
+			<?php endif ?>
+			<?php if ($project->Plotarea()->isNotEmpty()): ?>
+			<li class="d-flex flex-column align-items-end">
+				<span class="sub-heading">Plot Area</span>
+				<span class="tag"><?= $project->Plotarea() ?></span>
+			</li>
+			<?php endif ?>
+			<?php if ($project->Builtarea()->isNotEmpty()): ?>
+			<li class="d-flex flex-column align-items-end">
+				<span class="sub-heading">Built Area</span>
+				<span class="tag"><?= $project->Builtarea() ?></span>
+			</li>
+			<?php endif ?>
+			<?php if ($project->levels()->isNotEmpty()): ?>
+			<li class="d-flex flex-column align-items-end">
+				<span class="sub-heading">Levels</span>
+				<span class="tag"><?= $project->levels() ?></span>
+			</li>
+			<?php endif ?>
+			<?php if ($project->projectStatus()->isNotEmpty()): ?>
+			<li class="d-flex flex-column align-items-end">
+				<span class="sub-heading">Status</span>
+				<span class="tag"><?= $project->projectStatus() ?></span>
+			</li>
+			<?php endif ?>
+			<?php if ($project->year()->isNotEmpty()): ?>
+			<li class="d-flex flex-column align-items-end">
+				<span class="sub-heading">Design & Construction</span>
+				<span class="tag"><?= $project->year() ?></span>
+			</li>
+			<?php endif ?>
+		</ul>
+</div>

@@ -41,13 +41,17 @@ columns:
             width: 1/2
             icon: tag
             required: true
-          status:
+          year:
+            label: Design & Construction
+            type: number
+            icon: clock
+          projectStatus:
             label: Status
             type: select
             options:
-              In Progress: In Progress
-              Complete: Complete
-              Not Started: Not Started
+              Ongoing: Ongoing
+              Completed: Completed
+              Upcoming: Upcoming
           plotArea:
             label: Plot Area
             type: text

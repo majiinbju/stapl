@@ -11,14 +11,14 @@
 
 ?>
 
-<div class="mx-auto flex flex-col justify-center align-center min-w-full my-auto">
 	
+<div class="container-fluid mt-5">
 	<ul>
 		
 		<?php foreach ($projectsPage->children() as $project): ?>
-		<li class="mx-auto my-24 section flex center">
+		<li class="section d-flex mx-auto">
 			<div class="carousel">
-				<ul class="ul draggable min-w-fit">
+				<ul class="ul draggable">
 					<!-- Project Tags -->
 					<div class="min-w-fit flex justify-center">
 						<!-- Project Information -->
@@ -30,9 +30,7 @@
 									<?php endif ?>
 								<?php endif ?>
 								<div class="w-10 h-10 bg-black"></div>
-							</span>
 							<span class="text-black"><?= $project->title()->esc() ?></span>
-							<span class="text-gray-500 uppercase text-sm"><?= $project->location() ?></span>
 							<ul class="my-4 hidden">
 								<?php if ($project->typology()->isNotEmpty()): ?>
 								<li class="flex flex-col my-2">
@@ -69,7 +67,7 @@
 								<?= $project->text() ?>
 							</figcaption>
 						</figure>
-					</div>
+					</li>
 					<!-- End of Project Tags -->
 					
 					
@@ -78,27 +76,27 @@
 					<li class="li hidden min-w-fit">
 					<?php if ($image->caption()->isNotEmpty()) : ?>
 						<figure class="flex fit card">
-							<img src="<?= $image->crop(600)->url() ?>" alt="<?= $image->alt() ?>" class="w-50" />
-							<figcaption class="px-10 text-sm w-100">
+						<figure class="d-flex w-100">
+							<img src="<?= $image->resize(null, 800)->url() ?>" alt="<?= $image->alt() ?>" />
+							<figcaption class="mx-5 summary">
 								<?= $image->caption()->smartypants() ?>
 							</figcaption>
 						</figure>
 						<?php else: ?>
 						<figure class="flex flex-grow fit px-10">
-							<img src="<?= $image->crop(600)->url() ?>" alt="<?= $image->alt() ?>" />
+						<figure class="w-100 mx-2">
+							<img src="<?= $image->resize(null, 800)->url() ?>" alt="<?= $image->alt() ?>" />
 						</figure>
 						<?php endif ?>
 					</li>
 					<?php endforeach ?>
 					<!-- End of Project Images -->
-					
-						<div class="card hidden"></div>
 				</ul>
 			</div>
 		</li>
 		<?php endforeach ?>
 	</ul>
-	
 </div>
+
 
 <?php snippet('footer') ?>

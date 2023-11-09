@@ -1,0 +1,55 @@
+/* Project Information */
+/* Project info */
+.project-info {
+  display: flex;
+  flex-direction: row;
+  min-width: fit-content;
+  height: 100%;
+}
+/* Project Title */
+.project-title {
+  font-size: 1rem;
+  text-transform: none;
+  color: black;
+}
+/* Project Location */
+.project-location {
+  font-size: 0.85rem;
+  color: gray;
+  text-transform: uppercase;
+}
+/* Project Tags */
+.icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  background-color: black;
+}
+.tagContainer {
+  width: 300px;
+  /* align-self: start; */
+}
+.tags {
+  list-style-type: none;
+  margin-top: 1rem;
+  padding: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.tags li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.sub-heading {
+  color: gray;
+}
+.tag {
+  color: black;
+}
+/* Project text */
+.summary{
+  width: 500px;
+  font-size: 0.85rem;
+  margin: 0 2rem;
+}

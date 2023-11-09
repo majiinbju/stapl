@@ -1,24 +1,58 @@
-/* Styles for Top header */
 .header {
-  left: 25%;
-  width: 100%;
-  padding-top: 2.6rem;
-  transition: all 1s ease-in-out;
-  background: none;
+
+}
+
+/* Styles for Top header */
+.top-header {
+  font-size: 0.8rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  margin: 2rem;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+.navbar {
+  position: fixed;
+}
+
+.sidebar {
+  min-width: fit-content;
+  position: sticky;
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+}
+
+.sidebar a {
+  text-decoration: none;
   color: gray;
 }
 
-.search-bar {
-  position: absolute;
-  justify-self: end;
-  z-index: 10;
-  height: 100px;
-  background: none;
-  right: 1rem;
-  border-radius: 20px;
-  width: 300px;
+/* Top header links */
+.top-header a {
+  color: gray;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.top-header a:hover {
+  color: black;
 }
 
-.nav {
-  width: 50%;
+.logo {
+  width: 100px;
+  border: none;
+}
+
+.side {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fit-content {
+  width: fit-content;
+  position: absolute;
 }

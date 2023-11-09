@@ -13,10 +13,10 @@ tl.to(".animation", {
   height: '100px',
   width: '150px',
   color: 'black',
-  duration: 2,
+  duration: 1.5,
   delay: 1
 }, 'start')
 tl.to(".logo-shrink", {
   scale: 1,
-  duration: 2
+  duration: 1.5
 }, 'start')

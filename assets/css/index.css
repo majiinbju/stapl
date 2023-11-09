@@ -1,7 +1,9 @@
 /* Index Stylesheet */
 @import "./templates/header.css";
+@import "./templates/home.css";
 body {
   margin: 0;
+  font-family: arial;
 }
 ::-webkit-scrollbar { width: 0 !important }
 main {

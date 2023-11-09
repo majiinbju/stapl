@@ -13,8 +13,7 @@ sections.forEach(section => {
         sections[i].classList.remove('active')
       }
       section.classList.add('active')
-      hide.classList.add('show')
-      hide.classList.add('active')
+      hide.classList.add('showObject')
       // No delay on drag
       drag.style.transition = "all 0s ease-in-out"
       })
@@ -28,7 +27,6 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("expand");
     } else {
-
       entry.target.classList.remove("expand");
     }
   })

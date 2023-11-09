@@ -1,79 +1,10 @@
 @import "carousel.css";
 @import "animation.css";
-@import "filter.css";
+@import "project.css";
 
 /* Variables */
 :root {
   --animation: all 0.75s ease-in-out;
-}
-
-/* Section for each project */
-.section {
-  height: 50vh;
-  width: 70vw;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: middle;
-  transition: var(--animation);
-  animation: fadeIn 1s ease-in-out;
-  background: white;
-}
-
-/* Card */
-.card {
-    height: 500px;
-    width: 900px;
-    border-radius: 5px;
-}
-
-/* Summary */
-.summary {
-  width: 500px;
-}
-/* Image properties */
-.img {
-  object-fit: cover;
-  width: 100%;
-  transition: var(--animation);
-}
-
-.fit {
-  min-width: 550px;
-}
-
-/* Minimum width for project information (left) – to align all projects  */
-.information {
-  width: 300px;
-}
-
-/* JavaScript Classes */
-
-/* On click, section will expand to 100% width and increase in scale */
-.active {
-  /* transform: scale(1.1); */
-  height: 80vh;
-  position: relative;
-  transition: var(--animation);
-}
-
-/* On scroll, seciton will slightly expand */
-.expand {
-  transform: scale(1.1);
-}
-/* Toggle class to hide */
-.hidden {
-  opacity: 0;
-  display: none;
-  transition: var(--animation);
-}
-
-/* Toggle class to show */
-.show {
-  opacity: 1;
-  display: block;
-  animation: fadeIn 1s ease-in-out;
-
 }
 
 /* Fading in animation for text-align:  */

@@ -1,18 +1,18 @@
 <!-- Project Images -->
 <?php foreach ($project->images()->offset(1) as $image) : ?>
-<li class="min-w-fit hidden">
-	<?php if ($image->caption()->isNotEmpty()) : ?>
-	<figure class="flex card">
-		<img src="<?= $image->crop(900, 900)->url() ?>" class="" alt="<?= $image->alt() ?>" />
-		<figcaption class="px-10 text-sm w-100">
+<li class="li hidden">
+<?php if ($image->caption()->isNotEmpty()) : ?>
+	<figure class="">
+		<img src="<?= $image->resize(1080)->url() ?>" alt="<?= $image->alt() ?>" class="w-50" />
+		<figcaption class="summary">
 			<?= $image->caption()->smartypants() ?>
 		</figcaption>
 	</figure>
 	<?php else: ?>
-	<figure class="img">
-		<img src="<?= $image->crop(900, 900)->url() ?>" class="img" alt="<?= $image->alt() ?>" />
+	<figure class="">
+		<img src="<?= $image->resize(1080)->url() ?>" alt="<?= $image->alt() ?>" />
 	</figure>
 	<?php endif ?>
 </li>
-<!-- End of Project Images -->
 <?php endforeach ?>
+<!-- End of Project Images -->
