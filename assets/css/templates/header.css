@@ -1,58 +1,47 @@
-.header {
 
+@include media-breakpoint-up(sm) {
+  .nav-items {
+    width: 100%;
+  }
+}
+@include media-breakpoint-up(md) {
+  .nav-items {
+    width: 40%;
+  }
+  .input-group {
+    width: 150px;
+  }
 }
 
-/* Styles for Top header */
-.top-header {
-  font-size: 0.8rem;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  margin: 2rem;
-  display: flex;
-  list-style-type: none;
-  justify-content: space-evenly;
+i::before{
+    background:transparent;
 }
 
-.navbar {
-  position: fixed;
+btn:hover {
+  background: none;
 }
 
-.sidebar {
-  min-width: fit-content;
-  position: sticky;
-  display: flex;
-  margin: 1rem;
-  flex-direction: column;
-}
-
-.sidebar a {
+.top-bar a {
+  font-family: monospace;
   text-decoration: none;
-  color: gray;
+  font-size: 0.80rem;
+  font-weight: light;
+  color: #6b6b6b;
+  transition: all 0.5s ease-in-out;
 }
 
-/* Top header links */
-.top-header a {
-  color: gray;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-.top-header a:hover {
+.top-bar a:hover {
   color: black;
 }
 
-.logo {
-  width: 100px;
-  border: none;
+.input-group input {
+  color: #6b6b6b;
 }
 
-.side {
-  position: absolute;
-  top: 0;
-  left: 0;
+.input-group input:focus {
+  border: 0;
 }
 
-.fit-content {
-  width: fit-content;
-  position: absolute;
+.nav-item {
+  margin: 0 1rem;
 }

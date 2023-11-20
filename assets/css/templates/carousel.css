@@ -1,18 +1,5 @@
-/* Section for each project */
-.section {
-  height: 50vh;
-  width: 90vw;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  transition: var(--animation);
-}
-
-/* Main carousel */
-.carousel {
-  display: flex;
-  margin-bottom: 1rem;
-  overflow: hidden;
+::root {
+  --transition: all 1s ease-in-out;
 }
 
 /* List holding all information and images */
@@ -23,45 +10,69 @@
   padding: 0;
 }
 
+/* Main carousel */
+.carousel {
+  display: flex;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
 /* Individual list-item/image stylings */
 .li {
   display: flex;
   width: fit-content;
   height: 100%;
-  transition: all 1s ease-in-out;
+  transition: var(--transition);
 }
 
 /* Image properties */
 .img {
   object-fit: cover;
-  width: 100%;
-  transition: var(--animation);
+  width: 0;
+  height: auto;
+  transition: var(--transition);
 }
 
-/* On click, section will expand to 100% width and increase in scale */
-.active {
-  width: 90vw;
-  height: 100vh;
-  transition: var(--animation);
+.img.active {
+  width: 100%;
 }
 
 /* On scroll, seciton will slightly expand */
 .expand {
-  transform: scale(1.05);
+  transform: scale(1.1);
   margin: 1rem;
   transition: var(--animation);
 }
-/* Toggle class to hide */
+
+/* Section for each project */
+section {
+  height: 30vh;
+  width: 90vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: var(--transition);
+  transform-origin: center; /* Set the transform origin to the center */
+}
+
+/* Active state for section */
+section.active {
+  transform: translateX(0) scale(1.05);
+  transform-origin: center; /* Set the transform origin to the center */
+}
+
+/* Hidden elements */
 .hidden {
   opacity: 0;
   display: none;
-  transition: var(--animation);
+  transition: var(--transition); /* Transition opacity */
 }
 
-/* Toggle class to show */
+/* Show object */
 .showObject {
   opacity: 1;
+  animation: fadeIn 0.75s ease-in-out;
   display: block;
-  animation: fadeIn 1s ease-in-out;
-
+  transition: var(--transition); /* Transition opacity */
+  /* display: block; Remove display property */
 }

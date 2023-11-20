@@ -43,7 +43,7 @@ columns:
             required: true
           year:
             label: Design & Construction
-            type: number
+            type: text
             icon: clock
           projectStatus:
             label: Status
