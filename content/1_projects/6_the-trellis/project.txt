@@ -1,0 +1,37 @@
+Title: The Trellis
+
+----
+
+Icon: 
+
+----
+
+Category: Residential
+
+----
+
+Status: Ongoing
+
+----
+
+Plotarea: NA
+
+----
+
+Builtarea: NA
+
+----
+
+Levels: 
+
+----
+
+Location: 
+
+----
+
+Text: 
+
+----
+
+Uuid: zEAurY9sj8fw5hsr

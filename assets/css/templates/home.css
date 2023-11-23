@@ -3,19 +3,42 @@
 @import "project.css";
 @import "header.css";
 
-/* Variables */
-:root {
-  --animation: all 0.75s ease-in-out;
+
+/* Section for each project */
+section {
+  height: 30vh;
+  width: 90vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: var(--transition);
+  transform-origin: center; /* Set the transform origin to the center */
+}
+/* Active state for section */
+section.active {
+  transform: translateX(0) scale(1.05);
+  transform-origin: center; /* Set the transform origin to the center */
 }
 
-/* Fading in animation for text-align:  */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* JavaScript Classes */
+/* Hidden elements */
+.hidden {
+  opacity: 0;
+  display: none;
+  transition: var(--transition); /* Transition opacity */
+}
+/* Show object */
+.showObject {
+  opacity: 1;
+  animation: fadeIn 0.75s ease-in-out;
+  display: block;
+  transition: var(--transition); /* Transition opacity */
+  /* display: block; Remove display property */
+}
+/* On scroll, section will slightly expand */
+.expand {
+  transform: scale(0.97);
+  transition: var(--transition);
 }
 
 

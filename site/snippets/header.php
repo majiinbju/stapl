@@ -17,3 +17,5 @@
 	<header>
 		<?php snippet('topbar') ?>
 	</header>
+	
+<main id="id">

@@ -1,0 +1,13 @@
+Sort: 10
+
+----
+
+Caption: 
+
+----
+
+Uuid: 0gHRTDYB7uTxRRWJ
+
+----
+
+Template: gallery-image

@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption:
+
+Above the second floor facing the creek front is the residential block consisting of four separate towers that comprise of 2 and 3 bedroom apartments uptil the 25th floor and 4 bedroom apartments at the from the 26th to the 39th floor.
+
+The design of the apartments ensures that each flat is cross-ventillated and overlooks both the creek side towards the west, as well as the  landscaped area on the podium towards the east.
+
+----
+
+License: 
+
+----
+
+Sort: 12
+
+----
+
+Uuid: z35M9ud5ZyctcJWY
+
+----
+
+Template: gallery-image

@@ -1,0 +1,21 @@
+Alt: 
+
+----
+
+Caption: The main entrance lobby leads to the lift core that connects to the offices from the 3rd to the 21nd floor. The offices are linearly arranged with an access from a corridor towards the north. The façade of the offices faces the south, overlooking the highway. This is finished in double glazed units with horizontal fritting done on surface two. This creates a random pattern of horizontal lines across the façade of the building. This also helps reduce the direct sunlight from the south, controling the direct heat. The edges of the building have been rounded and fitted with curved glass to give the horizontal frit an enhanced  continuity.
+
+----
+
+License: 
+
+----
+
+Sort: 2
+
+----
+
+Uuid: TM2DaJAwQrBdefRo
+
+----
+
+Template: gallery-image

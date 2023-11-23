@@ -1,0 +1,13 @@
+Sort: 20
+
+----
+
+Caption: 
+
+----
+
+Uuid: Cc3bbbVS42Nnx9iY
+
+----
+
+Template: gallery-image

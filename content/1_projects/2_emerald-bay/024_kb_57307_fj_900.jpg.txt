@@ -1,0 +1,13 @@
+Sort: 9
+
+----
+
+Caption: 
+
+----
+
+Uuid: 39OVd5Jb5Ki3GSGP
+
+----
+
+Template: gallery-image

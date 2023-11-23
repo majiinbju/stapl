@@ -1,0 +1,9 @@
+/* Fading in animation for text-align:  */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

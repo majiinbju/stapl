@@ -1,47 +1,28 @@
-
-@include media-breakpoint-up(sm) {
-  .nav-items {
-    width: 100%;
-  }
-}
-@include media-breakpoint-up(md) {
-  .nav-items {
-    width: 40%;
-  }
-  .input-group {
-    width: 150px;
-  }
-}
-
-i::before{
-    background:transparent;
-}
-
-btn:hover {
-  background: none;
-}
-
+/* Topbar styles */
+/* Link item stylings */
 .top-bar a {
-  font-family: monospace;
-  text-decoration: none;
-  font-size: 0.80rem;
+  color: var(--color-secondary);
+  font-size: var(--text-primary-size);
   font-weight: light;
-  color: #6b6b6b;
+  text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
-
+/* Link hovers */
 .top-bar a:hover {
-  color: black;
+  color: var(--color-secondary-hover);
 }
-
+/* Search bar stylings */
+/* Search bar form */
 .input-group input {
-  color: #6b6b6b;
+  text-transform: uppercase;
+  font-size: var(--text-primary-size);
+  color: var(--color-secondary);
 }
-
-.input-group input:focus {
-  border: 0;
+/* Search icon */
+.input-group i {
+  font-size: var(--text-primary-size);
+  color: var(--color-secondary);
 }
-
-.nav-item {
-  margin: 0 1rem;
+.input-group .form-control {
+  width: fit-content;
 }

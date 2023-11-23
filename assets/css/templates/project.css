@@ -1,68 +1,67 @@
-/* Project Information */
+/* Projects Container */
 .projects {
+  /* Margin to offset the container from top navigation bar */
   margin-top: 7rem;
 }
-
 /* Project Info */
+/* Horizontal wrapper for tags, cover & summary */
 .project-info {
+  /* Flex properties */
   display: flex;
   flex-direction: row;
+  /* Size */
   min-width: fit-content;
   height: 100%;
+  /* Etc. */
+  line-height: 1.1;
   animation: fadeIn 0.75s ease-in-out;
 }
-
-/* Project Title and Location */
 .project-title {
-  font-size: 0.85rem;
-  line-height: 1.1;
+  font-size: var(--text-primary-size);
   text-transform: none;
   color: black;
 }
-
 .project-location {
-  font-size: 0.75rem;
+  font-size: var(--text-secondary-size);
   color: gray;
   text-transform: uppercase;
 }
-
 /* Project Tags */
-.icon {
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 1rem;
-  background-color: black;
-}
-
-.tagContainer {
-  width: 300px;
-}
-
+/* Tags Container */
 .tags {
   list-style-type: none;
   margin-top: 1rem;
   padding: 0;
-  font-size: 0.75rem;
+  font-size: var(--text-secondary-size);
   text-transform: uppercase;
 }
-
+.tagContainer {
+  width: 300px;
+}
+/* Tag Container */
 .tags li {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5rem;
 }
-
+/* Tag Heading */
 .sub-heading {
-  color: gray;
+  color: var(--color-secondary);
 }
-
+/* Tag Text */
 .tag {
-  color: black;
+  color: var(--color-primary);
 }
-
+/* Project Icon */
+.icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 0.75rem;
+  background-color: black;
+}
 /* Project Text */
 .summary {
   width: 500px;
-  font-size: 0.85rem;
+  font-size: var(--body-text-size);
   margin: 0 2rem;
 }

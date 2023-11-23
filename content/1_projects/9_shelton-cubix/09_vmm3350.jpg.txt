@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption:
+
+At the ground is a granite clad driveway with a large glass canopy that leads to the lobby and the car park beyond. Across the lobby is a landscape area that acts as a buffer between the road and the internal space. 
+
+At times the functional clarity of the plan allows for a form-based design; thus proving an age-old adage that, 'Form follows function‘.
+
+----
+
+License: 
+
+----
+
+Sort: 5
+
+----
+
+Uuid: ibBrVhIDtM3oDpPf
+
+----
+
+Template: gallery-image

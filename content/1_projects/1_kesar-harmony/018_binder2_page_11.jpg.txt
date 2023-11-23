@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption:
+
+The final built form was three linear buildings located towards the west, north and east of the plot. Each consisting of two wings, and each wing having three apartments per floor. All the apartments were planned to have unrestricted view of the central landscaped area. While the end apartments additionally achieved the much-needed cross ventilation.
+
+The building façade was visualized as a clean set of horizontal and vertical lines. The external driveway at the base accesses the entrance lobbies and the 430 car parks that are located directly below the central landscape. This clearly segregated the vehicular traffic and limited it to the ground floor level, ensuring that the first-floor landscape area was purely pedestrian.
+
+----
+
+License: 
+
+----
+
+Sort: 17
+
+----
+
+Uuid: R647Lq1RbjBwZ3sz
+
+----
+
+Template: gallery-image

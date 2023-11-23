@@ -1,0 +1,21 @@
+Alt: 
+
+----
+
+Caption: A large pool, basketball court, a gym, table-tennis, billiards and banquet room complete the amenities. A larger-than-life interactive chess board, children’s covered play area and the interplay of hard and soft surfaces complete the outdoor common spaces. The structure fits into the heterogeneous typology of the existing architecture around & justifies the commercial order of the neighbourhood.
+
+----
+
+License: 
+
+----
+
+Sort: 12
+
+----
+
+Uuid: hIWVzC7ekdGf8uWp
+
+----
+
+Template: gallery-image

@@ -1,0 +1,51 @@
+Alt: 
+
+----
+
+Caption:
+
+- Improved Lighting: Lower lighting power density (LPD) in the common areas and interior of the building as compared to the ASHRAE baseline.
+
+- Glass: Use of double glazed glass with low solar Coefficient to reduce the amount of heat entering the building.
+
+- Low VOC paints: Low volatile organic compound (VOC) paints are used in the building to reduce the ill effects of the paints on the building occupants.
+
+- Electrical metering and sub-metering: Electrical energy metering is provided to monitor the energy consumption of the area under developer scope and also electricity consumed by each tenant.
+
+- Covered Parking: 100% parking is provided at the stilt floor of the building.
+
+- Recycled material: Materials with recycled content has been used to reduce the use of fresh material.
+
+- Non-fossil fuel facility for vehicles: To encourage the use of non-fossil fuel vehicles to reduce the pollution from automobile use, electric charging points are provided in the parking area to charge the electric cars and two-wheelers.
+
+- Low flow water fixtures: To reduce the demand of potable and non-potable water low flow fixtures are used in the project.
+
+- CFC free fire suppression systems: The fire suppression systems which do not contain ozone depleting substances like CFC, HCFC are used in the project.
+
+- Waste reduction during construction: To minimize the construction waste being sent to landfills, the waste generated during construction were either reused or sold to recycles.
+
+- Tobacco smoke control: In order to minimize the adverse health impacts arising due to passive smoking, smoking is completely prohibited.
+
+- Eco-friendly housekeeping chemicals: Eco-friendly housekeeping chemicals are used in the building to reduce the adverse health impacts for the occupants.
+
+- CRI certified carpets: The carpets used in the building are CRI (Carpets and Rugs Institute) certified.
+
+- Adequate Daylight:The building has been designed to allow maximum daylight in the building.
+
+- Native Vegetation: Maximum usage of draught tolerant/native vegetation has been done in the landscape area to reduce the amount of landscaping water requirements.
+
+----
+
+License: 
+
+----
+
+Sort: 5
+
+----
+
+Uuid: bvBTtxDch1ztAqKp
+
+----
+
+Template: gallery-image

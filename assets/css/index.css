@@ -1,13 +1,21 @@
-/* Index Stylesheet */
-@import "./templates/header.css";
-@import "./templates/home.css";
+/* Variables */
+:root {
+  /* Text Primary */
+  --text-primary-size: 0.70rem;
+  --color-primary: rgba(0, 0, 0, 1);
+  /* Text Secondary */
+  --text-secondary-size: 0.65rem;
+  --color-secondary: rgba(107, 107, 107, 0.6);
+  --color-secondary-hover: rgba(107, 107, 107, 1);
+  /* Body Text */
+  --body-text-size: 0.75rem;
+  /* Animations */
+  --animation: all 0.75s ease-in-out;
+  /* Transitions */
+  --transition: all 0.75s ease-in-out;
+}
+/* Body Stylings */
 body {
   margin: 0;
-  font-family: arial;
-}
-::-webkit-scrollbar { width: 0 !important }
-main {
-  width : 100%;
-  height: 100vh;
-  position : relative;
+  font-family: ui-sans-serif;
 }
