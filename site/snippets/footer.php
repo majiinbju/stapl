@@ -21,15 +21,11 @@
 		<!-- Bootstrap JS (deferred for faster loading) -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
 
-		<!-- Interact.JS -->
-		<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
 </footer>
 
 <!-- Custom Scripts -->
 <?= js([
 		'assets/js/index.js',
-		'assets/js/scroll.js',
-		'assets/js/carousel.js',
 		'assets/js/animation.js',
 		'@auto'
 ], ['async' => true, 'defer' => true, 'model' => true]) ?>

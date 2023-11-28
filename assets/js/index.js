@@ -1,5 +1,6 @@
 gsap.registerPlugin(Draggable);
 
+
 const bodyElement = document.querySelector('.wrapper');
 const mainElement = document.querySelector('main');
 const sections = document.querySelectorAll('section');
@@ -23,6 +24,24 @@ sections.forEach(section => {
   let startX = 0;
   let endX = 0;
 
+  // Loop through each element and make it draggable using GSAP Draggable
+  document.querySelectorAll('.draggable').forEach(element => {
+    gsap.set(element, { x: 0 }); // Set initial x position
+
+    Draggable.create(element, {
+      type: 'x', // Restrict movement to horizontal axis
+      bounds: element.parentElement, // Restrict movement within the parent element
+      edgeResistance: 1, // Simulate 'endOnly' behavior from interact.js
+      onDrag: function() {
+        // Update the element's transform during drag
+        gsap.set(element, { x: this.x });
+      },
+      onRelease: function() {
+        // This is similar to the 'end' listener in interact.js
+        // You can add any necessary logic here when dragging ends
+      }
+    });
+  });
   carousel.addEventListener('mousedown', e => {
     isDragging = true;
     startX = e.clientX || e.touches[0].clientX;
