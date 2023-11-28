@@ -1,0 +1,24 @@
+/* List holding all information and images */
+.ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* Main carousel */
+.carousel {
+  display: flex;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* Image properties */
+.img {
+  object-fit: cover;
+  /* width: 0; */
+  /* height: auto; */
+  transition: var(--transition);
+}
+.img.active {
+  /* width: 100%; */
+}

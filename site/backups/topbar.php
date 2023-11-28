@@ -9,7 +9,7 @@
 		})
 
 ?>
-<nav class="top-0 w-100 position-fixed z-3 d-flex navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-lg-between mb-5 p-0">
+<nav class="top-0 w-100 position-sticky z-3 d-flex navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-lg-between mb-5 p-0">
 	<div class="container-fluid">
 
 		<!-- Stapl Logo -->

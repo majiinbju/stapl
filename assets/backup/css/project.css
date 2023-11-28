@@ -1,9 +1,9 @@
 /* Projects Container */
 .projects {
   /* Margin to offset the container from top navigation bar */
-  margin-top: 5rem;
+  margin-top: 1rem;
   padding: 0rem;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 /* Project Info */
 /* Horizontal wrapper for tags, cover & summary */
@@ -17,7 +17,7 @@
   margin: 0rem 1rem;
   /* Etc. */
   line-height: 1.1;
-  animation: fadeIn 0.75s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }
 .project-title {
   font-size: var(--text-primary-size);

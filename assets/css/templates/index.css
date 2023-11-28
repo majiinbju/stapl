@@ -10,9 +10,9 @@
   /* Body Text */
   --body-text-size: 14px;
   /* Animations */
-  --animation: all 0.75s ease-in-out;
+  --animation: all 0.5s ease-in-out;
   /* Transitions */
-  --transition: all 0.75s ease-in-out;
+  --transition: all 0.5s ease-in-out;
 }
 /* Body Stylings */
 body {

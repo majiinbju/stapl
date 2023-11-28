@@ -1,11 +1,8 @@
-gsap.registerPlugin(Draggable);
-
 const bodyElement = document.querySelector('.wrapper');
 const mainElement = document.querySelector('main');
 const sections = document.querySelectorAll('section');
 
 let isDragging = false;
-let lastTouch = 0;
 let isScrolling = false;
 let scrollSpeed = 0;
 let lastScrollTime = 0;
@@ -17,36 +14,13 @@ let dx = sx,
 let scrollTimeout;
 let expandTimeout;
 
+interact('.draggable').on('dragstart', () => {
+  isDragging = true;
+}).on('dragend', () => {
+  isDragging = false;
+});
+
 sections.forEach(section => {
-  const carousel = section.querySelector('.carousel');
-  let isDragging = false;
-  let startX = 0;
-  let endX = 0;
-
-  carousel.addEventListener('mousedown', e => {
-    isDragging = true;
-    startX = e.clientX || e.touches[0].clientX;
-  });
-
-  carousel.addEventListener('mouseup', e => {
-    if (isDragging) {
-      isDragging = false;
-      endX = e.clientX || e.changedTouches[0].clientX;
-
-      const distance = endX - startX;
-      const momentum = 0.9; // Adjust momentum factor as needed
-      const duration = 750; // Adjust duration for animation
-
-      const distanceWithMomentum = distance * momentum;
-      const targetX = carousel.scrollLeft + distanceWithMomentum;
-
-      gsap.to(carousel, { scrollLeft: targetX, duration: duration, ease: 'power2.out' });
-    }
-  });
-
-  carousel.addEventListener('mouseleave', () => {
-    isDragging = false;
-  });
   const hidden = section.querySelectorAll('.hidden');
 
   section.addEventListener('click', e => {
@@ -75,11 +49,10 @@ sections.forEach(section => {
         setTimeout(() => {
           const sectionsBefore = Array.from(sections).slice(0, Array.from(sections).indexOf(section));
           const totalHeightBefore = sectionsBefore.reduce((total, sec) => total + sec.clientHeight, 0);
-          const headerHeight = 40;
-          const targetScroll = totalHeightBefore + headerHeight - (window.innerHeight - section.clientHeight) / 2;
+          const headerHeight = 0;
 
           window.scrollTo({
-            top: targetScroll,
+            top: totalHeightBefore + headerHeight,
             behavior: 'smooth'
           });
         }, expandTransitionDuration);
@@ -98,33 +71,40 @@ sections.forEach(section => {
       section.style.width = '100%';
     }
   });
-
- section.addEventListener('touchstart', () => {
-   isDragging = true;
- });
-
- section.addEventListener('touchend', () => {
-   isDragging = false;
-   lastTouch = new Date().getTime();
- });
 });
 
-
 window.addEventListener('wheel', event => {
-  const currentTime = new Date().getTime();
-  const isTrackpad = currentTime - lastTouch < 100; // Adjust the time threshold as needed
-
   if (!isDragging) {
+    const currentTime = new Date().getTime();
+    const timeDiff = currentTime - lastScrollTime;
+
+    if (!isScrolling || timeDiff > 100) {
+      scrollSpeed = 0;
+    }
+
     const delta = event.deltaY || event.detail || (-event.wheelDelta);
 
     if (Math.abs(delta) > 1) {
-      if (isTrackpad || event.deltaX !== undefined || event.deltaY !== undefined) {
-        bodyElement.classList.add('expand');
-
-        setTimeout(() => {
-          bodyElement.classList.remove('expand');
-        }, 100); // Adjust the delay time as needed
+      if (delta !== lastScrollDelta) {
+        scrollSpeed = delta;
+      } else {
+        scrollSpeed += delta;
       }
+
+      lastScrollDelta = delta;
+      isScrolling = true;
+
+      bodyElement.classList.add('expand');
+      mainElement.classList.add('main-expand');
+
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        isScrolling = false;
+        bodyElement.classList.remove('expand');
+        mainElement.classList.remove('main-expand');
+      }, 100);
+
+      lastScrollTime = currentTime;
     }
   }
 });
