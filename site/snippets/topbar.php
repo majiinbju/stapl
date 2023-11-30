@@ -14,7 +14,7 @@
 
 		<!-- Stapl Logo -->
 		<a href="<?= $site->url() ?>" class="navbar-brand" width="10%">
-			<img src="../assets/logo/stapl-logo.svg" alt="Stapl logo" width="120" class="d-inline-block align-text-top p-1">
+			<img src="../assets/logo/stapl-logo.svg" alt="Stapl logo" width="100px" class="d-inline-block align-text-top logo p-1">
 		</a>
 		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>

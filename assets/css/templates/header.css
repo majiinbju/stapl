@@ -26,3 +26,6 @@
 .input-group .form-control {
   width: fit-content;
 }
+.logo {
+  max-width: 100px;
+}
