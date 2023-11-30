@@ -44,3 +44,47 @@ section.active {
   transition: transform 0.3s ease-in-out;
 } */
 
+
+@media screen and (max-width: 768px) {
+  .project-info {
+    height: 100%;
+    flex-direction: column-reverse;
+  }
+  .project-details {
+    height: 100%;
+    margin: 0rem 10px;
+  }
+  .project {
+    margin-bottom: 1rem;
+  }
+  .tags {
+    display: none;
+  }
+  .summary {
+    font-size: var(--mobile-body-text-size);
+    line-height: 15px;
+    max-height: 350px;
+    max-width: 700px;
+  }
+  .hidden {
+    opacity: 1;
+    display: flex;
+  }
+  img {
+    max-width: 90vw;
+    max-height: 400px;
+  }
+  .project-img {
+    height: 82.5%;
+  }
+  figure {
+    height: 450px;
+  }
+  section {
+    height: 50vh;
+    width: 100vw;
+  }
+  .project-title {
+    margin-bottom: 10px;
+  }
+}

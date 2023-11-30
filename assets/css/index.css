@@ -9,6 +9,7 @@
   --color-secondary-hover: rgba(107, 107, 107, 1);
   /* Body Text */
   --body-text-size: 14px;
+  --mobile-body-text-size: 12px;
   /* Animations */
   --animation: all 0.75s ease-in-out;
   /* Transitions */

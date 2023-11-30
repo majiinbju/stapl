@@ -1,7 +1,7 @@
 <!-- Project Tags -->
-<div class="d-flex flex-column align-items-end tagContainer mx-5">
+<div class="d-flex flex-column align-items-md-start align-items-lg-end tagContainer mx-md-0 mx-lg-5">
 	<!-- Project Information -->
-		<div class="d-flex flex-column align-items-end">
+		<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end">
 			<span class="icon">
 				<?php if ($project->icon()->isNotEmpty()): ?>
 					<?php if ($icon = $project->icon()): ?>
@@ -9,8 +9,10 @@
 					<?php endif ?>
 				<?php endif ?>
 			</span>
-			<span class="project-title"><?= $project->title()->esc() ?></span>
-			<span class="project-location"><?= $project->location() ?></span>
+			<div class="d-flex flex-column project-details align-items-md-start align-items-lg-end">
+				<span class="project-title"><?= $project->title()->esc() ?></span>
+				<span class="project-location"><?= $project->location() ?></span>
+			</div>
 		</div>
 		<div class="hidden">
 			

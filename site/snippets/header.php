@@ -13,9 +13,7 @@
 </head>
 
 <body>
-
 	<header>
 		<?php snippet('topbar') ?>
-	</header>
-	
+	</header>	
 <main id="id">

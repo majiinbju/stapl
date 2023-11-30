@@ -5,6 +5,7 @@
   padding: 0rem;
   transition: transform 0.3s ease-in-out;
 }
+
 /* Project Info */
 /* Horizontal wrapper for tags, cover & summary */
 .project-info {
@@ -19,16 +20,19 @@
   line-height: 1.1;
   animation: fadeIn 0.75s ease-in-out;
 }
+
 .project-title {
   font-size: var(--text-primary-size);
   text-transform: none;
   color: black;
 }
+
 .project-location {
   font-size: var(--text-secondary-size);
   color: gray;
   text-transform: uppercase;
 }
+
 /* Project Tags */
 /* Tags Container */
 .tags {
@@ -38,24 +42,29 @@
   font-size: var(--text-secondary-size);
   text-transform: uppercase;
 }
+
 .tagContainer {
   min-width: 300px;
   max-width: 500px;
 }
+
 /* Tag Container */
 .tags li {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.5rem;
 }
+
 /* Tag Heading */
 .sub-heading {
   color: var(--color-secondary);
 }
+
 /* Tag Text */
 .tag {
   color: var(--color-primary);
 }
+
 /* Project Icon */
 .icon {
   width: 2.2rem;
@@ -63,6 +72,7 @@
   margin-bottom: 0.75rem;
   background-color: black;
 }
+
 /* Project Text */
 .summary {
   line-height: 19px;
@@ -74,14 +84,17 @@
   font-size: var(--body-text-size);
   margin: 0 2rem;
 }
+
 /* Image styles */
 /* Figure style to stop offset on expansion */
 figure {
   margin: 0;
 }
+
 /* Width for Images */
-.li > figure img {
-  color:#212529;
-  grid-area:auto;
-  display:block;
+.li>figure img {
+  color: #212529;
+  grid-area: auto;
+  display: block;
 }
+
