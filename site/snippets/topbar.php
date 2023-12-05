@@ -6,8 +6,8 @@
 		->listed()
 		->when($filterBy, function($filterBy) {
 		return $this->filterBy('category', $filterBy);
-		})
-
+		});
+	$aboutPage = page('about');
 ?>
 <nav class="top-0 w-100 position-fixed z-3 d-flex navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-lg-between mb-5 p-0">
 	<div class="container-fluid">
@@ -19,26 +19,47 @@
 		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse justify-content-md-between text-end text-md-start d-sm-flex flex-sm-column flex-md-row" id="navBar">
-
-			<a href="<?= $site->url() ?>" class="navbar-brand me-auto">
+		<div class="collapse navbar-collapse justify-content-between d-sm-flex flex-sm-column flex-md-row" id="navBar">
+			<!-- Site Logo -->
+			<a href="<?= $aboutPage->url() ?>" class="navbar-brand me-auto">
 			</a>
-			<ul class="navbar-nav m-auto mb-2 top-bar text-end nav-items">
-				<li class="nav-item mx-md-3">
-					<a class="animated animate__fadeInRight" href="<?= $projects->url() ?>?filter=Commercial">Commercial</a>
-				</li>
-				<li class="nav-item mx-md-3">
-					<a class="animated animate__fadeInRight" href="<?= $projects->url() ?>?filter=Residential">Residential</a>
-				</li>
-				<li class="nav-item mx-md-3">
-					<a class="animated animate__fadeInRight" href="<?= $projects->url() ?>?filter=Mixed-Use">Mixed Use</a>
-				</li>
-				<li class="nav-item mx-md-3">
-					<a class="animated animate__fadeInRight" href="<?= $projects->url() ?>?filter=Retail">Retail</a>
-				</li>
-			</ul>
-
+			<!-- Menu Items -->
+			<?php if($aboutPage->navigation()->isNotEmpty()): ?>
+				<ul class="navbar-nav m-auto mb-2 top-bar text-end nav-items">
+					<!-- For loop for navigation items -->
+					<?php foreach($aboutPage->navigation()->toStructure() as $nav): ?>
+						<!--  -->
+						<?php if($nav->children()->isNotEmpty()): ?>
+						<li class="nav-item mx-md-3 dropdown">
+							<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> class="animated dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								<?php echo $nav->text() ?>
+							</a>
+								<ul class="dropdown-menu dropdown-menu-end text-end border-0 p-2">
+									<?php foreach($nav->children()->toStructure() as $child): ?>
+										<li class="dropdown-item p-0">
+											<a href="<?php echo $child->url() ?>" class="animated">
+												<?php echo $child->text() ?>
+											</a>
+										</li>
+									<?php endforeach ?>
+								</ul>
+						</li>
+						<?php endif ?>
+					
+						<?php if($nav->children()->isEmpty()): ?>
+						<li class="nav-item mx-md-3">
+							<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> class="animated ">
+								<?php echo $nav->text() ?>
+							</a>
+						</li>
+						<?php endif ?>
+			<?php endforeach ?>
+				</ul>
+						<?php endif ?>
+			<!-- Search Bar -->
 			<?php snippet('search-bar') ?>
 		</div>
 	</div>
 </nav>
+
+	

@@ -16,3 +16,9 @@ sections:
         type: textarea
         icon: 🔗
         required: true
+      navigation:
+        label: Navigation
+        type: navigation
+        levels: 5
+        help: Description of menu or where it is used
+        width: 1/2

@@ -16,6 +16,7 @@ return array(
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'League\\ColorExtractor\\' => array($vendorDir . '/league/color-extractor/src'),
     'Laminas\\Escaper\\' => array($vendorDir . '/laminas/laminas-escaper/src'),
-    'Kirby\\' => array($vendorDir . '/getkirby/composer-installer/src', $baseDir . '/kirby/src'),
+    'Kirby\\' => array($baseDir . '/kirby/src', $vendorDir . '/getkirby/composer-installer/src'),
     'Composer\\Semver\\' => array($vendorDir . '/composer/semver/src'),
+    'Bnomei\\' => array($baseDir . '/site/plugins/kirby3-mobile-detect/classes'),
 );

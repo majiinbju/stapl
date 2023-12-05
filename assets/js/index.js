@@ -94,7 +94,7 @@
             setTimeout(() => {
               const sectionsBefore = Array.from(sections).slice(0, Array.from(sections).indexOf(section));
               const totalHeightBefore = sectionsBefore.reduce((total, sec) => total + sec.clientHeight, 0);
-              const headerHeight = 30;
+              const headerHeight = 90;
               const targetScroll = totalHeightBefore + headerHeight - (window.innerHeight - section.clientHeight) / 2;
 
               window.scrollTo({

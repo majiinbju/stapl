@@ -1,0 +1,6 @@
+@import "header.css";
+
+.about p {
+  color: var(--color-primary);
+  font-size: var(--body-text-size);
+}

@@ -23,7 +23,10 @@
   },
   "require": {
     "php": ">=8.0.0 <8.3.0",
-    "getkirby/cms": "^3.9"
+    "getkirby/cms": "^3.9",
+    "belugadigital/kirby-navigation": "^3.0",
+    "bnomei/kirby3-mobile-detect": "^1.4",
+    "mobiledetect/mobiledetectlib": "^4.8"
   },
   "config": {
     "allow-plugins": {

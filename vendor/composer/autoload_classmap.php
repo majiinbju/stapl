@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Bnomei\\MobileDetect' => $baseDir . '/site/plugins/kirby3-mobile-detect/classes/MobileDetect.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Composer\\Semver\\Comparator' => $vendorDir . '/composer/semver/src/Comparator.php',
     'Composer\\Semver\\CompilingMatcher' => $vendorDir . '/composer/semver/src/CompilingMatcher.php',
@@ -19,6 +20,7 @@ return array(
     'Composer\\Semver\\Intervals' => $vendorDir . '/composer/semver/src/Intervals.php',
     'Composer\\Semver\\Semver' => $vendorDir . '/composer/semver/src/Semver.php',
     'Composer\\Semver\\VersionParser' => $vendorDir . '/composer/semver/src/VersionParser.php',
+    'Detection\\MobileDetect' => $vendorDir . '/mobiledetect/mobiledetectlib/namespaced/Detection/MobileDetect.php',
     'Kirby\\Api\\Api' => $baseDir . '/kirby/src/Api/Api.php',
     'Kirby\\Api\\Collection' => $baseDir . '/kirby/src/Api/Collection.php',
     'Kirby\\Api\\Model' => $baseDir . '/kirby/src/Api/Model.php',
@@ -325,6 +327,7 @@ return array(
     'League\\ColorExtractor\\Palette' => $vendorDir . '/league/color-extractor/src/Palette.php',
     'Michelf\\SmartyPants' => $vendorDir . '/michelf/php-smartypants/Michelf/SmartyPants.php',
     'Michelf\\SmartyPantsTypographer' => $vendorDir . '/michelf/php-smartypants/Michelf/SmartyPantsTypographer.php',
+    'Mobile_Detect' => $vendorDir . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
     'Normalizer' => $vendorDir . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
     'PHPMailer\\PHPMailer\\DSNConfigurator' => $vendorDir . '/phpmailer/phpmailer/src/DSNConfigurator.php',
     'PHPMailer\\PHPMailer\\Exception' => $vendorDir . '/phpmailer/phpmailer/src/Exception.php',

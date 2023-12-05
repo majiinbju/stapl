@@ -1,5 +1,13 @@
 /* Topbar styles */
+/* Site Brand */
+.logo {
+  max-width: 100px;
+}
 /* Link item stylings */
+.nav-item {
+  float: left;
+  overflow: none;
+}
 .top-bar a {
   color: var(--color-secondary);
   font-size: var(--text-primary-size);
@@ -11,9 +19,27 @@
 .top-bar a:hover {
   color: var(--color-secondary-hover);
 }
+/* Sub navigation item stylings */
+.dropdown-menu {
+  transition: var(--transition);
+  background-color: rgba(255,255,255, 0.5);
+}
+.sub-nav{
+  padding: 0;
+  list-style-type: none;
+}
+.sub-nav-item {
+  opacity: 0.5;
+  font-size: var(--body-text-size);
+  transition: var(--transition);
+}
+.sub-nav-item:hover {
+  opacity: 0.8;
+}
 /* Search bar stylings */
 /* Search bar form */
 .input-group input {
+
   text-transform: uppercase;
   font-size: var(--text-primary-size);
   color: var(--color-secondary);
@@ -26,6 +52,20 @@
 .input-group .form-control {
   width: fit-content;
 }
-.logo {
-  max-width: 100px;
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  z-index: 30;
+}
+.sidebar a {
+  color: var(--color-secondary);
+  font-size: var(--text-primary-size);
+  font-weight: light;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+.sidebar a:hover {
+  color: var(--color-secondary-hover);
 }

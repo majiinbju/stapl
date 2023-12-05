@@ -1,3 +1,12 @@
+<?php
+// Assuming you've already initialized the Mobile-Detect library
+$detect = $page->detect();
+
+$isMobile = $detect->isMobile();
+$isTablet = $detect->isTablet();
+$isDesktop = !$isMobile && !$isTablet;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +18,18 @@
 		'assets/css/index.css',
 		'@auto'
 	]) ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css" />
 </head>
 
 <body>
-	<header>
-		<?php snippet('topbar') ?>
-	</header>	
+	<?php if ($isMobile): ?>
+		<header>
+			<?php snippet('topbar') ?>
+		</header>	
+	<?php else: ?>
+		<header>
+			<?php snippet('topbar') ?>
+			<?php snippet('sidebar') ?>
+		</header>	
+	<?php endif ?>
 <main id="id">
+	

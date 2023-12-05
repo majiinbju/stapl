@@ -15,6 +15,7 @@
   /* Transitions */
   --transition: all 0.75s ease-in-out;
 }
+
 /* Body Stylings */
 body {
   margin: 0;
@@ -37,4 +38,24 @@ main {
 .wrapper.expand {
   transform: scale(0.95);
   transition: transform 0.3s ease-in-out; /* Adjust duration and timing function as needed */
+}
+
+/* Default Page Stylings */
+.pageTitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-top: 5rem;
+  font-size: 6rem;
+}
+
+.contact-container > navbar a {
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 11px;
+  transition: all 0.25s ease-in-out;
+}
+
+.contact-container > navbar a:hover {
+  color: var(--color-primary);
 }
