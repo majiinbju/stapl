@@ -1,0 +1,19 @@
+title: Job
+sections:
+  info:
+    type: fields
+    fields:
+      link:
+        label: link
+        type: url
+        icon: url
+        required: true
+        help: Link to job posting.
+      position:
+        label: Position
+        type: text
+        icon: tag
+        required: true
+        help: Name of position.
+
+

@@ -6,7 +6,7 @@ Icon:
 
 ----
 
-Category: Mixed
+Typology: Master Planning
 
 ----
 
@@ -45,6 +45,10 @@ Ground & 1st Floor – Shopping & Car Parking
 The location of this site is in Kandivali, in the western suburbs of Mumbai. Over the last 2 decades the locality has grown in leaps and bounds supported by the city’s ever changing infrastructure. This has invited a significant proliferation of residents. 
 
 The project is strategically located between two roads; the main 36 meter wide Linking road and the 18 meter wide service road. This dichotomy of the roads around the plot has defined the mixed use design, distinctly segregating the circulation required for the retail & residential sections.
+
+----
+
+Category: MasterPlanning
 
 ----
 

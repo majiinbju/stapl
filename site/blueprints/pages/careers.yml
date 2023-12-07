@@ -1,0 +1,43 @@
+title: Careers
+pages:
+  template: careers
+  num: date
+sections:
+  info:
+    type: fields
+    fields:
+      text:
+        label: Column 1
+        type: textarea
+        help: Short introduction to the project
+        icon: text
+        size: large
+      text2:
+        label: Column 2
+        type: textarea
+        help: Short introduction to the project
+        icon: text
+        size: large
+  people:
+    headline: Published
+    label: Published
+    help: The job is listed on the careers page.
+    type: pages
+    layout: cards
+    template: job
+    status: published
+    info: "{{ page.category }}"
+    image:
+      ratio: 4/5
+      cover: true
+  drafts:
+    headline: Drafts
+    label: Drafts
+    help: The job is still in draft mode.
+    type: pages
+    layout: cards
+    template: job
+    status: drafts
+    image:
+      ratio: 4/5
+      cover: true

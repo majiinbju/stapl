@@ -6,11 +6,15 @@ Icon:
 
 ----
 
-Category: Commercial
+Category: InteriorAmenities
 
 ----
 
-Status: Ongoing
+Year: 
+
+----
+
+Projectstatus: 
 
 ----
 
@@ -31,6 +35,10 @@ Location: NA
 ----
 
 Text: 
+
+----
+
+Status: Ongoing
 
 ----
 

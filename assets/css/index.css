@@ -47,6 +47,12 @@ main {
   padding-top: 5rem;
   font-size: 6rem;
 }
+.sectionTitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-top: 5rem;
+  font-size: 3rem;
+}
 
 .contact-container > navbar a {
   text-transform: uppercase;
@@ -58,4 +64,15 @@ main {
 
 .contact-container > navbar a:hover {
   color: var(--color-primary);
+}
+
+
+/* Default Mobile Stylings */
+@media screen and (max-width: 768px) {
+  .pageTitle {
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-top: 5rem;
+    font-size: 3.5rem;
+  }
 }

@@ -1,24 +1,59 @@
 title: About
+pages:
+  template: about
+  num: date
 image:
-  icon: 🧑🏾
+  icon: ℹ️
   back: "black"
-sections:
-  info:
-    type: fields
-    fields:
-      About:
-        label: About
-        type: textarea
-        icon: 📝
-        required: true
-      Links:
-        label: Links
-        type: textarea
-        icon: 🔗
-        required: true
-      navigation:
-        label: Navigation
-        type: navigation
-        levels: 5
-        help: Description of menu or where it is used
-        width: 1/2
+columns:
+  left:
+    sections:
+      aboutsections:
+        headline: Published
+        label: Published Sections
+        help: The section is online and listed in the blog
+        type: pages
+        layout: cards
+        template: aboutsection
+        status: published
+        image:
+          ratio: 4/4
+          cover: true
+      drafts:
+        headline: Drafts
+        label: Draft Sections
+        help: The section is still in draft mode. It can only be seen beditors with Panel access.
+        type: pages
+        layout: cards
+        template: aboutsection
+        status: drafts
+        image:
+          ratio: 4/4
+          cover: true
+  right:
+    width: 1/5
+    sections:
+      info:
+        type: fields
+        fields:
+          navigation:
+            label: Navigation
+            type: navigation
+            levels: 5
+            help: Categories for Navigation
+          Column1:
+            width: 1/2
+            label: Column 1
+            type: textarea
+            help: Text for first column
+            icon: textarea
+            size: large
+            required: true
+          Column2:
+            width: 1/2
+            label: Column 2
+            type: textarea
+            help: Text for second column
+            icon: textarea
+            size: large
+            required: true

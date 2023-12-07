@@ -6,7 +6,7 @@ Icon:
 
 ----
 
-Category: Mixed
+Typology: Interior Residential
 
 ----
 
@@ -45,6 +45,10 @@ The site is located at the junction of two major arterial roads of Ghansoli. One
 
 Since the permissible use was residential cum commercial, the building has been designed with retail shopping facing the two main arterial roads. At the ground floor level towards the rear of the shops, is located the carparking area, entrance lobbies for the four residential towers and other essential services. 
 The first floor of the building is also a dedicated parking zone. At the second floor level is located the green top. Within the landscape is located the clubhose with a fully equiped gymnasium, indoor games and changing rooms. The lanscape area provides for a jogging track, a party lawn, tennis courts, childrens play zone and a swimming pool.
+
+----
+
+Category: Interior
 
 ----
 

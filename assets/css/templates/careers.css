@@ -1,1 +1,28 @@
 @import "header.css";
+.jobTable {
+  font-weight: 300;
+  color: var(--color-primary);
+}
+.jobTable th {
+  font-size: var(--text-primary-size);
+  font-weight: 300;
+}
+.jobTable tr {
+  font-size: 13px;
+  color: var(--color-primary);
+}
+.jobTable a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.jobTable tr:first-child:hover {
+  background-color: none;
+}
+.jobTableRow {
+  transition: var(--transition);
+  border-top: 1px  solid rgba(0,0,0,0.2);
+  margin: 10px 0px;
+}
+.jobTableRow:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

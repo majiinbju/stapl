@@ -31,10 +31,3 @@ sections:
     image:
       ratio: 4/5
       cover: true
-    fields:
-    navigation:
-      label: Navigation
-      type: navigation
-      levels: 5
-      help: Description of menu or where it is used
-      width: 1/2

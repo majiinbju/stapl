@@ -1,0 +1,31 @@
+title: People
+pages:
+  template: people
+  num: date
+image:
+  icon: group
+  back: "black"
+sections:
+  people:
+    headline: Published
+    label: Published
+    help: The person is listed on the People page
+    type: pages
+    layout: cards
+    template: person
+    status: published
+    info: "{{ page.category }}"
+    image:
+      ratio: 4/5
+      cover: true
+  drafts:
+    headline: Drafts
+    label: Drafts
+    help: The person is still in draft mode.
+    type: pages
+    layout: cards
+    template: person
+    status: drafts
+    image:
+      ratio: 4/5
+      cover: true

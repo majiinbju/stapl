@@ -30,15 +30,17 @@ columns:
             image:
               ratio: 4/3
               cover: true
-          category:
+          typology:
             label: Typology
             type: select
             options:
-              Commercial: Commercial
-              Residential: Residential
-              Retail: Retail
-              Mixed: Mixed Use – Retail & Residential
-            width: 1/2
+              Architecture Residential: Architecture Residential
+              Architecture Commercial: Architecture Commercial
+              Master Planning: Master Planning
+              Interior Residential: Interior Residential
+              Interior Commercial: Interior Commercial
+              Interior Amenities: Interior Amenities
+              Landscape: Landscape
             icon: tag
             required: true
           year:

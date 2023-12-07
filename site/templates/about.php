@@ -1,25 +1,64 @@
+
+
 <?php snippet('header') ?>
 <main class="about">
 	<section class="container w-75">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<div class="d-sm-flex container-fluid my-5">
-			<p class="col-sm-12 col-lg-4 me-5">
-				"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-				<br/>
-				<br/>
-				Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+			<p class="col-sm-12 col-lg-5 me-5">
+				<?= $page->Column1() ?>
 			</p>
 
-			<p class="col-sm-12 col-lg-4">
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			<p class="col-sm-12 col-lg-5">
+				<?= $page->Column2() ?>
 				<br />
 				<br />
 				<b>Stapl</b>
 				<br />
 				<b>Founder & Creative Director</b>
 			</p>
-
 		</div>
 	</section>
+	
+		<?php foreach ($page->children() as $aboutSection): ?>
+			<section class="container w-75">
+				<!-- Section Title -->
+				<h2 class="sectionTitle">
+					<?= $aboutSection->title() ?>
+				</h2>
+				<!-- Section Text -->
+				<div class="d-sm-flex container-fluid my-5">
+					<p class="col-sm-12 col-lg-5 me-5">
+						<?= $aboutSection->Column1() ?>
+					</p>
+					<p class="col-sm-12 col-lg-5">
+						<?= $aboutSection->Column1() ?>
+					</p>
+				</div>
+				<!-- Section Galleries -->
+				<div class="carousel">
+					<ul class="ul draggable">
+						<?php foreach ($aboutSection->images() as $image) : ?>
+						<li class="li">
+							<?php if ($image->alt()->isNotEmpty()) : ?>
+							<figure class="d-flex flex-column mx-2">
+								<a  href="<?= $image->link() ?>">
+								<img class="project-img" src="<?= $image->crop(500, 300)->url() ?>" alt="<?= $image->alt() ?>"/>
+								</a>
+								<figcaption class="sectionImageTitle mt-3">
+									<?= $image->title() ?>
+								</figcaption>
+							</figure>
+							<?php else: ?>
+							<figure class="d-flex mx-2 bg-gray-100">
+								<img class="project-img" src="<?= $image->crop(500, 300)->url() ?>" alt="<?= $image->alt() ?>" />
+							</figure>
+							<?php endif ?>
+						</li>
+						<?php endforeach ?>
+					</ul>
+				</div>
+			</section>
+		<?php endforeach ?>
 </main>
 <?php snippet('footer') ?>

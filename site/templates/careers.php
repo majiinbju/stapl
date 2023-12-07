@@ -1,17 +1,33 @@
 <?php snippet('header') ?>
 <main class="about">
-	<section class="container w-75">
+	<section class="container col-10">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
+		<!-- Text columns -->
 		<div class="d-sm-flex container-fluid my-5">
 			<p class="careers-body col-sm-12 col-lg-5 me-5">
-				"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+				<?= $page->text() ?>
 			</p>
-
 			<p class="careers-body col-sm-12 col-lg-5">
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				<?= $page->text2() ?>
 			</p>
-
 		</div>
+		<table class="w-100 jobTable text-uppercase">
+			<tr class="d-flex justify-content-between">
+				<th>Title</th>
+				<th>Apply</th>
+			</tr>
+			
+			<?php foreach ($page->children() as $posting): ?>
+				
+				<tr class="d-flex justify-content-between jobTableRow">
+					<td><?= $posting->position() ?></td>
+					<td><a href="<?= $posting->link() ?>">
+							Apply Here
+						</a></td>
+				</tr>
+			<?php endforeach ?>
+		</table>
+		
 	</section>
 </main>
 <?php snippet('footer') ?>

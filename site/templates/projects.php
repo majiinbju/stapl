@@ -1,14 +1,17 @@
 <?php snippet('header') ?>
 <?php
-	$filterBy = get('filter');
-	$projectsPage = page('projects');
-	$projects = $projectsPage
+$filterBy = param('filter');
+$projectsPage = page('projects');
+$projects = $projectsPage
 		->children()
-		->listed()
-		->when($filterBy, function($filterBy) {
-		return $this->filterBy('category', $filterBy);
-		})
+		->listed();
 
+if (!empty($filterBy)) {
+		$projects = $projects->filter(function ($child) use ($filterBy) {
+				$typology = $child->typology()->toString();
+				return $filterBy === $typology;
+		});
+}
 ?>
 
 <div class="wrapper">

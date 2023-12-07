@@ -2,14 +2,6 @@ Title: About
 
 ----
 
-About: Hi
-
-----
-
-Links: HI
-
-----
-
 Navigation:
 
 - 
@@ -17,17 +9,17 @@ Navigation:
     - 
       children: [ ]
       text: Residential
-      url: '#'
+      url: /filter:Architecture Residential
       popup: false
       uuid: hw0iw3ju1hw
     - 
       children: [ ]
       text: Commercial
-      url: '#'
+      url: /filter:Architecture Commercial
       popup: false
       uuid: igmwawnx67b
   text: Architecture
-  url: '#'
+  url: /filter:Architecture
   popup: false
   uuid: ggp91kaqnmq
   title: Architecture
@@ -35,7 +27,7 @@ Navigation:
 - 
   children: [ ]
   text: Master Planning
-  url: '#'
+  url: /filter:Master Planning
   popup: false
   uuid: dkyngb47fuc
 - 
@@ -43,26 +35,26 @@ Navigation:
     - 
       children: [ ]
       text: Residential
-      url: ""
+      url: /filter:Interior Residential
       popup: false
       uuid: 9c7qo63bano
     - 
       children: [ ]
-      id: Commercial
+      id: ""
       text: Commercial
-      url: '#'
+      url: /filter:Interior Commercial
       popup: false
       uuid: u84y3aqzowr
-      title: Commercial
+      title: ""
     - 
       children: [ ]
       text: Ameneties
-      url: '#'
+      url: /filter:Interior Amenities
       popup: false
       uuid: 2io6nn7j4r3
   id: Interior
   text: Interior
-  url: '#'
+  url: /filter:Interior
   popup: false
   uuid: uw1pa12hh4
   title: Interior
@@ -70,10 +62,34 @@ Navigation:
   children: [ ]
   id: Landscape
   text: Landscape
-  url: '#'
+  url: /filter:Landscape
   popup: false
   uuid: i2ffuzf6lk
   title: Landscape
+
+----
+
+Column1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----
+
+Column2: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+----
+
+Aboutsections: - page://eUWskdOoA2932tDR
+
+----
+
+Drafts: 
+
+----
+
+About: Hi
+
+----
+
+Links: HI
 
 ----
 

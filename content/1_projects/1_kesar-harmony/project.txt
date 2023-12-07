@@ -6,7 +6,7 @@ Icon:
 
 ----
 
-Category: Residential
+Typology: Architecture
 
 ----
 
@@ -45,6 +45,10 @@ Second to fourteenth floor:  Apartments
 The project is set at the foot of Kharghar hills that lies to its west, flanked by a school in the north, a recreational open space to the south; the main access road and the node of Kharghar to the east.
 
 As per governing byelaws, permissible land use was residential, and the specified floor space index was 1. The brief was to not just produce an apartment complex but to go beyond and conceptualize a master plan that met the aspirations of the residents.
+
+----
+
+Category: Architecture
 
 ----
 

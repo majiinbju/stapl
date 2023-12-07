@@ -1,6 +1,14 @@
+@import "carousel.css";
 @import "header.css";
 
 .about p {
   color: var(--color-primary);
   font-size: var(--body-text-size);
 }
+
+.sectionImageTitle {
+  font-size: var(--text-primary-size);
+  color: var(--color-primary);
+}
+
+

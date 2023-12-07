@@ -1,0 +1,17 @@
+title: Section Image
+
+accept:
+  mime: image/*
+  type: image
+  maxsize: 400000000
+
+fields:
+  alt:
+    type: text
+    width: 1/2
+  title:
+    type: text
+    width: 1/2
+  link:
+    type: url
+    width: 1/2

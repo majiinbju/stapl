@@ -1,19 +1,19 @@
 <?php snippet('header') ?>
 <?php
-	$filterBy = get('filter');
-	$projectsPage = page('projects');
-	$projects = $projectsPage
+$filterBy = param('filter');
+$projectsPage = page('projects');
+$projects = $projectsPage
 		->children()
-		->listed()
-		->when($filterBy, function($filterBy) {
-		return $this->filterBy('category', $filterBy);
-		})
+		->listed();
 
+if (!empty($filterBy)) {
+		$projects = $projects->filterBy('typology', $filterBy);
+}
 ?>
 
 <div class="wrapper">
 	<div class="container-fluid projects p-0">
-		<?php foreach ($projectsPage->children() as $project): ?>
+		<?php foreach ($projects as $project): ?>
 			<?php snippet('project', compact('project')) ?>
 		<?php endforeach ?>
 	</div>

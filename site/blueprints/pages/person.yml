@@ -1,0 +1,44 @@
+title: Person
+
+columns:
+  - width: 1/2
+    sections:
+      image:
+        type: files
+        headline: Image
+        help: Upload image to be used on People page.
+        max: 1
+        layout: cards
+        info: "{{ file.alt }} / {{ file.dimensions }}"
+        image:
+          ratio: 4/3
+          cover: true
+
+  - width: 1/2
+    sections:
+      info:
+        type: fields
+        fields:
+          slug:
+            label: Slug
+            type: text
+            icon: tag
+            required: true
+            help: First name of person.
+          name:
+            label: Name
+            type: text
+            icon: tag
+            required: true
+          position:
+            label: Position
+            type: text
+            icon: tag
+            required: true
+          description:
+            label: Description
+            type: textarea
+            icon: text
+            required: true
+
+

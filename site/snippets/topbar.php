@@ -4,9 +4,8 @@
 	$projects = $projectsPage
 		->children()
 		->listed()
-		->when($filterBy, function($filterBy) {
-		return $this->filterBy('category', $filterBy);
-		});
+		->filterBy('category', $filterBy);
+	$pagination = $projects->pagination();
 	$aboutPage = page('about');
 ?>
 <nav class="top-0 w-100 position-fixed z-3 d-flex navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-lg-between mb-5 p-0">
@@ -21,7 +20,7 @@
 		</button>
 		<div class="collapse navbar-collapse justify-content-between d-sm-flex flex-sm-column flex-md-row" id="navBar">
 			<!-- Site Logo -->
-			<a href="<?= $aboutPage->url() ?>" class="navbar-brand me-auto">
+			<a href="<?= $aboutPage->url() ?>" class="navbar-brand me-auto" style="opacity:0">
 			</a>
 			<!-- Menu Items -->
 			<?php if($aboutPage->navigation()->isNotEmpty()): ?>

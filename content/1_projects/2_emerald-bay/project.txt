@@ -6,7 +6,7 @@ Icon:
 
 ----
 
-Category: Residential
+Typology: Architecture
 
 ----
 
@@ -42,6 +42,10 @@ First Floor  - Amenities, Landscape, Swimming pool
 Second Floor to 29 Floors – APARTMENTS
 
 The site is located on a prime stretch of the Palm Beach road in Navi Mumbai. Towards the east where the plot is located, lies a stretch of some of the most luxurious and expensive apartments and condos in the city. The plot is rectangular with the shorter side facing the viewing direction. The access is through the service road towards the west, running parallel to Palm Beach road and another service road that is on the east.
+
+----
+
+Category: ArchitectureCommercial
 
 ----
 

@@ -10,6 +10,15 @@ return [
 				 ]
 			 ]
 		 ]
-	  ]
+	  ],
+	'routes' => [
+		[
+			'pattern' => 'filter(:any)',
+			'action'  => function ($typology) {
+				// Redirect to the projects page with the filter parameter
+				return go('projects', ['filter' => $typology]);
+			}
+		]
+	]
 	 
 ];

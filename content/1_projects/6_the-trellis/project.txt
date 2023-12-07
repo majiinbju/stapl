@@ -6,11 +6,15 @@ Icon:
 
 ----
 
-Category: Residential
+Category: InteriorCommercial
 
 ----
 
-Status: Ongoing
+Year: 
+
+----
+
+Projectstatus: 
 
 ----
 
@@ -31,6 +35,10 @@ Location:
 ----
 
 Text: 
+
+----
+
+Status: Ongoing
 
 ----
 

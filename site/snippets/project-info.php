@@ -1,7 +1,5 @@
 <?php
-// Assuming you've already initialized the Mobile-Detect library
 $detect = $page->detect();
-
 $isMobile = $detect->isMobile();
 $isTablet = $detect->isTablet();
 $isDesktop = !$isMobile && !$isTablet;
