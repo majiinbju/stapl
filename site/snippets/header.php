@@ -23,6 +23,7 @@ $isDesktop = !$isMobile && !$isTablet;
 <body>
 	<?php if ($isMobile): ?>
 		<header>
+			<?php snippet('sidebar') ?>
 			<?php snippet('topbar') ?>
 		</header>	
 	<?php else: ?>

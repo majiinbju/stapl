@@ -11,7 +11,7 @@
 				<?= $page->text2() ?>
 			</p>
 		</div>
-		<table class="w-100 jobTable text-uppercase">
+		<table class="w-100 jobTable text-uppercase p-2">
 			<tr class="d-flex justify-content-between">
 				<th>Title</th>
 				<th>Apply</th>
@@ -19,11 +19,13 @@
 			
 			<?php foreach ($page->children() as $posting): ?>
 				
-				<tr class="d-flex justify-content-between jobTableRow">
+				<tr class="d-flex justify-content-between jobTableRow py-2">
 					<td><?= $posting->position() ?></td>
-					<td><a href="<?= $posting->link() ?>">
+					<td>
+						<a href="<?= $posting->link() ?>">
 							Apply Here
-						</a></td>
+						</a>
+					</td>
 				</tr>
 			<?php endforeach ?>
 		</table>

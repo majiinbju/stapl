@@ -13,6 +13,7 @@ columns:
         image:
           ratio: 4/3
           cover: true
+        required: true
 
   - width: 1/2
     sections:
