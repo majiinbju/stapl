@@ -36,10 +36,12 @@ columns:
             options:
               Architecture Residential: Architecture Residential
               Architecture Commercial: Architecture Commercial
+              Architecture Residential cum Commercial: Architecture Residential cum Commercial
               Master Planning: Master Planning
               Interior Residential: Interior Residential
               Interior Commercial: Interior Commercial
-              Interior Amenities: Interior Amenities
+              Interior Lobbies: Interior Lobbies
+              Interior Clubhouse: Interior Clubhouse
               Landscape: Landscape
             icon: tag
             required: true

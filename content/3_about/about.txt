@@ -18,6 +18,14 @@ Navigation:
       url: /filter:Architecture Commercial
       popup: false
       uuid: igmwawnx67b
+    - 
+      children: [ ]
+      text: Residential cum Commercial
+      url: >
+        /filter:Architecture Residential cum
+        Commercial
+      popup: false
+      uuid: ej7zm6giif6
   text: Architecture
   url: /filter:Architecture
   popup: false
@@ -48,10 +56,16 @@ Navigation:
       title: ""
     - 
       children: [ ]
-      text: Ameneties
-      url: /filter:Interior Amenities
+      text: Lobbies
+      url: /filter:Interior Lobbies
       popup: false
       uuid: 2io6nn7j4r3
+    - 
+      children: [ ]
+      text: Clubhouse
+      url: /filter:Interior Clubhouse
+      popup: false
+      uuid: kf8rurhcjt
   id: Interior
   text: Interior
   url: /filter:Interior
