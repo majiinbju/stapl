@@ -83,9 +83,9 @@ $isDesktop = !$isMobile && !$isTablet;
 				</p>
 			</div>
 			<!-- Image -->
-			<div class="col-4 d-flex justify-content-end absolute">
+			<div class="col-4 d-flex justify-content-end position-fixed person-img">
 				<?php if ($person->image()->isNotEmpty()): ?>
-					<img src="<?= $person->image()->resize(350)->url() ?>" />
+					<img src="<?= $person->image()->resize(400)->url() ?>" />
 				<?php endif ?>
 			</div>
 		</li>

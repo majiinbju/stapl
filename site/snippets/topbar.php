@@ -8,11 +8,11 @@
 	$pagination = $projects->pagination();
 	$aboutPage = page('about');
 ?>
-<nav class="top-0 w-100 position-fixed z-3 d-flex navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-lg-between mb-5 p-0">
+<nav class="top-0 w-100 position-sticky z-3 d-flex navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-lg-between mb-5 p-0">
 	<div class="container-fluid">
 
 		<!-- Stapl Logo -->
-		<a href="<?= $site->url() ?>" class="navbar-brand" width="10%">
+		<a href="<?= $site->url() ?>" class="navbar-brand" width="10%" style="opacity:0">
 			<img src="../assets/logo/stapl-logo.svg" alt="Stapl logo" width="100px" class="d-inline-block align-text-top logo p-1">
 		</a>
 		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">

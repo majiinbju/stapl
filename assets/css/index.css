@@ -1,7 +1,7 @@
 /* Variables */
 :root {
   /* Text Primary */
-  --text-primary-size: 14px;
+  --text-primary-size: 12px;
   --color-primary: rgba(0, 0, 0, 1);
   /* Text Secondary */
   --text-secondary-size: 12px;
@@ -19,8 +19,9 @@
 /* Body Stylings */
 body {
   margin: 0;
+  /* min-height: 100vh; */
   /* height: 0; */
-  font-family: ui-sans-serif;
+  font-family: arial;
 }
 ::-webkit-scrollbar { width: 0 !important }
 main {

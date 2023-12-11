@@ -21,13 +21,20 @@
 }
 /* Person Image stylings */
 .person img {
+  width: 70%;
+  /* height: 100%; */
   opacity: 0;
-  position: absolute;
   transition: all 0.35s ease-in-out;
 }
 /* Image hover stylings */
 .person:hover img {
   opacity: 1;
+}
+.person-img {
+  right: 2.5%;
+  top: 30%;
+  position: fixed;
+  /* background: red; */
 }
 /* Person's name */
 .person-name {

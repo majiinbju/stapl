@@ -27,7 +27,7 @@ section.active {
 .hidden {
   opacity: 0;
   display: none;
-  transition: var(--transition); /* Transition opacity */
+  transition: var(--transition);
 }
 /* Show object */
 .showObject {

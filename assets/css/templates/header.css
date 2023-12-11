@@ -39,7 +39,6 @@
 /* Search bar stylings */
 /* Search bar form */
 .input-group input {
-
   text-transform: uppercase;
   font-size: var(--text-primary-size);
   color: var(--color-secondary);
@@ -56,8 +55,10 @@
 
 /* Sidebar */
 .sidebar {
-  position: fixed;
-  z-index: 30000;
+  width: 100px;
+  border: 0;
+  /* position: fixed; */
+  /* z-index: 30000; */
 }
 .sidebar a {
   color: var(--color-secondary);
