@@ -18,13 +18,13 @@
 		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse justify-content-between d-sm-flex flex-sm-column flex-md-row" id="navBar">
+		<div class="collapse navbar-collapse justify-content-between align-items-start d-sm-flex flex-sm-column flex-md-row" id="navBar">
 			<!-- Site Logo -->
 			<a href="<?= $aboutPage->url() ?>" class="navbar-brand me-auto" style="opacity:0">
 			</a>
 			<!-- Menu Items -->
 			<?php if($aboutPage->navigation()->isNotEmpty()): ?>
-				<ul class="navbar-nav m-auto mb-2 top-bar text-end nav-items">
+				<ul class="navbar-nav top-bar text-end nav-items">
 					<!-- For loop for navigation items -->
 					<?php foreach($aboutPage->navigation()->toStructure() as $nav): ?>
 						<!--  -->

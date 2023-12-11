@@ -38,6 +38,11 @@
 }
 /* Search bar stylings */
 /* Search bar form */
+.input-group {
+  display: flex;
+  align-items: start;
+  flex-wrap: nowrap;
+}
 .input-group input {
   text-transform: uppercase;
   font-size: var(--text-primary-size);
@@ -51,7 +56,6 @@
 .input-group .form-control {
   width: fit-content;
 }
-
 
 /* Sidebar */
 .sidebar {

@@ -5,5 +5,5 @@
 			<i class="fa fa-search">￼</i>
 		</button>
 	</span>
-	<input type="search" value="Search" id="example-search-input" class="form-control border-0 text-wrap">
+	<input type="search" value="Search" id="example-search-input" class="form-control border-0 text-wrap" style="line-height: 0;">
 </div>

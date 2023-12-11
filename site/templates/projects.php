@@ -7,16 +7,13 @@ $projects = $projectsPage
 		->listed();
 
 if (!empty($filterBy)) {
-		$projects = $projects->filter(function ($child) use ($filterBy) {
-				$typology = $child->typology()->toString();
-				return $filterBy === $typology;
-		});
+		$projects = $projects->filterBy('typology', $filterBy);
 }
 ?>
 
 <div class="wrapper">
 	<div class="container-fluid projects p-0">
-		<?php foreach ($projectsPage->children() as $project): ?>
+		<?php foreach ($projects as $project): ?>
 			<?php snippet('project', compact('project')) ?>
 		<?php endforeach ?>
 	</div>

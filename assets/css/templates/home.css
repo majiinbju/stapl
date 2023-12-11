@@ -60,8 +60,8 @@ section.active {
     height: 100%;
     margin: 0rem 10px;
   }
-  .project {
-
+  .cover-img {
+    margin-bottom: 1rem;
   }
   .tags {
     /* display: none; */

@@ -7,7 +7,7 @@ $isDesktop = !$isMobile && !$isTablet;
 
 <?php if ($isMobile): ?>
 		<li class="li project-info">
-				<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end">
+				<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end mt-3">
 						<span class="icon">
 								<?php if ($project->icon()->isNotEmpty()): ?>
 										<?php if ($icon = $project->icon()): ?>
@@ -64,7 +64,7 @@ $isDesktop = !$isMobile && !$isTablet;
 						</ul>
 						<?php if ($project->text()->isNotEmpty()) : ?>
 								<figcaption class="hidden summary">
-										<?= $project->text() ?>
+										<?= $project->text()->kirbytextinline() ?>
 								</figcaption>
 						<?php endif ?>
 						
@@ -80,7 +80,7 @@ $isDesktop = !$isMobile && !$isTablet;
 						<?php endif ?>
 						<?php if ($project->text()->isNotEmpty()) : ?>
 								<figcaption class="hidden summary">
-										<?= $project->text() ?>
+										<?= $project->text()->kirbytextinline() ?>
 								</figcaption>
 						<?php endif ?>
 				</figure>

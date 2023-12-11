@@ -35,7 +35,7 @@ $isDesktop = !$isMobile && !$isTablet;
 				</a>
 				<div class="mt-3 collapse" id="collapse<?= $person->slug() ?>" style="transition: all 0.75s ease-in-out;">
 					
-				<?php if ($person->image()->isNotEmpty()): ?>
+				<?php if ($person->image()->exists()): ?>
 					<img src="<?= $person->image()->url() ?>" class="w-100"/>
 				<?php endif ?>
 					<p class="person-body mt-3">
@@ -84,9 +84,9 @@ $isDesktop = !$isMobile && !$isTablet;
 			</div>
 			<!-- Image -->
 			<div class="col-4 d-flex justify-content-end position-fixed person-img">
-				<?php if ($person->image()->isNotEmpty()): ?>
-					<img src="<?= $person->image()->resize(400)->url() ?>" />
-				<?php endif ?>
+					<?php if ($person->image()->isNotEmpty() && $person->image()->exists()): ?>
+							<img src="<?= $person->image()->url() ?>" />
+					<?php endif ?>
 			</div>
 		</li>
 		<?php endforeach ?>
