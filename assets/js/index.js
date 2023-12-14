@@ -1,41 +1,41 @@
 gsap.registerPlugin(Draggable);
 
-const bodyElement = document.querySelector('.wrapper');
-const mainElement = document.querySelector('main');
-const sections = document.querySelectorAll('section');
+const bodyElement = document.querySelector(".wrapper");
+const mainElement = document.querySelector("main");
+const sections = document.querySelectorAll("section");
 
 let isDragging = false;
 let lastTouch = 0;
 
-sections.forEach(section => {
-  const carousel = section.querySelector('.carousel');
+sections.forEach((section) => {
+  const carousel = section.querySelector(".carousel");
   let startX = 0;
 
   // Loop through each element and make it draggable using GSAP Draggable
-  document.querySelectorAll('.draggable').forEach(element => {
+  document.querySelectorAll(".draggable").forEach((element) => {
     gsap.set(element, { x: 0 }); // Set initial x position
 
     Draggable.create(element, {
-      type: 'x', // Restrict movement to horizontal axis
+      type: "x", // Restrict movement to horizontal axis
       bounds: element.parentElement, // Restrict movement within the parent element
       edgeResistance: 1, // Simulate 'endOnly' behavior from interact.js
-      onDrag: function() {
+      onDrag: function () {
         // Update the element's transform during drag
         gsap.set(element, { x: this.x });
       },
-      onRelease: function() {
+      onRelease: function () {
         // This is similar to the 'end' listener in interact.js
         // You can add any necessary logic here when dragging ends
-      }
+      },
     });
   });
 
-  carousel.addEventListener('mousedown', e => {
+  carousel.addEventListener("mousedown", (e) => {
     isDragging = true;
     startX = e.clientX || e.touches[0].clientX;
   });
 
-  carousel.addEventListener('mouseup', e => {
+  carousel.addEventListener("mouseup", (e) => {
     if (isDragging) {
       isDragging = false;
       endX = e.clientX || e.changedTouches[0].clientX;
@@ -46,100 +46,108 @@ sections.forEach(section => {
       const distanceWithMomentum = distance * momentum;
       const targetX = carousel.scrollLeft + distanceWithMomentum;
 
-      gsap.to(carousel, { scrollLeft: targetX, duration: duration, ease: 'power2.out' });
+      gsap.to(carousel, {
+        scrollLeft: targetX,
+        duration: duration,
+        ease: "power2.out",
+      });
     }
   });
 
-  carousel.addEventListener('mouseleave', () => {
+  carousel.addEventListener("mouseleave", () => {
     isDragging = false;
   });
 
-  const hidden = section.querySelectorAll('.hidden');
+  const hidden = section.querySelectorAll(".hidden");
   let expandTimeline;
   let expandTimeout;
 
   if (window.innerWidth > 768) {
-    section.addEventListener('click', e => {
-      if (!isDragging && !section.classList.contains('active')) {
+    section.addEventListener("click", (e) => {
+      if (!isDragging && !section.classList.contains("active")) {
         const expandTimeline = gsap.timeline({
-          defaults: { duration: 0.75, ease: 'power2.out' }
+          defaults: { duration: 0.75, ease: "power2.out" },
         });
 
         gsap.to(window, {
           duration: 1,
           scrollTo: {
-            y: section.offsetTop + (window.innerHeight - section.clientHeight) / 2,
-            offsetY: (window.innerHeight - section.clientHeight) / 2
+            y:
+              section.offsetTop +
+              (window.innerHeight - section.clientHeight) / 2,
+            offsetY: (window.innerHeight - section.clientHeight) / 2,
           },
-          ease: 'power2.out',
+          ease: "power2.out",
           onComplete: () => {
             gsap.to(section, {
               duration: 0.75,
-              height: '80vh',
-              width: '100%',
-              ease: 'power2.out',
+              height: "80vh",
+              width: "100%",
+              ease: "power2.out",
               onComplete: () => {
-                bodyElement.classList.add('expand');
-                clearTimeout(expandTimeout);
-                expandTimeout = setTimeout(() => {
-                  bodyElement.classList.remove('expand');
-                }, 750); // Adjust this delay as necessary
-
                 // Add showObject class to hidden elements after animation completes
-                hidden.forEach(hide => {
-                  hide.classList.add('showObject');
+                hidden.forEach((hide) => {
+                  hide.classList.add("showObject");
                 });
-              }
+              },
             });
-          }
+          },
         });
 
         expandTimeline.to(section, {
-          height: '80vh',
-          width: '100%',
+          height: "80vh",
+          width: "100%",
           top: `calc(50% - 40vh)`, // Center vertically in the viewport
-          left: '0',
-          x: '0',
-          transformOrigin: 'center center',
+          left: "0",
+          x: "0",
+          transformOrigin: "center center",
         });
 
-        sections.forEach(s => {
-          if (s !== section && s.classList.contains('active')) {
-            s.classList.remove('active');
+        sections.forEach((s) => {
+          if (s !== section && s.classList.contains("active")) {
+            s.classList.remove("active");
 
-            expandTimeline.to(s, {
-              height: '80vh',
-              width: '100%',
-              onComplete: () => {
-                gsap.set(s, { top: 'auto', left: 'auto', x: 'auto' });
-              }
-            }, '-=0.75'); // Ensure this happens simultaneously with the current animation
+            expandTimeline.to(
+              s,
+              {
+                height: "80vh",
+                width: "100%",
+                onComplete: () => {
+                  gsap.set(s, { top: "auto", left: "auto", x: "auto" });
+                },
+              },
+              "-=0.75"
+            ); // Ensure this happens simultaneously with the current animation
           }
         });
 
-        expandTimeline.to(section, {
-          x: '0',
-          left: '0',
-          scrollLeft: 0,
-          onComplete: () => {
-            section.classList.add('active');
-          }
-        }, '-=0.75'); // Ensure this happens simultaneously with the current animation
+        expandTimeline.to(
+          section,
+          {
+            x: "0",
+            left: "0",
+            scrollLeft: 0,
+            onComplete: () => {
+              section.classList.add("active");
+            },
+          },
+          "-=0.75"
+        ); // Ensure this happens simultaneously with the current animation
       }
     });
   }
 
-  section.addEventListener('touchstart', () => {
+  section.addEventListener("touchstart", () => {
     isDragging = true;
   });
 
-  section.addEventListener('touchend', () => {
+  section.addEventListener("touchend", () => {
     isDragging = false;
     lastTouch = new Date().getTime();
   });
 });
 
-window.addEventListener('wheel', event => {
+window.addEventListener("wheel", (event) => {
   const currentTime = new Date().getTime();
   const isTrackpad = currentTime - lastTouch < 100;
 
@@ -147,10 +155,14 @@ window.addEventListener('wheel', event => {
     const delta = event.deltaY || event.detail || -event.wheelDelta;
 
     if (Math.abs(delta) > 1) {
-      if (isTrackpad || event.deltaX !== undefined || event.deltaY !== undefined) {
-        bodyElement.classList.add('expand');
+      if (
+        isTrackpad ||
+        event.deltaX !== undefined ||
+        event.deltaY !== undefined
+      ) {
+        bodyElement.classList.add("expand");
         setTimeout(() => {
-          bodyElement.classList.remove('expand');
+          bodyElement.classList.remove("expand");
         }, 100);
       }
     }
@@ -169,7 +181,7 @@ function easeScroll() {
 
   mainElement.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
 
-  document.body.style.height = '0';
+  document.body.style.height = "0";
   window.requestAnimationFrame(easeScroll);
 }
 

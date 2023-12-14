@@ -1,4 +1,8 @@
 /* Topbar styles */
+.top-bar {
+  z-index: 10000000;
+}
+
 /* Site Brand */
 .logo {
   max-width: 100px;

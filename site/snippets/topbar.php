@@ -8,7 +8,7 @@
 	$pagination = $projects->pagination();
 	$aboutPage = page('about');
 ?>
-<nav class="top-0 w-100 position-sticky z-3 d-flex navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-lg-between mb-5 p-0">
+<nav class="top-bar top-0 w-100 position-sticky d-flex navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-lg-between mb-5 p-0">
 	<div class="container-fluid">
 
 		<!-- Stapl Logo -->
@@ -20,7 +20,7 @@
 		</button>
 		<div class="collapse navbar-collapse justify-content-between align-items-start d-sm-flex flex-sm-column flex-md-row" id="navBar">
 			<!-- Site Logo -->
-			<a href="<?= $aboutPage->url() ?>" class="navbar-brand me-auto" style="opacity:0">
+			<a href="<?= $site->url() ?>" class="navbar-brand me-auto" style="opacity:0">
 			</a>
 			<!-- Menu Items -->
 			<?php if($aboutPage->navigation()->isNotEmpty()): ?>
