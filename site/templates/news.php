@@ -47,13 +47,13 @@ $isDesktop = !$isMobile && !$isTablet;
 	<section class="container w-75">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<?php foreach($page->children()->listed()->flip() as $article): ?>
-			<article class="my-5 ms-5">
+			<article class="my-5">
 				<div class="d-flex">
 					<!-- Date -->
 					<?php if ($article->date()->isNotEmpty()): ?>
-							<p class="article-date">
+							<span class="article-date">
 								<?= $article->date() ?>
-							</p>
+							</span>
 					<?php endif ?>
 					<!-- Image -->
 					<?php if ($cover = $article->image()): ?>
