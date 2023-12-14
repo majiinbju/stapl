@@ -1,5 +1,5 @@
 <!-- Search box & icon -->
-<div class="input-group ms-auto" style="width: 150px;">
+<div class="input-group" style="width: 150px;">
 	<span class="input-group-append">
 		<button class="btn border-0" type="button">
 			<i class="fa fa-search">￼</i>

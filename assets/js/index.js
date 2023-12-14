@@ -62,7 +62,7 @@ sections.forEach((section) => {
   let expandTimeline;
   let expandTimeout;
 
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 1366) {
     section.addEventListener("click", (e) => {
       if (!isDragging && !section.classList.contains("active")) {
         const expandTimeline = gsap.timeline({

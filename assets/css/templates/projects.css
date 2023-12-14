@@ -3,6 +3,7 @@
 @import "project.css";
 @import "header.css";
 
+
 /* Section for each project */
 section {
   height: 30vh;
@@ -25,7 +26,7 @@ section.active {
 /* Hidden elements */
 .hidden {
   opacity: 0;
-  /*  display: none;*/
+/*  display: none;*/
   visibility: hidden;
   height: 0;
   overflow: hidden;
@@ -37,7 +38,7 @@ section.active {
   visibility: visible;
   height: auto;
   animation: fadeIn 0.75s ease-in-out;
-  /*  display: flex;*/
+/*  display: flex;*/
   transition: var(--transition); /* Transition opacity */
   /* display: block; Remove display property */
 }
@@ -48,7 +49,8 @@ section.active {
   transition: transform 0.3s ease-in-out;
 } */
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1366px) {
   .project-info {
     height: 100%;
     flex-direction: column-reverse;
@@ -71,7 +73,7 @@ section.active {
   }
   .summary {
     font-size: var(--mobile-body-text-size);
-    line-height: 1.1;
+    line-height: 1;
     height: 100%;
     min-width: 350px;
     max-width: 400px;
@@ -79,6 +81,7 @@ section.active {
   .hidden {
     opacity: 1;
     visibility: visible;
+    height: 100%;
     display: flex;
   }
   img {

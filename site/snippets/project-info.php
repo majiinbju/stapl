@@ -1,11 +1,12 @@
 <?php
-$detect = $page->detect();
-$isMobile = $detect->isMobile();
-$isTablet = $detect->isTablet();
-$isDesktop = !$isMobile && !$isTablet;
+		$detect = $page->detect();
+		$isMobile = $detect->isMobile();
+		$isTablet = $detect->isTablet();
+		$isLargeTablet = $detect->isTablet() && !$detect->is('iPhone') && !$detect->is('iPadMini');
+		$isMobileOrTablet = $isMobile || $isTablet || $isLargeTablet;
 ?>
 
-<?php if ($isMobile): ?>
+<?php if ($isMobileOrTablet): ?>
 		<li class="li project-info">
 				<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end mt-3">
 						<span class="icon">
@@ -25,49 +26,34 @@ $isDesktop = !$isMobile && !$isTablet;
 								<img src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 						<?php endif ?>
 						<ul class="tags tagsMobile">
-							<?php if ($project->typology()->isNotEmpty()): ?>
-							<li class="d-flex flex-column align-items-start">
-								<span class="sub-heading">Typology</span>
-								<span class="tag"><?= $project->typology() ?></span>
-							</li>
-							<?php endif ?>
-							<?php if ($project->Plotarea()->isNotEmpty()): ?>
-							<li class="d-flex flex-column align-items-start">
-								<span class="sub-heading">Plot Area</span>
-								<span class="tag"><?= $project->Plotarea() ?></span>
-							</li>
-							<?php endif ?>
-							<?php if ($project->Builtarea()->isNotEmpty()): ?>
-							<li class="d-flex flex-column align-items-start">
-								<span class="sub-heading">Built Area</span>
-								<span class="tag"><?= $project->Builtarea() ?></span>
-							</li>
-							<?php endif ?>
-							<?php if ($project->levels()->isNotEmpty()): ?>
-							<li class="d-flex flex-column align-items-start">
-								<span class="sub-heading">Levels</span>
-								<span class="tag"><?= $project->levels() ?></span>
-							</li>
-							<?php endif ?>
-							<?php if ($project->projectStatus()->isNotEmpty()): ?>
-							<li class="d-flex flex-column align-items-start">
-								<span class="sub-heading">Status</span>
-								<span class="tag"><?= $project->projectStatus() ?></span>
-							</li>
-							<?php endif ?>
-							<?php if ($project->year()->isNotEmpty()): ?>
-							<li class="d-flex flex-column align-items-start">
-								<span class="sub-heading">Design & Construction</span>
-								<span class="tag"><?= $project->year() ?></span>
-							</li>
-							<?php endif ?>
+								<!-- Tags content for mobile/tablet -->
+								
+										<?php if ($project->typology()->isNotEmpty()): ?>
+										<li class="d-flex flex-column align-items-start">
+											<span class="sub-heading">Typology</span>
+											<span class="tag"><?= $project->typology() ?></span>
+										</li>
+										<?php endif ?>
+										<?php if ($project->Plotarea()->isNotEmpty()): ?>
+										<li class="d-flex flex-column align-items-start">
+											<span class="sub-heading">Plot Area</span>
+											<span class="tag"><?= $project->Plotarea() ?></span>
+										</li>
+										<?php endif ?>
+										<?php if ($project->Builtarea()->isNotEmpty()): ?>
+										<li class="d-flex flex-column align-items-start">
+											<span class="sub-heading">Built Area</span>
+											<span class="tag"><?= $project->Builtarea() ?>
+										</span>
+										<?php endif ?>
+								
+								<!-- Add other tag sections as needed -->
 						</ul>
 						<?php if ($project->text()->isNotEmpty()) : ?>
 								<figcaption class="hidden summary">
 										<?= $project->text()->kirbytextinline() ?>
 								</figcaption>
 						<?php endif ?>
-						
 				</figure>
 		</li>
 <?php else: ?>

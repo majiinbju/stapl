@@ -1,16 +1,14 @@
-<?php
-$detect = $page->detect();
-$isMobile = $detect->isMobile();
-$isTablet = $detect->isTablet();
-$isDesktop = !$isMobile && !$isTablet;
-?>
-
 
 <?php snippet('header') ?>
+<?php
+		$detect = $page->detect();
+		$isMobile = $detect->isMobile();
+		$isTablet = $detect->isTablet();
+		$isLargeTablet = $detect->isTablet() && !$detect->is('iPhone') && !$detect->is('iPadMini');
+		$isMobileOrTablet = $isMobile || $isTablet || $isLargeTablet;
+?>
 
-
-<!-- Mobile -->
-<?php if ($isMobile): ?>
+<?php if ($isMobileOrTablet): ?>
 	<div class="container col-11 me-0">
 		<h1 class="pageTitle mb-5"><?= $page->title() ?></h1>
 		<span class="people-tag mb-5">
@@ -51,7 +49,7 @@ $isDesktop = !$isMobile && !$isTablet;
 
 <!-- PC -->
 <?php else: ?>
-<div class="container col-9 me-0">
+<div class="container col-12">
 	<h1 class="pageTitle mb-5"><?= $page->title() ?></h1>
 	<span class="people-tag mb-5">
 		Partners
@@ -61,7 +59,7 @@ $isDesktop = !$isMobile && !$isTablet;
 		<?php foreach ($page->children() as $person): ?>
 		<li class="d-flex justify-content-between mb-3 person align-items-start">
 			<!-- Column for name and description -->
-			<div class="d-flex flex-column col-6">
+			<div class="d-flex flex-column col-8">
 				<a class="d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse<?= $person->slug() ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
 					<div class="d-flex align-content-center">
 						<span class="person-name">

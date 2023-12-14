@@ -8,11 +8,10 @@
   align-items: center;
   transition: transform 0.3s ease-in-out;
 }
-
-@media only screen and (min-width: 1920px)
-{
+/* To fix center on larger screens */
+@media only screen and (min-width: 1920px) {
  .projects {
-  align-items: end;
+    align-items: end;
  }
 }
 

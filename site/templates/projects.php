@@ -4,7 +4,7 @@ $filterBy = param("filter");
 $projectsPage = page("projects");
 $projects = $projectsPage->children()->listed();
 if (!empty($filterBy)) {
-  $projects = $projects->filterBy("typology", $filterBy);
+	$projects = $projects->filterBy("typology", $filterBy);
 }
 ?>
 
