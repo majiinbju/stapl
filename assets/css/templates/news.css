@@ -2,8 +2,15 @@
 
 /* Image */
 .article-img {
-  width: 500px;
+  max-width: 400px;
 }
+/* For larger screens */
+@media only screen and (min-width: 1920px) {
+ .article-img {
+   max-width: 600px;
+ }
+}
+
 article h2 {
   color: var(--color-primary);
   font-size: var(--text-primary-size);

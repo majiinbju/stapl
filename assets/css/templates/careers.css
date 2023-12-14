@@ -1,4 +1,10 @@
 @import "header.css";
+
+.careers-body {
+  font-size: var(--body-text-size);
+  color: var(--color-primary);
+}
+
 .jobTable {
   font-weight: 300;
   color: var(--color-primary);
@@ -23,6 +29,13 @@
   border-top: 1px  solid rgba(0,0,0,0.2);
   margin: 10px 0px;
 }
-.jobTableRow:hover {
+/* .jobTableRow:hover {
   background-color: rgba(0, 0, 0, 0.1);
+} */
+.jobTable a.jobLink {
+  color: var(--color-secondary);
+  transition: var(--transition);
+}
+.jobTable a.jobLink:hover {
+  color: var(--color-primary);
 }

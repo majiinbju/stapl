@@ -8,6 +8,10 @@
 
 .sectionImageTitle {
   font-size: var(--text-primary-size);
+  color: var(--color-secondary);
+  transition: var(--transition);
+}
+figure:hover > .sectionImageTitle {
   color: var(--color-primary);
 }
 

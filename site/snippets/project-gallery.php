@@ -6,7 +6,7 @@
     ->crop(1280, 800)
     ->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" />
 		<figcaption class="ms-5 hidden summary">
-			<?= $image->caption()->smartypants() ?>
+			<?= $image->caption()->kirbytextinline() ?>
 		</figcaption>
 	</figure>
 	<?php else: ?>

@@ -6,16 +6,11 @@
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<div class="d-sm-flex container-fluid my-5">
 			<p class="col-sm-12 col-lg-5 me-5">
-				<?= $page->Column1() ?>
+				<?= $page->Column1()->kirbytextinline() ?>
 			</p>
 
 			<p class="col-sm-12 col-lg-5">
-				<?= $page->Column2() ?>
-				<br />
-				<br />
-				<b>Stapl</b>
-				<br />
-				<b>Founder & Creative Director</b>
+				<?= $page->Column2()->kirbytextinline() ?>
 			</p>
 		</div>
 	</section>
@@ -29,10 +24,10 @@
 				<!-- Section Text -->
 				<div class="d-sm-flex container-fluid my-5">
 					<p class="col-sm-12 col-lg-5 me-5">
-						<?= $aboutSection->Column1() ?>
+						<?= $aboutSection->Column1()->kirbytextinline() ?>
 					</p>
 					<p class="col-sm-12 col-lg-5">
-						<?= $aboutSection->Column1() ?>
+						<?= $aboutSection->Column1()->kirbytextinline() ?>
 					</p>
 				</div>
 				<!-- Section Galleries -->

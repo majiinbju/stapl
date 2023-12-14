@@ -38,7 +38,7 @@
 				<?php endif ?>
 					<p class="person-body mt-3">
 				<?php if ($person->description()->isNotEmpty()): ?>
-						<?= $person->description() ?>
+						<?= $person->description()->kirbytextinline() ?>
 				<?php endif ?>
 					</p>	
 				</div>			
@@ -74,9 +74,9 @@
 						<?php endif ?>
 					</span>
 				</a>
-				<p class="person-body mt-3 collapse" id="collapse<?= $person->slug() ?>" style="transition: all 0.75s ease-in-out;">
+				<p class="person-body mt-3 collapse" id="collapse<?= $person->slug() ?>" style="transition: all 0.5s ease-in-out;">
 					<?php if ($person->description()->isNotEmpty()): ?>
-						<?= $person->description() ?>
+						<?= $person->description()->kirbytextinline() ?>
 					<?php endif ?>
 				</p>
 			</div>
