@@ -11,7 +11,7 @@ $isDesktop = !$isMobile && !$isTablet;
 						<span class="icon">
 								<?php if ($project->icon()->isNotEmpty()): ?>
 										<?php if ($icon = $project->icon()): ?>
-												<img src="<?= $icon->crop(50)->url() ?>" alt="<?= $icon->alt() ?>">
+												<img src="<?= $icon->crop(50)->url() ?>" loading="lazy" alt="<?= $icon->alt() ?>">
 										<?php endif ?>
 								<?php endif ?>
 						</span>
@@ -22,7 +22,7 @@ $isDesktop = !$isMobile && !$isTablet;
 				</div>
 				<figure class="d-flex">
 						<?php if ($cover = $project->cover()): ?>
-								<img src="<?= $cover->crop(1280, 800)->url() ?>" alt="<?= $cover->alt() ?>">
+								<img src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 						<?php endif ?>
 						<ul class="tags tagsMobile">
 							<?php if ($project->typology()->isNotEmpty()): ?>
@@ -76,7 +76,7 @@ $isDesktop = !$isMobile && !$isTablet;
 				<!-- Project Cover -->
 				<figure class="d-flex">
 						<?php if ($cover = $project->cover()): ?>
-								<img src="<?= $cover->crop(1280, 800)->url() ?>" alt="<?= $cover->alt() ?>">
+								<img src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 						<?php endif ?>
 						<?php if ($project->text()->isNotEmpty()) : ?>
 								<figcaption class="hidden summary">

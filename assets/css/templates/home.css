@@ -81,6 +81,7 @@ section.active {
   .hidden {
     opacity: 1;
     visibility: visible;
+    height: 100%;
     display: flex;
   }
   img {
