@@ -9,12 +9,12 @@
   transition: transform 0.3s ease-in-out;
 }
 
-@media only screen and (min-width: 1920px)  
-{ 
+@media only screen and (min-width: 1920px)
+{
  .projects {
   align-items: end;
  }
-}  
+}
 
 /* Project Info */
 /* Horizontal wrapper for tags, cover & summary */
@@ -93,7 +93,6 @@
 .summary {
   line-height: 19px;
   letter-spacing: 0.56px;
-  font-size: 14px;
   min-width: 300px;
   max-width: 500px;
   font-weight: normal;

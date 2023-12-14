@@ -21,6 +21,7 @@ Icon
 *.sublime-workspace
 /.vscode
 /.idea
+/.nova
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
@@ -48,3 +49,7 @@ Icon
 # ---------------
 
 /site/config/.license
+
+# Assets
+# ---------------
+/assets/type/
