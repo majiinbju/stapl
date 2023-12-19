@@ -12,9 +12,9 @@
 		<div class="container-fluid">
 
 				<!-- Stapl Logo -->
-				<a href="<?= $site->url() ?>" class="navbar-brand" width="10%" style="opacity:0">
+				<div href="<?= $site->url() ?>" class="navbar-brand" width="10%" style="opacity:0">
 						<img src="../assets/logo/stapl-logo.svg" alt="Stapl logo" width="100px" class="d-inline-block align-text-top logo p-1">
-				</a>
+				</div>
 				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 				</button>
