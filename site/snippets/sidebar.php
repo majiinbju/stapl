@@ -6,7 +6,7 @@
 		</svg>	
 	</div>
 	<span class="flip-logo-back">
-		<i class="fa-solid fa-bars fa-sharp  barIcon" style="color:var(--color-secondary-hover);"></i>
+		<i class="fa-solid fa-bars fa-sharp  barIcon" style="color:var(--color-primary);"></i>
 	</span>
 </div>
 </a>
