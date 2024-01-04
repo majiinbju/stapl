@@ -15,5 +15,17 @@ sections:
         icon: tag
         required: true
         help: Name of position.
+      area:
+        label: Job Area
+        type: text
+        icon: tag
+        required: true
+        help: Name of job location.
+      deadline:
+        label: Deadline
+        type: date
+        icon: clock
+        required: true
+        help: Deadline to apply for job.
 
 

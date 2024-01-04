@@ -1,7 +1,7 @@
 @import "carousel.css";
 @import "header.css";
 
-.about p {
+.aboutBody {
   color: var(--color-primary);
   font-size: var(--body-text-size);
 }

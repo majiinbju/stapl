@@ -9,7 +9,7 @@
   transition: transform 0.3s ease-in-out;
 }
 /* To fix center on larger screens */
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1880px) {
  .projects {
     align-items: end;
  }
@@ -27,7 +27,7 @@
   margin: 0rem 1rem;
   /* Etc. */
   line-height: 1.1;
-  animation: fadeIn 0.75s ease-in-out;
+  /* animation: fadeIn 0.75s ease-in-out; */
 }
 
 .project-title {

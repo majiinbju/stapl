@@ -41,3 +41,25 @@ sections:
     image:
       ratio: 4/5
       cover: true
+  pagesections:
+    headline: Published
+    label: Published Carousels
+    help: The section is online and listed in the blog
+    type: pages
+    layout: cards
+    template: pagesection
+    status: published
+    image:
+      ratio: 4/4
+      cover: true
+  drafts:
+    headline: Drafts
+    label: Draft Carousels
+    help: The section is still in draft mode. It can only be seen beditors with Panel access.
+    type: pages
+    layout: cards
+    template: pagesection
+    status: drafts
+    image:
+      ratio: 4/4
+      cover: true

@@ -23,8 +23,7 @@ $isDesktop = !$isMobile && !$isTablet;
 	]) ?>
 </head>
 
-<body>
-<main id="id">
+<body data-barba="wrapper">
 
 <?php snippet('topbar') ?>
 <?php snippet('sidebar') ?>

@@ -1,3 +1,5 @@
+@import "templates/animation.css";
+
 @font-face {
     font-family: Everett;
     src: url("../type/everett.otf") format("opentype");
@@ -35,10 +37,9 @@ body {
   /* min-height: 100vh; */
   /* height: 0; */
   font-family: Everett, Helvetica, Arial, system-ui;
-  animation: fadeIn 0.75s ease-in-out;
 }
 ::-webkit-scrollbar { width: 0 !important }
-main {
+.main {
   width : 100%;
   min-height: 100vh;
   position : relative;
@@ -81,6 +82,17 @@ main {
   color: var(--color-primary);
 }
 
+.backToTop {
+  font-size: var(--text-primary-size);
+  color: var(--color-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.backToTop:hover {
+  color: var(--color-primary);
+}
 
 /* Default Mobile Stylings */
 @media screen and (max-width: 768px) {

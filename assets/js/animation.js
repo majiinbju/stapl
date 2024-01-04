@@ -1,24 +1,41 @@
-// Animation on load
-const tl = gsap.timeline()
-tl.add('start')
-
-tl.to(".wall", {
-  height: '0vh',
-  duration: 1,
-  delay: 1
-}, 'start')
-tl.to(".animation", {
-  fontSize: '16px',
-  top: 0,
-  left: 0,
-  position: 'absolute',
-  height: '50px',
-  width: '150px',
-  color: 'black',
-  duration: 0.85,
-  delay: 1
-}, 'start')
-tl.to(".logo-shrink", {
-  scale: 1,
-  duration: 0.5
-}, 'start')
+// document.addEventListener('DOMContentLoaded', function() {
+//   const mainContent = document.getElementById('main-content');
+//   const sideNav = document.getElementById('sideNavigation')
+//   const navLinks = sideNav.querySelectorAll('nav a');
+//
+//   // Variable to track initial page load
+//   let initialLoad = true;
+//
+//   navLinks.forEach(link => {
+//     link.addEventListener('click', function(event) {
+//       event.preventDefault();
+//       const href = this.getAttribute('href');
+//       loadPage(href);
+//       sideNav.classList.remove('active'); // Close the navbar upon link click
+//     });
+//   });
+//
+//   function loadPage(url) {
+//     fetch(url)
+//       .then(response => response.text())
+//       .then(html => {
+//         const parser = new DOMParser();
+//         const newDoc = parser.parseFromString(html, 'text/html');
+//         const newContent = newDoc.querySelector('main').innerHTML;
+//
+//         if (initialLoad) {
+//           // For initial load, directly set the content without animation class
+//           mainContent.innerHTML = newContent;
+//           initialLoad = false;
+//         } else {
+//           // For subsequent transitions, apply animation class
+//           mainContent.innerHTML = newContent;
+//           mainContent.classList.add('active'); // Add class to trigger the animation
+//           setTimeout(() => {
+//             mainContent.classList.remove('page-enter'); // Remove initial animation class
+//           }, 300); // Adjust according to your CSS transition duration
+//         }
+//       })
+//       .catch(error => console.error('Error:', error));
+//   }
+// });

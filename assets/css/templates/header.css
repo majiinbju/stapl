@@ -34,9 +34,16 @@
 }
 .barIcon {
   font-size: 2rem;
+  color:var(--color-secondary);
   transform: scale(1.8,1);
   padding-left: 5px;
+  transition: var(--transition);
 }
+
+.barIcon:hover {
+  color: var(--color-primary);
+}
+
 /* Link item stylings */
 .nav-item {
   float: left;

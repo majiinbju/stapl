@@ -1,4 +1,5 @@
 @import "header.css";
+@import "carousel.css";
 
 .careers-body {
   font-size: var(--body-text-size);
@@ -6,6 +7,8 @@
 }
 
 .jobTable {
+  display: table;
+  table-layout: fixed;
   font-weight: 300;
   color: var(--color-primary);
 }
@@ -37,5 +40,14 @@
   transition: var(--transition);
 }
 .jobTable a.jobLink:hover {
+  color: var(--color-primary);
+}
+
+.sectionImageTitle {
+  font-size: var(--text-primary-size);
+  color: var(--color-secondary);
+  transition: var(--transition);
+}
+figure:hover > .sectionImageTitle {
   color: var(--color-primary);
 }

@@ -1,0 +1,10 @@
+title: Home
+icon: home
+fields:
+  Email:
+    type: email
+  navigation:
+    label: Navigation
+    type: navigation
+    levels: 5
+    help: Categories for Navigation
