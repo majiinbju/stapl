@@ -8,8 +8,7 @@ if (!empty($filterBy)) {
 ?>
 
 <?php snippet("header"); ?>
-<main>
-
+<main id="top">
 	<div class="wrapper">
 		<div class="container-fluid projects p-0">
 			<?php foreach ($projects as $project): ?>

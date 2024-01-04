@@ -94,6 +94,13 @@ body {
   color: var(--color-primary);
 }
 
+.hidden-during-drag {
+  visibility: visible !important;
+  opacity: 1 !important;
+  /* Adjust any other styles as needed to keep the elements visible */
+}
+
+
 /* Default Mobile Stylings */
 @media screen and (max-width: 768px) {
   .pageTitle {
