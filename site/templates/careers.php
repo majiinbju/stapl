@@ -12,28 +12,7 @@
 				<?= $page->text2()->kirbytextinline() ?>
 			</p>
 		</div>
-		<!-- Render Job Postings -->
-		<table class="w-100 jobTable text-uppercase p-2">
-			<tr class="d-flex">
-				<th class="col-4">Title</th>
-				<th class="col-4">Job Area</th>
-				<th class="col-4">Deadline</th>
-				<th class="col-4">Apply Now</th>
-			</tr>
-			<?php foreach ($page->children()->filterBy('intendedTemplate', 'job') as $posting): ?>
-			<tr class="d-flex jobTableRow py-2">
-				<td class="col-4"><?= $posting->position() ?></td>
-				<td class="col-4"><?= $posting->area() ?></td>
-				<td class="col-4"><?= $posting->deadline() ?></td>
-				<td class="col-4">
-					<a href="<?= $posting->link() ?>" class="jobLink">
-						Apply Here
-					</a>
-				</td>
-			</tr>
-			<?php endforeach ?>
-		</table>
-
+		
 		<!-- Render Carousels -->
 		<?php foreach ($page->children()->filterBy('intendedTemplate', 'pagesection') as $pageSection): ?>
 		<section class="container">
@@ -75,7 +54,32 @@
 			</div>
 		</section>
 		<?php endforeach ?>
-
+		
+		<!-- Render Job Postings -->
+		<h2 class="sectionTitle my-5 py-5">
+			Open Jobs
+		</h2>
+		
+		<table class="w-100 jobTable text-uppercase mt-5 p-2">
+			<tr class="d-flex">
+				<th class="col-3">Title</th>
+				<th class="col-3">Job Area</th>
+				<th class="col-3">Deadline</th>
+				<th class="col-3">Apply Now</th>
+			</tr>
+			<?php foreach ($page->children()->filterBy('intendedTemplate', 'job') as $posting): ?>
+			<tr class="d-flex jobTableRow py-2">
+				<td class="col-3"><?= $posting->position() ?></td>
+				<td class="col-3"><?= $posting->area() ?></td>
+				<td class="col-3"><?= $posting->deadline() ?></td>
+				<td class="col-3">
+					<a href="<?= $posting->link() ?>" class="jobLink">
+						Apply Here
+					</a>
+				</td>
+			</tr>
+			<?php endforeach ?>
+		</table>
 
 	</section>
 </main>
