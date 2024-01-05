@@ -25,7 +25,7 @@ section.active {
 /* Hidden elements */
 .hidden {
   opacity: 0;
-/*  display: none;*/
+  /* display: none; */
   visibility: hidden;
   height: 0;
   overflow: hidden;
@@ -37,7 +37,7 @@ section.active {
   visibility: visible;
   height: auto;
   animation: fadeIn 0.75s ease-in-out;
-/*  display: flex;*/
+  display: flex;
   transition: var(--transition); /* Transition opacity */
   /* display: block; Remove display property */
 }
