@@ -17,7 +17,7 @@ sections.forEach((section) => {
   const makeElementsDraggable = () => {
     draggableElements.forEach((element) => {
       if (section === activeProject) {
-        gsap.set(element, { x: 0, pointerEvents: "auto" });
+        gsap.set(element, {pointerEvents: "auto" });
         Draggable.create(element, {
           type: "x",
           bounds: element.parentElement,
@@ -114,8 +114,6 @@ sections.forEach((section) => {
         height: "80vh",
         width: "100%",
         top: `calc(50% - 40vh)`,
-        left: "0",
-        x: "0",
         transformOrigin: "center center",
       });
 
@@ -126,10 +124,10 @@ sections.forEach((section) => {
           expandTimeline.to(
             s,
             {
-              height: "70vh",
+              height: "65vh",
               width: "100%",
               onComplete: () => {
-                gsap.set(s, { top: "auto", left: "auto", x: "auto" });
+                gsap.set(s, { top: "auto", x: "auto" });
               },
             },
             "-=0.75"
@@ -140,9 +138,6 @@ sections.forEach((section) => {
       expandTimeline.to(
         project,
         {
-          x: "0",
-          left: "0",
-          scrollLeft: 0,
           onComplete: () => {
             project.classList.add("active");
           },
@@ -156,14 +151,28 @@ sections.forEach((section) => {
       const timeline = gsap.timeline({ defaults: { duration: 0.75, ease: "power2.out" } });
 
       timeline.to(project, {
-        height: "70vh",
+        height: "65vh",
         width: "100%",
         onComplete: () => {
-          hidden.forEach((hide) => {
-            hide.classList.remove("showObject");
-          });
-          makeElementsDraggable(); // Disable draggable elements after shrinking
+          // Add logic if needed
         },
+      });
+      sections.forEach((s) => {
+        if (s !== project && s.classList.contains("active")) {
+          s.classList.remove("active");
+
+          expandTimeline.to(
+            s,
+            {
+              height: "65vh",
+              width: "100%",
+              onComplete: () => {
+                gsap.set(s, { top: "auto", x: "auto" });
+              },
+            },
+            "-=0.75"
+          );
+        }
       });
 
       activeProject = null; // Reset active project after shrinking
@@ -179,6 +188,33 @@ sections.forEach((section) => {
     lastTouch = new Date().getTime();
   });
 });
+
+window.addEventListener("scroll", () => {
+  let isProjectInView = false; // Flag to check if any active project is in view
+
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (activeProject === section && (rect.top > window.innerHeight || rect.bottom < 0)) {
+      shrinkProject(activeProject);
+      activeProject.classList.remove("active");
+      activeProject = null;
+    }
+
+    if (section.classList.contains("active")) {
+      isProjectInView = true; // Set flag if any project with the 'active' class is in view
+    }
+  });
+
+  // Remove 'active' class from all projects if no 'active' project is in view
+  if (!isProjectInView) {
+    sections.forEach((section) => {
+      if (section.classList.contains("active")) {
+        section.classList.remove("active");
+      }
+    });
+  }
+});
+
 
 window.addEventListener("wheel", (event) => {
   const currentTime = new Date().getTime();
@@ -246,13 +282,10 @@ function shrinkProject(project) {
   const hidden = project.querySelectorAll(".hidden");
 
   timeline.to(project, {
-    height: "70vh",
+    height: "65vh",
     width: "100%",
     onComplete: () => {
-      hidden.forEach((hide) => {
-        hide.classList.remove("showObject");
-      });
-      makeElementsNotDraggable(); // Disable draggable elements after shrinking
+      // Add logic if needed
     },
   });
 }

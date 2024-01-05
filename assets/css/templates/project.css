@@ -5,14 +5,14 @@
   padding: 0rem;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
   transition: transform 0.3s ease-in-out;
 }
 /* To fix center on larger screens */
-@media only screen and (min-width: 1880px) {
+@media only screen and (min-width: 1600px) {
  .projects {
     align-items: end;
- }
+ }x
 }
 
 /* Project Info */
@@ -106,9 +106,5 @@ figure {
 }
 
 /* Width for Images */
-.li>figure img {
-  color: #212529;
-  grid-area: auto;
-  display: block;
-}
+
 

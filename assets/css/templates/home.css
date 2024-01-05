@@ -9,8 +9,6 @@ section {
   width: 80%;
   position: relative;
   display: flex;
-  grid-area: center;
-  justify-content: center;
   align-content: center;
   transition: var(--transition);
   transform-origin: center; /* Set the transform origin to the center */
@@ -37,7 +35,7 @@ section.active {
   visibility: visible;
   height: auto;
   animation: fadeIn 0.75s ease-in-out;
-  display: flex;
+  /* display: flex; */
   transition: var(--transition); /* Transition opacity */
   /* display: block; Remove display property */
 }
@@ -47,6 +45,15 @@ section.active {
   transform: scale(0.95);
   transition: transform 0.3s ease-in-out;
 } */
+
+.active .project-img {
+  height: 80vh;
+}
+
+.project-img {
+  height: 65vh;
+  transition: var(--transition);
+}
 
 
 @media screen and (max-width: 1366px) {
