@@ -17,7 +17,9 @@ sections.forEach((section) => {
   const makeElementsDraggable = () => {
     draggableElements.forEach((element) => {
       if (section === activeProject) {
-        gsap.set(element, {pointerEvents: "auto" });
+        gsap.set(element, { pointerEvents: "auto" });
+        Draggable.get(element)?.kill(); // Remove existing Draggable instances
+
         Draggable.create(element, {
           type: "x",
           bounds: element.parentElement,
@@ -30,7 +32,8 @@ sections.forEach((section) => {
           },
         });
       } else {
-        gsap.set(element, { x: 0, pointerEvents: "none" });
+        gsap.set(element, {pointerEvents: "none" });
+        Draggable.get(element)?.kill(); // Remove Draggable from inactive elements
       }
     });
   };
@@ -71,21 +74,21 @@ sections.forEach((section) => {
     section.addEventListener("click", (e) => {
       if (!isDragging && !section.classList.contains("active")) {
         if (activeProject && activeProject !== section) {
+          // Shrink the previously active project
           shrinkProject(activeProject);
+          makeElementsNotDraggable(); // Make elements not draggable for inactive project
         }
 
         expandProject(section);
         activeProject = section;
-        makeElementsDraggable(); // Make elements draggable when the section is opened
+        makeElementsDraggable(); // Make elements draggable for the newly active project
+      } else if (section.classList.contains("active")) {
+        activeProject = section; // Update the active project on click if it's already active
       }
     });
 
     // Function to expand the project
     function expandProject(project) {
-      const expandTimeline = gsap.timeline({
-        defaults: { duration: 0.75, ease: "power2.out" },
-      });
-
       gsap.to(window, {
         duration: 1,
         scrollTo: {
@@ -108,6 +111,10 @@ sections.forEach((section) => {
             },
           });
         },
+      });
+
+      const expandTimeline = gsap.timeline({
+        defaults: { duration: 0.75, ease: "power2.out" },
       });
 
       expandTimeline.to(project, {
@@ -150,6 +157,8 @@ sections.forEach((section) => {
     function shrinkProject(project) {
       const timeline = gsap.timeline({ defaults: { duration: 0.75, ease: "power2.out" } });
 
+      const hidden = project.querySelectorAll(".hidden");
+
       timeline.to(project, {
         height: "65vh",
         width: "100%",
@@ -161,7 +170,7 @@ sections.forEach((section) => {
         if (s !== project && s.classList.contains("active")) {
           s.classList.remove("active");
 
-          expandTimeline.to(
+          timeline.to(
             s,
             {
               height: "65vh",
@@ -176,6 +185,18 @@ sections.forEach((section) => {
       });
 
       activeProject = null; // Reset active project after shrinking
+    }
+
+    function makeElementsNotDraggable() {
+      sections.forEach((section) => {
+        if (section !== activeProject) {
+          const draggableElements = section.querySelectorAll(".draggable");
+          draggableElements.forEach((element) => {
+            gsap.set(element, {pointerEvents: "none" });
+            Draggable.get(element)?.kill(); // Remove Draggable from inactive elements
+          });
+        }
+      });
     }
   }
 
@@ -214,7 +235,6 @@ window.addEventListener("scroll", () => {
     });
   }
 });
-
 
 window.addEventListener("wheel", (event) => {
   const currentTime = new Date().getTime();
@@ -275,28 +295,3 @@ function updateScroll() {
   }
   requestAnimationFrame(updateScroll);
 }
-
-function shrinkProject(project) {
-  const timeline = gsap.timeline({ defaults: { duration: 0.75, ease: "power2.out" } });
-
-  const hidden = project.querySelectorAll(".hidden");
-
-  timeline.to(project, {
-    height: "65vh",
-    width: "100%",
-    onComplete: () => {
-      // Add logic if needed
-    },
-  });
-}
-
-function makeElementsNotDraggable() {
-  sections.forEach((section) => {
-    const draggableElements = section.querySelectorAll(".draggable");
-    draggableElements.forEach((element) => {
-      gsap.set(element, { x: 0, pointerEvents: "none" });
-    });
-  });
-}
-
-updateScroll();
