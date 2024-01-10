@@ -269,7 +269,7 @@ window.addEventListener("wheel", (event) => {
         bodyElement.classList.add("expand");
         setTimeout(() => {
           bodyElement.classList.remove("expand");
-        }, 100);
+        }, 300);
       }
     }
   }
