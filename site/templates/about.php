@@ -55,3 +55,4 @@
 	<?php endforeach ?>
 </main>
 <?php snippet('footer') ?>
+<script async="true" defer="true" model="true" src="http://stapl.test/assets/js/about.js"></script>

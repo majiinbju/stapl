@@ -17,10 +17,9 @@
 
 <!-- Custom Scripts -->
 <?= js([
-		'assets/js/index.js',
 		'assets/js/animation.js',
 		'@auto'
-], ['async' => true, 'defer' => true, 'model' => true]) ?>
+], ['async' => 'true', 'defer' => 'true', 'model' => 'true']) ?>
 
 
 </body>

@@ -1,4 +1,4 @@
-<a class="menu-toggle top-0 mt-3 mt-lg-1 position-fixed mx-4" data-bs-toggle="offcanvas" href="#offcanvasSide" role="button" aria-controls="offcanvasSide" style="z-index:300000000;">
+<a class="menu-toggle top-0 mt-3 mt-lg-1 position-fixed mx-4" data-bs-toggle="offcanvas" href="#offcanvasSide" role="button" aria-controls="offcanvasSide" style="z-index:300000000;" id="offCanvasSide">
 <div class="d-flex flex-column align-items-start justify-content-start">
 	<div class="">
 		<svg xmlns="http://www.w3.org/2000/svg" width="80" viewBox="0 0 807 280">
