@@ -21,4 +21,4 @@ if (!empty($filterBy)) {
 	</div>
 </main>
 <?php snippet("footer"); ?>
-<script async="true" defer="true" model="true" src="http://stapl.test/assets/js/home.js"></script>
+<script async="true" defer="true" model="true" src="assets/js/home.js"></script>

@@ -84,4 +84,5 @@
 	</section>
 </main>
 <?php snippet('footer') ?>
-<script async="true" defer="true" model="true" src="http://stapl.test/assets/js/careers.js"></script>
+<script async="true" defer="true" model="true" src="assets/js/careers.js"></script>
+
