@@ -262,10 +262,6 @@ window.addEventListener("wheel", (event) => {
         event.deltaX !== undefined ||
         event.deltaY !== undefined
       ) {
-        if (activeProject) {
-          shrinkProject(activeProject);
-          activeProject = null;
-        }
         bodyElement.classList.add("expand");
         setTimeout(() => {
           bodyElement.classList.remove("expand");
