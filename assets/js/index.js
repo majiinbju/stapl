@@ -1,4 +1,4 @@
-gsap.registerPlugin(Draggable);
+gsap.registerPlugin(ScrollToPlugin, Draggable);
 
 const bodyElement = document.querySelector(".wrapper");
 const mainElement = document.querySelector("main");
@@ -32,7 +32,7 @@ sections.forEach((section) => {
           },
         });
       } else {
-        gsap.set(element, {pointerEvents: "none" });
+        gsap.set(element, { pointerEvents: "none" });
         Draggable.get(element)?.kill(); // Remove Draggable from inactive elements
       }
     });
@@ -79,9 +79,22 @@ sections.forEach((section) => {
           makeElementsNotDraggable(); // Make elements not draggable for inactive project
         }
 
-        expandProject(section);
-        activeProject = section;
-        makeElementsDraggable(); // Make elements draggable for the newly active project
+        // Calculate the scroll position to center the project
+        const scrollPosition = section.offsetTop + (section.clientHeight - window.innerHeight) / 2;
+
+        gsap.to(window, {
+          duration: 0.75,
+          scrollTo: {
+            y: scrollPosition,
+            offsetY: window.innerHeight / 2,
+          },
+          ease: "power2.out",
+          onComplete: () => {
+            expandProject(section);
+            activeProject = section;
+            makeElementsDraggable(); // Make elements draggable for the newly active project
+          },
+        });
       } else if (section.classList.contains("active")) {
         activeProject = section; // Update the active project on click if it's already active
       }
@@ -90,7 +103,7 @@ sections.forEach((section) => {
     // Function to expand the project
     function expandProject(project) {
       gsap.to(window, {
-        duration: 1,
+        duration: 0.75,
         scrollTo: {
           y:
             project.offsetTop +
@@ -161,11 +174,12 @@ sections.forEach((section) => {
 
       timeline.to(project, {
         height: "65vh",
-        width: "100%",
         onComplete: () => {
           // Add logic if needed
         },
-      });
+      },
+      "-=0.75"
+    );
       sections.forEach((s) => {
         if (s !== project && s.classList.contains("active")) {
           s.classList.remove("active");
@@ -174,7 +188,6 @@ sections.forEach((section) => {
             s,
             {
               height: "65vh",
-              width: "100%",
               onComplete: () => {
                 gsap.set(s, { top: "auto", x: "auto" });
               },
@@ -192,7 +205,7 @@ sections.forEach((section) => {
         if (section !== activeProject) {
           const draggableElements = section.querySelectorAll(".draggable");
           draggableElements.forEach((element) => {
-            gsap.set(element, {pointerEvents: "none" });
+            gsap.set(element, { pointerEvents: "none" });
             Draggable.get(element)?.kill(); // Remove Draggable from inactive elements
           });
         }
