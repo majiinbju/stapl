@@ -2,7 +2,6 @@
 $homePage = page('home');
 ?>
 
-<?php if ($homePage->navigation()->isNotEmpty()) : ?>
 	<div class="container-fluid w-75 d-flex justify-content-center contact-container mb-5">
 		<navbar class="w-100 d-flex justify-content-between">
 			<ul class="ul w-100 d-flex justify-content-between">
@@ -39,4 +38,3 @@ $homePage = page('home');
 				</li>
 			</ul>
 	</div>
-<?php endif ?>
