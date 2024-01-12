@@ -6,7 +6,7 @@ $isDesktop = !$isMobile && !$isTablet;
 ?>
 
 <?php snippet('header') ?>
-<main id="swup" class="transition-slide">
+<main>
 
 	<?php if ($isMobile): ?>
 	<section class="container-fluid">

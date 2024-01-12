@@ -7,7 +7,7 @@
 ?>
 <?php snippet('header') ?>
 
-<main id="swup" class="transition-slide">
+<main>
 
 	<?php if ($isMobileOrTablet): ?>
 	<div class="container col-11 me-0">

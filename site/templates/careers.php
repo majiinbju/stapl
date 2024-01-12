@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<main id="swup" class="transition-slide">
+<main>
 
 	<div class="container col-12" id="section">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
@@ -84,5 +84,4 @@
 			</div>
 </main>
 <?php snippet('footer') ?>
-<script async="true" defer="true" type="module" src="assets/js/careers.js"></script>
 

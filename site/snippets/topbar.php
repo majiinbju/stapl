@@ -27,13 +27,13 @@
 				<!--  -->
 				<?php if($nav->children()->isNotEmpty()): ?>
 				<li class="nav-item mx-lg-3 dropdown">
-					<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> class="animated dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 						<?php echo $nav->text() ?>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-end text-end border-0 p-2">
 						<?php foreach($nav->children()->toStructure() as $child): ?>
 						<li class="dropdown-item p-0">
-							<a href="<?php echo $child->url() ?>" class="animated">
+							<a href="<?php echo $child->url() ?>" id="faderLink">
 								<?php echo $child->text() ?>
 							</a>
 						</li>
@@ -44,7 +44,7 @@
 
 				<?php if($nav->children()->isEmpty()): ?>
 				<li class="nav-item mx-lg-3">
-					<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> class="animated ">
+					<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> id="faderLink">
 						<?php echo $nav->text() ?>
 					</a>
 				</li>

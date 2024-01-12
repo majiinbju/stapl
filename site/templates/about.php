@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<main id="swup" class="transition-slide">
+<main>
 	<div class="container-fluid w-75">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<div class="d-sm-flex container-fluid my-5">
@@ -55,5 +55,4 @@
 	<?php endforeach ?>
 </main>
 <?php snippet('footer') ?>
-<script async="true" defer="true" model="true" src="assets/js/about.js"></script>
 
