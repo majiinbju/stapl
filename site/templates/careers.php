@@ -82,10 +82,7 @@
 		</table>
 
 			</div>
-			<?= js([
-		'assets/js/animation.js',
-		'@auto'
-	], ['defer', 'type' => 'module']) ?>
 </main>
 <?php snippet('footer') ?>
+<script async="true" defer="true" type="module" src="assets/js/careers.js"></script>
 
