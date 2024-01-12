@@ -77,6 +77,10 @@ $isDesktop = !$isMobile && !$isTablet;
 		<?php endforeach ?>
 	</div>
 	<?php endif ?>
+	<?= js([
+		'assets/js/animation.js',
+		'@auto'
+	], ['defer', 'type' => 'module']) ?>
 </main>
 
 <?php snippet('footer') ?>

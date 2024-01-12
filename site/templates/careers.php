@@ -82,6 +82,10 @@
 		</table>
 
 			</div>
+			<?= js([
+		'assets/js/animation.js',
+		'@auto'
+	], ['defer', 'type' => 'module']) ?>
 </main>
 <?php snippet('footer') ?>
 

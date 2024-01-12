@@ -19,5 +19,9 @@ if (!empty($filterBy)) {
 	<div class="my-5 py-5 container d-flex justify-content-center">
 		<a href="#top" class="backToTop">Back to Top</a>
 	</div>
+	<?= js([
+		'assets/js/animation.js',
+		'@auto'
+	], ['defer', 'type' => 'module']) ?>
 </main>
 <?php snippet("footer"); ?>
