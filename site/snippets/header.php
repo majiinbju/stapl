@@ -21,9 +21,14 @@ $isDesktop = !$isMobile && !$isTablet;
 		'assets/css/index.css',
 		'@auto'
 	]) ?>
+	<!-- Custom Scripts -->
+	<?= js([
+		'assets/js/animation.js',
+		'@auto'
+	], ['defer' => 'true', 'type' => 'module']) ?>
 </head>
 
 <body data-barba="wrapper">
 
-<?php snippet('topbar') ?>
-<?php snippet('sidebar') ?>
+	<?php snippet('topbar') ?>
+	<?php snippet('sidebar') ?>

@@ -1,4 +1,9 @@
 @import "templates/animation.css";
+@import "templates/about.css";
+@import "templates/contact.css";
+@import "templates/careers.css";
+@import "templates/news.css";
+@import "templates/people.css";
 
 @font-face {
     font-family: Everett;

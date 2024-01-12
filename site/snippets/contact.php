@@ -1,38 +1,42 @@
 <?php
-	$homePage = page('home');
+$homePage = page('home');
 ?>
-	
-	<?php if($homePage->navigation()->isNotEmpty()): ?>
+
+<?php if ($homePage->navigation()->isNotEmpty()) : ?>
 	<div class="container-fluid w-75 d-flex justify-content-center contact-container mb-5">
 		<navbar class="w-100 d-flex justify-content-between">
-			<!-- For loop for navigation items -->
-			<?php foreach($homePage->navigation()->toStructure() as $nav): ?>
-			<!--  -->
-			<?php if($nav->children()->isNotEmpty()): ?>
-			
-				<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> class="animated dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-					<?php echo $nav->title() ?>
-					<?php echo $nav->text() ?>
-				</a>
-				<ul class="dropdown-menu dropdown-menu-end text-end border-0 p-2">
-					<?php foreach($nav->children()->toStructure() as $child): ?>
-					<li class="dropdown-item p-0">
-						<a href="<?php echo $child->url() ?>" class="animated">
-							<?php echo $child->text() ?>
-						</a>
-					</li>
-					<?php endforeach ?>
-				</ul>
-			<?php endif ?>
-			
-			<?php if($nav->children()->isEmpty()): ?>
-			
-				<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> class="animated ">
-					<?php echo $nav->text() ?>
-				</a>
-			<?php endif ?>
-			<?php endforeach ?>
-		</navbar>
-		
+			<ul class="ul w-100 d-flex justify-content-between">
+				<li class="col-1">
+					<!-- Email -->
+					<a href="mailto:soyuztalibarchitects@gmail.com" target="_blank" class="animated" aria-expanded="false">
+						Email ↗
+					</a>
+				</li>
+				<li class="col-1">
+					<!-- Office -->
+					<a href="#collapseOffice" class="animated dropdown-toggle" data-bs-toggle="collapse" aria-expanded="false">
+						Office
+					</a>
+					<p class="collapse footer-text" id="collapseOffice" aria-controls="collapseOffice">
+						1405/1406, 14th Floor,</br>
+						Kesar Solitaire, Plot no. 5,</br>
+						Sector - 19,Off Palm Beach Road,</br>
+						Sanpada, Navi Mumbai - 400 705
+					</p>
+				</li>
+				<li class="col-1">
+					<a href="#collapseSocial" class="animated dropdown-toggle" data-bs-toggle="collapse" aria-expanded="false">
+						Social
+					</a>
+					<ul class="flex-column collapse ul footer-text" id="collapseSocial" aria-controls="collapseSocial">
+						<li>
+							<a href="https://www.instagram.com/soyuz_talib_architects" target="_blank">Instagram ↗</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/Soyuz.Kavita" target="_blank">Facebook ↗</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
 	</div>
-	<?php endif ?>
+<?php endif ?>

@@ -1,23 +1,9 @@
-/* Initially hidden content */
-.page-hidden {
-  transform: translateX(-100%);
+/* Define a transition duration during page visits */
+html.is-changing .transition-slide {
+  transition: transform 0.75s ease-in-out;
+  transform: translateX(0%);
 }
-
-/* Transition effect */
-.page-enter {
-  transform: translateX(-100%);
-}
-
-.page-enter-active {
-  transform: translateX(0);
-  transition: transform 0.5s ease-in-out;
-}
-
-.page-exit {
-  transform: translateX(0);
-}
-
-.page-exit-active {
+/* Define the styles for the unloaded pages */
+html.is-animating .transition-slide {
   transform: translateX(100%);
-  transition: transform 0.5s ease-in-out;
 }

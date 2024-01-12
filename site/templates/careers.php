@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
-<main>
+<main id="swup" class="transition-slide">
 
-	<section class="container col-12">
+	<div class="container col-12" id="section">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<!-- Text columns -->
 		<div class="d-sm-flex container-fluid my-5">
@@ -15,7 +15,7 @@
 		
 		<!-- Render Carousels -->
 		<?php foreach ($page->children()->filterBy('intendedTemplate', 'pagesection') as $pageSection): ?>
-		<section class="container">
+		<div class="container" id="section">
 			<!-- Section Title -->
 			<h2 class="sectionTitle">
 				<?= $pageSection->title() ?>
@@ -52,7 +52,7 @@
 					<?php endforeach ?>
 				</ul>
 			</div>
-		</section>
+						</div>
 		<?php endforeach ?>
 		
 		<!-- Render Job Postings -->
@@ -81,8 +81,7 @@
 			<?php endforeach ?>
 		</table>
 
-	</section>
+			</div>
 </main>
 <?php snippet('footer') ?>
-<script async="true" defer="true" model="true" src="assets/js/careers.js"></script>
 

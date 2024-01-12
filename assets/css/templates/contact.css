@@ -1,3 +1,15 @@
+
 .contact-container {
   width: 100%;
+}
+
+.footer-text {
+  font-size: var(--text-secondary-size);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.footer-text:hover {
+  color: var(--color-primary);
 }

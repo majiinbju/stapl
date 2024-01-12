@@ -2,7 +2,7 @@ gsap.registerPlugin(Draggable);
 
 const bodyElement = document.querySelector(".wrapper");
 const mainElement = document.querySelector("main");
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("#section");
 
 let isDragging = false;
 let lastTouch = 0;

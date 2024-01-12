@@ -6,10 +6,10 @@ $isDesktop = !$isMobile && !$isTablet;
 ?>
 
 <?php snippet('header') ?>
-<main>
+<main id="swup" class="transition-slide">
 
 	<?php if ($isMobile): ?>
-	<section class="container-fluid">
+	<div class="container-fluid">
 		<h1 class="pageTitle mb-5">
 			<?= $page->title() ?>
 		</h1>
@@ -41,9 +41,9 @@ $isDesktop = !$isMobile && !$isTablet;
 			</div>
 		</article>
 		<?php endforeach ?>
-	</section>
+	</div>
 	<?php else: ?>
-	<section class="container w-75">
+	<div class="container w-75">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<?php foreach($page->children()->listed()->flip() as $article): ?>
 		<article class="my-5">
@@ -75,7 +75,7 @@ $isDesktop = !$isMobile && !$isTablet;
 			</div>
 		</article>
 		<?php endforeach ?>
-	</section>
+	</div>
 	<?php endif ?>
 </main>
 

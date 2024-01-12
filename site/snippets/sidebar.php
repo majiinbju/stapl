@@ -14,12 +14,9 @@
 <div class="offcanvas offcanvas-start border-0" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasSide" aria-labelledby="offcanvasSideLabel">
 	<nav class="d-flex flex-column sidebar mx-4 border-0 mt-5 pt-5 text-uppercase" id="sideNavigation">
 		<?php foreach ($site->children()->listed() as $item): ?>
-		<a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>" class="nav-item"><?= $item->title()->esc() ?></a>
+		<a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>" class="nav-item" data-bs-toggle="offcanvas"><?= $item->title()->esc() ?></a>
 		<?php endforeach ?>
-	
-		<a href="#contact" class="nav-item">Contact</a>
-	
-		<?php snippet('social') ?>
+		<a href="#contact" class="nav-item" data-bs-dismiss="offcanvasSide" data-bs-toggle="offcanvas">Contact</a>
 	</nav>
 </div>
 

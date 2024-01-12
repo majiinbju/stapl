@@ -8,7 +8,7 @@ if (!empty($filterBy)) {
 ?>
 
 <?php snippet("header"); ?>
-<main id="top">
+<main id="swup" class="transition-slide">
 	<div class="wrapper">
 		<div class="container-fluid projects p-0">
 			<?php foreach ($projects as $project): ?>
@@ -21,4 +21,3 @@ if (!empty($filterBy)) {
 	</div>
 </main>
 <?php snippet("footer"); ?>
-<script async="true" defer="true" model="true" src="assets/js/home.js"></script>
