@@ -6,34 +6,80 @@ const sections = document.querySelectorAll("section");
 
 let isDragging = false;
 let lastTouch = 0;
-let activeProject = null; // To track the active project
+let activeProject = null;
+
+let startX = 0;
+let endX = 0;
+let dragX = 0; // New variable to store the drag distance
+
+function shrinkProject(project) {
+  const timeline = gsap.timeline({ defaults: { duration: 0.75, ease: "power2.out" } });
+
+  project.querySelectorAll(".draggable").forEach((element) => {
+    Draggable.get(element)?.kill();
+  });
+
+  timeline.to(project, {
+    height: "65vh",
+    onComplete: () => {
+      // Add logic if needed
+    },
+  }, "-=0.75");
+
+  project.classList.remove("shrink");
+
+  sections.forEach((s) => {
+    if (s !== project && s.classList.contains("active")) {
+      s.classList.remove("active");
+
+      timeline.to(
+        s,
+        {
+          height: "65vh",
+          onComplete: () => {
+            gsap.set(s, { top: "auto" });
+          },
+        },
+        "-=0.75"
+      );
+    }
+  });
+
+  activeProject = null;
+}
 
 sections.forEach((section) => {
   const carousel = section.querySelector(".carousel");
-  let startX = 0;
-
   const draggableElements = section.querySelectorAll(".draggable");
 
   const makeElementsDraggable = () => {
     draggableElements.forEach((element) => {
       if (section === activeProject) {
         gsap.set(element, { pointerEvents: "auto" });
-        Draggable.get(element)?.kill(); // Remove existing Draggable instances
+        Draggable.get(element)?.kill();
 
         Draggable.create(element, {
           type: "x",
           bounds: element.parentElement,
           edgeResistance: 1,
           onDrag: function () {
-            gsap.set(element, { x: this.x });
+            gsap.set(element);
+            dragX = this.x; // Update dragX during dragging
           },
           onRelease: function () {
             // Add any necessary logic here when dragging ends
           },
         });
+
+        if (activeProject.classList.contains("shrink")) {
+          Draggable.get(element).disable();
+          gsap.set(element); // Use the last dragX value when releasing
+        } else {
+          Draggable.get(element).enable();
+        }
       } else {
         gsap.set(element, { pointerEvents: "none" });
-        Draggable.get(element)?.kill(); // Remove Draggable from inactive elements
+        Draggable.get(element)?.kill();
       }
     });
   };
@@ -42,6 +88,7 @@ sections.forEach((section) => {
     if (section === activeProject) {
       isDragging = true;
       startX = e.clientX || e.touches[0].clientX;
+      endX = startX;
     }
   });
 
@@ -74,12 +121,10 @@ sections.forEach((section) => {
     section.addEventListener("click", (e) => {
       if (!isDragging && !section.classList.contains("active")) {
         if (activeProject && activeProject !== section) {
-          // Shrink the previously active project
           shrinkProject(activeProject);
-          makeElementsNotDraggable(); // Make elements not draggable for inactive project
+          makeElementsNotDraggable();
         }
 
-        // Calculate the scroll position to center the project
         const scrollPosition = section.offsetTop + (section.clientHeight - window.innerHeight) / 2;
 
         gsap.to(window, {
@@ -92,22 +137,19 @@ sections.forEach((section) => {
           onComplete: () => {
             expandProject(section);
             activeProject = section;
-            makeElementsDraggable(); // Make elements draggable for the newly active project
+            makeElementsDraggable();
           },
         });
       } else if (section.classList.contains("active")) {
-        activeProject = section; // Update the active project on click if it's already active
+        activeProject = section;
       }
     });
 
-    // Function to expand the project
     function expandProject(project) {
       gsap.to(window, {
         duration: 0.75,
         scrollTo: {
-          y:
-            project.offsetTop +
-            (window.innerHeight - project.clientHeight) / 2,
+          y: project.offsetTop + (window.innerHeight - project.clientHeight) / 2,
           offsetY: (window.innerHeight - project.clientHeight) / 2,
         },
         ease: "power2.out",
@@ -134,7 +176,7 @@ sections.forEach((section) => {
         height: "80vh",
         width: "100%",
         top: `calc(50% - 40vh)`,
-        transformOrigin: "center center",
+        // transformOrigin: "center center",
       });
 
       sections.forEach((s) => {
@@ -147,7 +189,7 @@ sections.forEach((section) => {
               height: "65vh",
               width: "100%",
               onComplete: () => {
-                gsap.set(s, { top: "auto", x: "auto" });
+                gsap.set(s, { top: "auto" });
               },
             },
             "-=0.75"
@@ -166,47 +208,13 @@ sections.forEach((section) => {
       );
     }
 
-    // Function to shrink the project
-    function shrinkProject(project) {
-      const timeline = gsap.timeline({ defaults: { duration: 0.75, ease: "power2.out" } });
-
-      const hidden = project.querySelectorAll(".hidden");
-
-      timeline.to(project, {
-        height: "65vh",
-        onComplete: () => {
-          // Add logic if needed
-        },
-      },
-      "-=0.75"
-    );
-      sections.forEach((s) => {
-        if (s !== project && s.classList.contains("active")) {
-          s.classList.remove("active");
-
-          timeline.to(
-            s,
-            {
-              height: "65vh",
-              onComplete: () => {
-                gsap.set(s, { top: "auto", x: "auto" });
-              },
-            },
-            "-=0.75"
-          );
-        }
-      });
-
-      activeProject = null; // Reset active project after shrinking
-    }
-
     function makeElementsNotDraggable() {
       sections.forEach((section) => {
         if (section !== activeProject) {
           const draggableElements = section.querySelectorAll(".draggable");
           draggableElements.forEach((element) => {
             gsap.set(element, { pointerEvents: "none" });
-            Draggable.get(element)?.kill(); // Remove Draggable from inactive elements
+            Draggable.get(element)?.kill();
           });
         }
       });
@@ -224,7 +232,7 @@ sections.forEach((section) => {
 });
 
 window.addEventListener("scroll", () => {
-  let isProjectInView = false; // Flag to check if any active project is in view
+  let isProjectInView = false;
 
   sections.forEach((section) => {
     const rect = section.getBoundingClientRect();
@@ -235,11 +243,10 @@ window.addEventListener("scroll", () => {
     }
 
     if (section.classList.contains("active")) {
-      isProjectInView = true; // Set flag if any project with the 'active' class is in view
+      isProjectInView = true;
     }
   });
 
-  // Remove 'active' class from all projects if no 'active' project is in view
   if (!isProjectInView) {
     sections.forEach((section) => {
       if (section.classList.contains("active")) {
@@ -257,11 +264,7 @@ window.addEventListener("wheel", (event) => {
     const delta = event.deltaY || event.detail || -event.wheelDelta;
 
     if (Math.abs(delta) > 1) {
-      if (
-        isTrackpad ||
-        event.deltaX !== undefined ||
-        event.deltaY !== undefined
-      ) {
+      if (isTrackpad || event.deltaX !== undefined || event.deltaY !== undefined) {
         bodyElement.classList.add("expand");
         setTimeout(() => {
           bodyElement.classList.remove("expand");
@@ -276,8 +279,17 @@ function easeScroll() {
   const sy = window.pageYOffset;
   let dx = sx;
   let dy = sy;
-  dx = li(dx, sx, 0.07);
-  dy = li(dy, sy, 0.07);
+
+  if (activeProject && isDragging) {
+    if (!isProjectShrinking(activeProject)) {
+      dx = li(dx, sx, 0.07);
+      dy = li(dy, sy, 0.07);
+    }
+  } else {
+    dx = li(dx, sx, 0.07);
+    dy = li(dy, sy, 0.07);
+  }
+
   dx = Math.floor(dx * 100) / 100;
   dy = Math.floor(dy * 100) / 100;
 
@@ -287,20 +299,9 @@ function easeScroll() {
   window.requestAnimationFrame(easeScroll);
 }
 
-function li(a, b, n) {
-  return (1 - n) * a + n * b;
+function isProjectShrinking(project) {
+  const timeline = gsap.getTweensOf(project);
+  return timeline.some((tween) => tween.vars && tween.vars.height === "65vh");
 }
 
-function updateScroll() {
-  let scrollSpeed = 0;
-
-  if (scrollSpeed !== 0) {
-    window.scrollBy(0, scrollSpeed);
-    scrollSpeed *= 0.9;
-
-    if (Math.abs(scrollSpeed) < 0.1) {
-      scrollSpeed = 0;
-    }
-  }
-  requestAnimationFrame(updateScroll);
-}
+window.requestAnimationFrame(easeScroll);

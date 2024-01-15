@@ -8,7 +8,7 @@ if (!empty($filterBy)) {
 ?>
 
 <?php snippet("header"); ?>
-<main>
+<main id="top">
 	<div class="wrapper">
 		<div class="container-fluid projects p-0">
 			<?php foreach ($projects as $project): ?>
@@ -19,9 +19,5 @@ if (!empty($filterBy)) {
 	<div class="my-5 py-5 container d-flex justify-content-center">
 		<a href="#top" class="backToTop">Back to Top</a>
 	</div>
-	<?= js([
-		'assets/js/animation.js',
-		'@auto'
-	], ['defer', 'type' => 'module']) ?>
 </main>
 <?php snippet("footer"); ?>
