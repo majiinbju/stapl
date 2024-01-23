@@ -6,7 +6,7 @@ $isDesktop = !$isMobile && !$isTablet;
 ?>
 
 <?php snippet('header') ?>
-<main>
+<main id="top">
 
 	<?php if ($isMobile): ?>
 	<section class="container-fluid">
@@ -77,6 +77,9 @@ $isDesktop = !$isMobile && !$isTablet;
 		<?php endforeach ?>
 	</section>
 	<?php endif ?>
+	<div class="my-5 py-5 container d-flex justify-content-center">
+		<a href="#top" class="backToTop">Back to Top</a>
+	</div>
 </main>
 
 <?php snippet('footer') ?>

@@ -3,7 +3,7 @@ $homePage = page('home');
 ?>
 
 	<div class="container-fluid w-75 d-flex justify-content-center contact-container mb-5">
-		<navbar class="w-100 d-flex justify-content-between">
+		<navbar class="w-50 d-flex justify-content-between">
 			<ul class="ul w-100 d-flex justify-content-between">
 				<li class="col-1">
 					<!-- Email -->

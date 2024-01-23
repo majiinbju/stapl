@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<main>
+<main id="top">
 
 	<div class="container col-12" id="section">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
@@ -12,7 +12,7 @@
 				<?= $page->text2()->kirbytextinline() ?>
 			</p>
 		</div>
-		
+
 		<!-- Render Carousels -->
 		<?php foreach ($page->children()->filterBy('intendedTemplate', 'pagesection') as $pageSection): ?>
 		<div class="container" id="section">
@@ -52,14 +52,14 @@
 					<?php endforeach ?>
 				</ul>
 			</div>
-						</div>
+		</div>
 		<?php endforeach ?>
-		
+
 		<!-- Render Job Postings -->
 		<h2 class="sectionTitle my-5 py-5">
 			Open Jobs
 		</h2>
-		
+
 		<table class="w-100 jobTable text-uppercase mt-5 p-2">
 			<tr class="d-flex">
 				<th class="col-3">Title</th>
@@ -80,8 +80,10 @@
 			</tr>
 			<?php endforeach ?>
 		</table>
-
-			</div>
+	</div>
+	
+	<div class="my-5 py-5 container d-flex justify-content-center">
+		<a href="#top" class="backToTop">Back to Top</a>
+	</div>
 </main>
 <?php snippet('footer') ?>
-

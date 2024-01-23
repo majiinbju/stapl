@@ -7,7 +7,7 @@
 ?>
 <?php snippet('header') ?>
 
-<main>
+<main id="top">
 
 	<?php if ($isMobileOrTablet): ?>
 	<div class="container col-11 me-0">
@@ -90,6 +90,9 @@
 			</li>
 			<?php endforeach ?>
 		</ul>
+	</div>
+	<div class="my-5 py-5 container d-flex justify-content-center">
+		<a href="#top" class="backToTop">Back to Top</a>
 	</div>
 	<?php endif ?>
 </main>

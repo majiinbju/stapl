@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<main>
+<main id="top">
 	<div class="container-fluid w-75">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<div class="d-sm-flex container-fluid my-5">
@@ -53,6 +53,9 @@
 		</div>
 					</div>
 	<?php endforeach ?>
+	<div class="my-5 py-5 container d-flex justify-content-center">
+		<a href="#top" class="backToTop">Back to Top</a>
+	</div>
 </main>
 <?php snippet('footer') ?>
 

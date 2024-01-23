@@ -10,7 +10,7 @@
 }
 
 .barIcon {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color:var(--color-primary);
   transform: scale(1.8,1);
   padding-left: 5px;
@@ -50,10 +50,19 @@
 .top-bar a:hover {
   color: var(--color-secondary-hover);
 }
+
+.top-bar a:active {
+  color: var(--color-secondary-hover);
+  background: none;
+}
 /* Sub navigation item stylings */
 .dropdown-menu {
   transition: var(--transition);
   background-color: rgba(255,255,255, 0.5);
+}
+
+.dropdown-item:active {
+  background: none;
 }
 .sub-nav{
   padding: 0;
@@ -97,7 +106,7 @@
 }
 .sidebar a {
   color: var(--color-secondary);
-  font-size: var(--text-primary-size);
+  font-size: var(--link-text-size);
   font-weight: light;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
