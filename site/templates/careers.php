@@ -73,7 +73,7 @@
 				<td class="col-3"><?= $posting->area() ?></td>
 				<td class="col-3"><?= $posting->deadline() ?></td>
 				<td class="col-3">
-					<a href="<?= $posting->link() ?>" class="jobLink">
+					<a href="<?= $posting->link() ?>" class="jobLink" target="_blank">
 						Apply Here
 					</a>
 				</td>

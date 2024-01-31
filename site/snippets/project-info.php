@@ -60,7 +60,7 @@
 		<li class="li project-info">
 				<?php snippet('tags', compact('project')) ?>
 				<!-- Project Cover -->
-				<figure class="d-flex">
+				<figure class="d-flex mx-1">
 						<?php if ($cover = $project->cover()): ?>
 								<img src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 						<?php endif ?>

@@ -1,4 +1,4 @@
-<a class="menu-toggle top-0 mt-3 mt-lg-1 position-fixed mx-4" data-bs-toggle="offcanvas" href="#offcanvasSide" role="button" aria-controls="offcanvasSide" style="z-index:300000000;" id="offCanvasSide">
+<a class="menu-toggle top-0 mt-3 mt-lg-3 position-fixed mx-4" data-bs-toggle="offcanvas" href="#offcanvasSide" role="button" aria-controls="offcanvasSide" style="z-index:300000000;" id="offCanvasSide">
 <div class="d-flex flex-column align-items-start justify-content-start">
 	<div>
 		<svg xmlns="http://www.w3.org/2000/svg" width="100" viewBox="0 0 807 280">
@@ -11,7 +11,7 @@
 </div>
 </a>
 
-<div class="offcanvas offcanvas-start border-0" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasSide" aria-labelledby="offcanvasSideLabel" style="width: 300px;">
+<div class="offcanvas offcanvas-start border-0" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasSide" aria-labelledby="offcanvasSideLabel" style="width: 150px;">
 	<nav class="d-flex flex-column sidebar mx-4 border-0 mt-5 pt-5 text-uppercase" id="sideNavigation">
 		<?php foreach ($site->children()->listed() as $item): ?>
 		<a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>" class="nav-item my-1" id="faderLink"><?= $item->title()->esc() ?></a>

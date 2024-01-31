@@ -19,10 +19,10 @@
 /* Horizontal wrapper for tags, cover & summary */
 .project-info {
   /* Flex properties */
-  display: flex;
+  display: contents;
   flex-direction: row;
   /* Size */
-  width: fit-content;
+  /* width: min-content; */
   height: 100%;
   margin: 0rem 1rem;
   /* Etc. */
@@ -103,9 +103,18 @@
 /* Image styles */
 /* Figure style to stop offset on expansion */
 figure {
+  position: relative;
+  height: auto;
   margin: 0;
 }
 
 /* Width for Images */
+figure img {
+  flex: 2 1 auto;
+  height: 100%;
+  object-fit: cover;
+}
 
-
+li {
+  max-width: fit-content;
+}

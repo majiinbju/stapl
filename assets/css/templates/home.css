@@ -95,10 +95,6 @@ section.active {
     max-width: 90vw;
     /* max-height: 310px; */
   }
-  figure {
-    height: 100%;
-    width: fit-content;
-  }
   .project-img {
     height: 80%;
     object-fit: cover;
