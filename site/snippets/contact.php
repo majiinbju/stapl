@@ -2,16 +2,16 @@
 $homePage = page('home');
 ?>
 
-	<div class="container-fluid w-75 d-flex justify-content-center contact-container mb-5">
-		<navbar class="w-50 d-flex justify-content-between">
-			<ul class="ul w-100 d-flex justify-content-between">
-				<li class="col-1">
+	<div class="container d-flex justify-content-center contact-container mb-5">
+		<navbar class="col-6 d-flex justify-content-between">
+			<ul class="ul col-12 d-flex justify-content-between">
+				<li class="col-3">
 					<!-- Email -->
 					<a href="mailto:soyuztalibarchitects@gmail.com" target="_blank" class="animated" aria-expanded="false">
 						Email ↗
 					</a>
 				</li>
-				<li class="col-1">
+				<li class="col-3">
 					<!-- Office -->
 					<a href="#collapseOffice" class="animated dropdown-toggle" data-bs-toggle="collapse" aria-expanded="false">
 						Office
@@ -23,7 +23,7 @@ $homePage = page('home');
 						Sanpada, Navi Mumbai - 400 705
 					</p>
 				</li>
-				<li class="col-1">
+				<li class="col-3">
 					<a href="#collapseSocial" class="animated dropdown-toggle" data-bs-toggle="collapse" aria-expanded="false">
 						Social
 					</a>

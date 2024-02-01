@@ -282,12 +282,12 @@ function easeScroll() {
 
   if (activeProject && isDragging) {
     if (!isProjectShrinking(activeProject)) {
-      dx = li(dx, sx, 0.07);
-      dy = li(dy, sy, 0.07);
+      dx = lerp(dx, sx, 0.07);
+      dy = lerp(dy, sy, 0.07);
     }
   } else {
-    dx = li(dx, sx, 0.07);
-    dy = li(dy, sy, 0.07);
+    dx = lerp(dx, sx, 0.07);
+    dy = lerp(dy, sy, 0.07);
   }
 
   dx = Math.floor(dx * 100) / 100;
