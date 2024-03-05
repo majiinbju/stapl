@@ -37,11 +37,11 @@
 					<?php if ($person->image()->exists()): ?>
 					<img src="<?= $person->image()->url() ?>" class="w-100" />
 					<?php endif ?>
+					<?php if ($person->description()->isNotEmpty()): ?>
 					<p class="person-body mt-3">
-						<?php if ($person->description()->isNotEmpty()): ?>
 						<?= $person->description()->kirbytextinline() ?>
-						<?php endif ?>
 					</p>
+					<?php endif ?>
 				</div>
 			</li>
 			<?php endforeach ?>
@@ -59,34 +59,40 @@
 		<ul class="people-list mt-5">
 			<?php foreach ($page->children() as $person): ?>
 			<li class="d-flex justify-content-between mb-3 person align-items-start">
-				<!-- Column for name and description -->
-				<div class="d-flex flex-column col-8">
-					<a class="d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse<?= $person->slug() ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
-						<div class="d-flex align-content-center">
-							<span class="person-name">
-								<?php if ($person->name()->isNotEmpty()): ?>
-								<?= $person->name() ?>
-								<?php endif ?>
-							</span>
-						</div>
-						<span class="people-tag">
-							<?php if ($person->position()->isNotEmpty()): ?>
-							<?= $person->position() ?>
+				<ul class="people-list">
+					<li class="person-anchor">
+						<!-- Column for name and description -->
+						<div class="d-flex flex-column col-8">
+							<a class="d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse<?= $person->slug() ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+								<div class="d-flex align-content-center">
+									<span class="person-name">
+										<?php if ($person->name()->isNotEmpty()): ?>
+										<?= $person->name() ?>
+										<?php endif ?>
+									</span>
+								</div>
+								<span class="people-tag">
+									<?php if ($person->position()->isNotEmpty()): ?>
+									<?= $person->position() ?>
+									<?php endif ?>
+								</span>
+							</a>
+							<?php if ($person->description()->isNotEmpty()): ?>
+							<p class="person-body mt-3 collapse" id="collapse<?= $person->slug() ?>" style="transition: all 0.5s ease-in-out;">
+								<?= $person->description()->kirbytextinline() ?>
+							</p>
 							<?php endif ?>
-						</span>
-					</a>
-					<p class="person-body mt-3 collapse" id="collapse<?= $person->slug() ?>" style="transition: all 0.5s ease-in-out;">
-						<?php if ($person->description()->isNotEmpty()): ?>
-						<?= $person->description()->kirbytextinline() ?>
-						<?php endif ?>
-					</p>
-				</div>
-				<!-- Image -->
-				<div class="col-4 d-flex justify-content-end position-fixed person-img">
-					<?php if ($person->image()->isNotEmpty() && $person->image()->exists()): ?>
-					<img src="<?= $person->image()->url() ?>" />
-					<?php endif ?>
-				</div>
+						</div>
+					</li>
+					<li class="img-anchor">
+						<!-- Image -->
+						<div class="col-4 d-flex justify-content-end position-fixed person-img">
+							<?php if ($person->image()->isNotEmpty() && $person->image()->exists()): ?>
+							<img src="<?= $person->image()->url() ?>" />
+							<?php endif ?>
+						</div>
+					</li>
+				</ul>
 			</li>
 			<?php endforeach ?>
 		</ul>

@@ -1,7 +1,15 @@
 <footer class="footer" id="contact">
 	<br />
 	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 	<?php snippet('contact') ?>
+	<br />
+	<br />
+	<br />
+	<br />
 	<br />
 	<br />
 </footer>

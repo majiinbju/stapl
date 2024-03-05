@@ -23,3 +23,13 @@
 .img.active {
   /* width: 100%; */
 }
+
+
+@media screen and (max-width: 1366px) {
+  .carousel {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  overflow: visible;
+  }
+}

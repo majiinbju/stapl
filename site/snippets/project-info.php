@@ -6,7 +6,7 @@
 		$isMobileOrTablet = $isMobile || $isTablet || $isLargeTablet;
 ?>
 
-<?php if ($isMobileOrTablet): ?>
+<?php if ($isMobile): ?>
 		<li class="li project-info">
 				<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end mt-3">
 						<span class="icon">
@@ -23,7 +23,7 @@
 				</div>
 				<figure class="d-flex">
 						<?php if ($cover = $project->cover()): ?>
-								<img src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
+								<img class="cover-img" src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 						<?php endif ?>
 						<ul class="tags tagsMobile">
 								<!-- Tags content for mobile/tablet -->
@@ -60,9 +60,9 @@
 		<li class="li project-info">
 				<?php snippet('tags', compact('project')) ?>
 				<!-- Project Cover -->
-				<figure class="d-flex mx-1">
+				<figure class="d-flex mx-4">
 						<?php if ($cover = $project->cover()): ?>
-								<img src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
+								<img class="cover-img" src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 						<?php endif ?>
 						<?php if ($project->text()->isNotEmpty()) : ?>
 								<figcaption class="hidden summary">

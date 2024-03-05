@@ -20,14 +20,15 @@
   text-transform: uppercase;
 }
 /* Person Image stylings */
-.person img {
+.img-anchor img {
   width: 70%;
   /* height: 100%; */
   opacity: 0;
   transition: all 0.35s ease-in-out;
 }
+
 /* Image hover stylings */
-.person:hover img {
+.person-anchor:hover + .img-anchor img {
   opacity: 1;
 }
 .person-img {
@@ -43,7 +44,7 @@
   transition: all 0.25s ease-in-out;
 }
 /* On person element hover, name will scale up */
-.person:hover .person-name {
+.person-anchor:hover .person-name {
   transform: scale(1.5);
   transform-origin: bottom left;
 }
@@ -62,7 +63,7 @@
     opacity: 1;
     position: relative;
   }
-  .person:hover .person-name {
+  .person-anchor:hover .person-name {
     transform: scale(1.0);
     transform-origin: bottom left;
   }

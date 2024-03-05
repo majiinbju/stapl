@@ -54,8 +54,7 @@
 }
 
 .tagContainer {
-  min-width: 300px;
-  max-width: 320px;
+  width: 310px;
 }
 
 /* Tag Container */
@@ -111,6 +110,25 @@ figure {
 /* Width for Images */
 figure img {
   flex: 2 1 auto;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
 }
+
+.cover-img {
+  height: 100%;
+}
+
+@media screen and (max-width: 1366px) {
+  .project-info {
+    display: flex;
+    height: 100%;
+    flex-direction: column-reverse;
+  }
+  figure {
+    position: relative;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+

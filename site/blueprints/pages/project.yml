@@ -43,6 +43,7 @@ columns:
               Interior Lobbies: Interior Lobbies
               Interior Clubhouse: Interior Clubhouse
               Landscape: Landscape
+              Residential & Club: Residential & Club
             icon: tag
             required: true
           year:
@@ -77,6 +78,10 @@ columns:
             label: Location
             type: text
             icon: location
+          developer:
+            label: Developer
+            type: text
+            icon: person
           text:
             label: Summary
             type: textarea

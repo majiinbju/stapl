@@ -51,7 +51,7 @@ section.active {
 }
 
 .project-img {
-  min-width: 100%;
+  min-width: 50%;
   max-height: 80vh;
   transition: var(--transition);
 }
@@ -80,7 +80,6 @@ section.active {
   }
   .summary {
     font-size: var(--mobile-body-text-size);
-    line-height: 1;
     height: 100%;
     min-width: 350px;
     max-width: 400px;

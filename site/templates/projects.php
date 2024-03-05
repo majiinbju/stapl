@@ -17,7 +17,7 @@ if (!empty($filterBy)) {
 		</div>
 	</div>
 	<div class="my-5 py-5 container d-flex justify-content-center">
-		<a href="#top" class="backToTop">Back to Top</a>
+		<a href="#top" class="backToTop my-5">Back to Top</a>
 	</div>
 </main>
 <?php snippet("footer"); ?>

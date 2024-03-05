@@ -3,7 +3,7 @@
 	<?php if ($image->caption()->isNotEmpty()): ?>
 	<figure class="d-flex">
 		<img class="project-img" src="<?= $image
-    ->resize(1440)
+    ->resize(null, 1080)
     ->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" />
 		<figcaption class="ms-5 hidden summary">
 			<?= $image->caption()->kirbytextinline() ?>
@@ -12,7 +12,7 @@
 	<?php else: ?>
 	<figure class="d-flex mx-2">
 		<img class="project-img" src="<?= $image
-    ->resize(1440)
+    ->resize(null, 1080)
     ->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" />
 	</figure>
 	<?php endif; ?>
