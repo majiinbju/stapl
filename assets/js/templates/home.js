@@ -10,7 +10,7 @@ let activeProject = null;
 
 let startX = 0;
 let endX = 0;
-let dragX = 0; // New variable to store the drag distance
+let dragX = 0;
 
 function shrinkProject(project) {
   const timeline = gsap.timeline({ defaults: { duration: 0.75, ease: "power2.out" } });
@@ -54,70 +54,64 @@ sections.forEach((section) => {
 
   const makeElementsDraggable = () => {
     draggableElements.forEach((element) => {
-      if (section === activeProject) {
-        gsap.set(element, { pointerEvents: "auto" });
-        Draggable.get(element)?.kill();
+      gsap.set(element, { pointerEvents: "auto" });
+      Draggable.get(element)?.kill();
 
-        Draggable.create(element, {
-          type: "x",
-          bounds: element.parentElement,
-          edgeResistance: 1,
-          onDrag: function () {
-            gsap.set(element);
-            dragX = this.x; // Update dragX during dragging
-          },
-          onRelease: function () {
-            // Add any necessary logic here when dragging ends
-          },
-        });
+      Draggable.create(element, {
+        type: "x",
+        bounds: element.parentElement,
+        edgeResistance: 0.9,
+        onDrag: function () {
+          gsap.set(element);
+          dragX = this.x;
+        },
+        onRelease: function () {
+          // Add any necessary logic here when dragging ends
+        },
+      });
 
-        if (activeProject.classList.contains("shrink")) {
-          Draggable.get(element).disable();
-          gsap.set(element); // Use the last dragX value when releasing
-        } else {
-          Draggable.get(element).enable();
-        }
+      if (activeProject && activeProject.classList.contains("shrink")) {
+        Draggable.get(element).disable();
+        gsap.set(element);
       } else {
-        gsap.set(element, { pointerEvents: "none" });
-        Draggable.get(element)?.kill();
+        Draggable.get(element).enable();
       }
     });
   };
 
-  carousel.addEventListener("mousedown", (e) => {
-    if (section === activeProject) {
-      isDragging = true;
-      startX = e.clientX || e.touches[0].clientX;
-      endX = startX;
-    }
-  });
+  // Check for screen width before adding desktop-specific event listeners
+  if (screen.width > 1376) {
+    carousel.addEventListener("mousedown", (e) => {
+      if (section === activeProject) {
+        isDragging = true;
+        startX = e.clientX || e.touches[0].clientX;
+        endX = startX;
+      }
+    });
 
-  carousel.addEventListener("mouseup", (e) => {
-    if (isDragging) {
+    carousel.addEventListener("mouseup", (e) => {
+      if (isDragging) {
+        isDragging = false;
+        endX = e.clientX || e.changedTouches[0].clientX;
+
+        const distance = endX - startX;
+        const momentum = 0.9;
+        const duration = 750;
+        const distanceWithMomentum = distance * momentum;
+        const targetX = carousel.scrollLeft + distanceWithMomentum;
+
+        gsap.to(carousel, {
+          scrollLeft: targetX,
+          duration: duration,
+          ease: "power2.out",
+        });
+      }
+    });
+
+    carousel.addEventListener("mouseleave", () => {
       isDragging = false;
-      endX = e.clientX || e.changedTouches[0].clientX;
+    });
 
-      const distance = endX - startX;
-      const momentum = 0.9;
-      const duration = 750;
-      const distanceWithMomentum = distance * momentum;
-      const targetX = carousel.scrollLeft + distanceWithMomentum;
-
-      gsap.to(carousel, {
-        scrollLeft: targetX,
-        duration: duration,
-        ease: "power2.out",
-      });
-    }
-  });
-
-  carousel.addEventListener("mouseleave", () => {
-    isDragging = false;
-  });
-
-  const hidden = section.querySelectorAll(".hidden");
-
-  if (window.innerWidth > 1366) {
     section.addEventListener("click", (e) => {
       if (!isDragging && !section.classList.contains("active")) {
         if (activeProject && activeProject !== section) {
@@ -160,6 +154,8 @@ sections.forEach((section) => {
             width: "100%",
             ease: "power2.out",
             onComplete: () => {
+              // Show hidden elements after expansion
+              const hidden = project.querySelectorAll(".hidden");
               hidden.forEach((hide) => {
                 hide.classList.add("showObject");
               });
@@ -176,7 +172,6 @@ sections.forEach((section) => {
         height: "80vh",
         width: "100%",
         top: `calc(50% - 40vh)`,
-        // transformOrigin: "center center",
       });
 
       sections.forEach((s) => {
@@ -219,6 +214,9 @@ sections.forEach((section) => {
         }
       });
     }
+  } else { // For mobile devices
+    // Make elements draggable on mobile
+    makeElementsDraggable();
   }
 
   section.addEventListener("touchstart", () => {
@@ -231,28 +229,33 @@ sections.forEach((section) => {
   });
 });
 
+// Variable to store the previous scroll position
+let prevScrollPos = window.pageYOffset;
+
+// Update the scroll event listener
 window.addEventListener("scroll", () => {
-  let isProjectInView = false;
+  const currentScrollPos = window.pageYOffset;
+  let scrollDirection;
 
-  sections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    if (activeProject === section && (rect.top > window.innerHeight || rect.bottom < 0)) {
-      shrinkProject(activeProject);
-      activeProject.classList.remove("active");
-      activeProject = null;
-    }
+  // Determine the scroll direction
+  if (currentScrollPos > prevScrollPos) {
+    scrollDirection = "down"; // Scrolling down
+  } else {
+    scrollDirection = "up"; // Scrolling up
+  }
 
-    if (section.classList.contains("active")) {
-      isProjectInView = true;
-    }
-  });
+  // Update the previous scroll position
+  prevScrollPos = currentScrollPos;
 
-  if (!isProjectInView) {
-    sections.forEach((section) => {
-      if (section.classList.contains("active")) {
-        section.classList.remove("active");
-      }
-    });
+  // Check if the active project is still visible in the viewport
+  const activeRect = activeProject.getBoundingClientRect();
+  const isProjectInView = activeRect.top >= 0 && activeRect.bottom <= window.innerHeight;
+
+  // Shrink the active project if it's no longer in view or if scrolling away
+  if (!isProjectInView || (scrollDirection === "down" && activeRect.top < 0) || (scrollDirection === "up" && activeRect.bottom > window.innerHeight)) {
+    shrinkProject(activeProject);
+    activeProject.classList.remove("active");
+    activeProject = null;
   }
 });
 
