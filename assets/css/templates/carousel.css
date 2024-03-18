@@ -31,6 +31,6 @@
   width: 100%;
   margin-bottom: 0rem;
   overflow: visible;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   }
 }

@@ -93,8 +93,9 @@
   /* line-height: 19px; */
   letter-spacing: 0.56px;
   min-width: 100px;
+  max-width: 600px;
   /* width: fit-content; */
-  max-width: fill-available;
+  /* max-width: fill-available; */
   font-weight: normal;
   font-size: var(--body-text-size);
   margin: 0 2rem;
@@ -129,7 +130,9 @@ figure img {
   .summary {
     font-size: var(--mobile-body-text-size);
     contain: content;
-    max-width: fit-content;
+    max-width: 800px;
+    overflow: clip;
+    /* max-width: fit-content; */
   }
 
 }

@@ -32,6 +32,6 @@ $isDesktop = !$isMobile && !$isTablet;
 
 <body>
 	
-	<?php snippet('topbar') ?>
 	<?php snippet('sidebar') ?>
+	<?php snippet('topbar') ?>
 	<svg id="fader"></svg>

@@ -2,10 +2,10 @@
 <main id="top">
 
 	<div class="container col-12" id="section">
-		<h1 class="pageTitle"><?= $page->title() ?></h1>
+		<h1 class="pageTitle mx-1"><?= $page->title() ?></h1>
 		<!-- Text columns -->
 		<div class="d-sm-flex container-fluid my-5">
-			<p class="careers-body col-sm-12 col-lg-5 me-5">
+			<p class="careers-body col-sm-12 col-lg-5 me-lg-5 me-sm-0">
 				<?= $page->text()->kirbytextinline() ?>
 			</p>
 			<p class="careers-body col-sm-12 col-lg-5">
@@ -17,12 +17,12 @@
 		<?php foreach ($page->children()->filterBy('intendedTemplate', 'pagesection') as $pageSection): ?>
 		<div class="container" id="section">
 			<!-- Section Title -->
-			<h2 class="sectionTitle">
+			<h2 class="mx-1 sectionTitle">
 				<?= $pageSection->title() ?>
 			</h2>
 			<!-- Section Text -->
 			<div class="d-sm-flex container-fluid my-5">
-				<p class="col-sm-12 col-lg-5 me-5 careers-body">
+				<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 careers-body">
 					<?= $pageSection->Column1()->kirbytextinline() ?>
 				</p>
 				<p class="col-sm-12 col-lg-5 careers-body">
@@ -56,30 +56,32 @@
 		<?php endforeach ?>
 
 		<!-- Render Job Postings -->
-		<h2 class="sectionTitle my-5 py-5">
+		<h2 class="sectionTitle my-5 py-5 mx-1">
 			Open Jobs
 		</h2>
 
-		<table class="w-100 jobTable text-uppercase mt-5 p-2">
-			<tr class="d-flex">
-				<th class="col-3">Title</th>
-				<th class="col-3">Job Area</th>
-				<th class="col-3">Deadline</th>
-				<th class="col-3">Apply Now</th>
-			</tr>
-			<?php foreach ($page->children()->filterBy('intendedTemplate', 'job') as $posting): ?>
-			<tr class="d-flex jobTableRow py-2">
-				<td class="col-3"><?= $posting->position() ?></td>
-				<td class="col-3"><?= $posting->area() ?></td>
-				<td class="col-3"><?= $posting->deadline() ?></td>
-				<td class="col-3">
-					<a href="<?= $posting->link() ?>" class="jobLink" target="_blank">
-						Apply Here
-					</a>
-				</td>
-			</tr>
-			<?php endforeach ?>
-		</table>
+		<div class="container">
+			<table class="col-12 jobTable text-uppercase mt-5 p-2">
+				<tr class="d-flex">
+					<th class="col-3">Title</th>
+					<th class="col-3">Job Area</th>
+					<th class="col-3">Deadline</th>
+					<th class="col-3">Apply Now</th>
+				</tr>
+				<?php foreach ($page->children()->filterBy('intendedTemplate', 'job') as $posting): ?>
+				<tr class="d-flex jobTableRow py-2">
+					<td class="col-3"><?= $posting->position() ?></td>
+					<td class="col-3"><?= $posting->area() ?></td>
+					<td class="col-3"><?= $posting->deadline() ?></td>
+					<td class="col-3">
+						<a href="<?= $posting->link() ?>" class="jobLink" target="_blank">
+							Apply Here
+						</a>
+					</td>
+				</tr>
+				<?php endforeach ?>
+			</table>
+		</div>
 	</div>
 	
 	<div class="my-5 py-5 container d-flex justify-content-center">

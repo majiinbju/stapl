@@ -50,6 +50,10 @@ section.active {
   /* height: auto; */
 }
 
+.cover-img {
+  max-height: 100%;
+}
+
 .project-img {
   /* min-width: 50%; */
   max-height: 80vh;
@@ -57,7 +61,7 @@ section.active {
 }
 
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 768px) {
 
   .tagContainer {
     /* height: 20%; */

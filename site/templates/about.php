@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <main id="top">
-	<div class="container-fluid col-10 col-lg-9">
-		<h1 class="pageTitle"><?= $page->title() ?></h1>
+	<div class="container-fluid col-sm-12 col-lg-9">
+		<h1 class="pageTitle mx-2"><?= $page->title() ?></h1>
 		<div class="d-sm-flex container-fluid my-5">
 			<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 aboutBody">
 				<?= $page->Column1()->kirbytextinline() ?>
@@ -14,14 +14,14 @@
 	</div>
 
 	<?php foreach ($page->children() as $aboutSection): ?>
-	<div class="container-fluid col-10 col-lg-9" id="section">
+	<div class="container-fluid col-sm-12 col-lg-9" id="section">
 		<!-- Section Title -->
-		<h2 class="sectionTitle">
+		<h2 class="sectionTitle mx-2">
 			<?= $aboutSection->title() ?>
 		</h2>
 		<!-- Section Text -->
 		<div class="d-sm-flex container-fluid my-5">
-			<p class="col-sm-12 col-lg-5 me-5 me-sm-0 aboutBody">
+			<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 aboutBody">
 				<?= $aboutSection->Column1()->kirbytextinline() ?>
 			</p>
 			<p class="col-sm-12 col-lg-5 aboutBody">
