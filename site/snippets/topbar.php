@@ -8,7 +8,7 @@
 		$pagination = $projects->pagination();
 		$aboutPage = page('about');
 ?>
-<nav class="top-bar top-0 w-100 position-sticky navbar navbar-expand-lg bg-white text-uppercase align-items-center justify-content-between mb-5 p-0">
+<nav class="top-bar top-0 w-100 position-sticky navbar navbar-expand-lg text-uppercase align-items-center justify-content-between mb-5 p-0">
 	<div class="container-fluid">
 
 		<!-- Stapl Logo -->

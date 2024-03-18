@@ -1,0 +1,41 @@
+Title: Kamdhenu 23 West
+
+----
+
+Icon: 
+
+----
+
+Typology: Architecture Commercial
+
+----
+
+Year: 
+
+----
+
+Projectstatus: 
+
+----
+
+Plotarea: NA
+
+----
+
+Builtarea: NA
+
+----
+
+Levels: 
+
+----
+
+Location: 
+
+----
+
+Text: 
+
+----
+
+Uuid: MV2VsXpfxcG5X5TD

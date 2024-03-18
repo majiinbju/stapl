@@ -1,0 +1,13 @@
+Sort: 8
+
+----
+
+Caption: 
+
+----
+
+Uuid: JPJKwDsypm0fMerA
+
+----
+
+Template: gallery-image

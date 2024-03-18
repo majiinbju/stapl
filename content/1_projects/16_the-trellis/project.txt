@@ -1,0 +1,41 @@
+Title: The Trellis
+
+----
+
+Icon: 
+
+----
+
+Typology: Architecture Residential
+
+----
+
+Year: 
+
+----
+
+Projectstatus: 
+
+----
+
+Plotarea: NA
+
+----
+
+Builtarea: NA
+
+----
+
+Levels: 
+
+----
+
+Location: 
+
+----
+
+Text: 
+
+----
+
+Uuid: Q9CDmyop6pfFFrLu

@@ -1,0 +1,49 @@
+Title: 24 High
+
+----
+
+Icon: 
+
+----
+
+Typology: Architecture Commercial
+
+----
+
+Year: 
+
+----
+
+Projectstatus: 
+
+----
+
+Plotarea: NA
+
+----
+
+Builtarea: NA
+
+----
+
+Levels: NA
+
+----
+
+Location: NA
+
+----
+
+Text: 
+
+----
+
+Category: Commercial
+
+----
+
+Status: Ongoing
+
+----
+
+Uuid: kOcBIxymU4nUaQP0

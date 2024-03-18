@@ -1,0 +1,49 @@
+Title: Cityopia
+
+----
+
+Icon: 
+
+----
+
+Typology: Architecture Residential
+
+----
+
+Year: 
+
+----
+
+Projectstatus: 
+
+----
+
+Plotarea: NA
+
+----
+
+Builtarea: NA
+
+----
+
+Levels: 
+
+----
+
+Location: 
+
+----
+
+Text: 
+
+----
+
+Category: Residential
+
+----
+
+Status: Ongoing
+
+----
+
+Uuid: hc4flZIxiJMunVSz

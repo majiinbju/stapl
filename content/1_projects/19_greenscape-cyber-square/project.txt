@@ -1,0 +1,49 @@
+Title: Greenscape Cyber Square
+
+----
+
+Icon: 
+
+----
+
+Typology: Architecture Commercial
+
+----
+
+Year: 
+
+----
+
+Projectstatus: 
+
+----
+
+Plotarea: NA
+
+----
+
+Builtarea: NA
+
+----
+
+Levels: 
+
+----
+
+Location: 
+
+----
+
+Text: 
+
+----
+
+Category: Commercial
+
+----
+
+Status: Ongoing
+
+----
+
+Uuid: NCtAE2vMrcI0GQpQ

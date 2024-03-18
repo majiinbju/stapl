@@ -1,6 +1,7 @@
 /* Topbar styles */
 .top-bar {
   z-index: 10000000;
+  background-color: white;
 }
 
 /* Site Brand */
@@ -113,4 +114,11 @@
 }
 .sidebar a:hover {
   color: var(--color-secondary-hover);
+}
+
+/* Default Mobile Stylings */
+@media screen and (max-width: 768px) {
+  .top-bar {
+    background: none;
+  }
 }

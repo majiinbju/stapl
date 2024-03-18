@@ -1,0 +1,49 @@
+Title: NMS Midas
+
+----
+
+Icon: 
+
+----
+
+Typology: Architecture Commercial
+
+----
+
+Year: 
+
+----
+
+Projectstatus: 
+
+----
+
+Plotarea: NA
+
+----
+
+Builtarea: NA
+
+----
+
+Levels: NA
+
+----
+
+Location: NA
+
+----
+
+Text: 
+
+----
+
+Category: Commercial
+
+----
+
+Status: Ongoing
+
+----
+
+Uuid: xI3J70c2WfIpyWcc

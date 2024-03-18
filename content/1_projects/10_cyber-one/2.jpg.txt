@@ -1,0 +1,29 @@
+Alt: 
+
+----
+
+Caption:
+
+The car parking frontage produces the effect of a canopy going upto the sixth floor of the building. Internally, frosted glass to allow light to get into the parking section. At night, it lights up like a lantern. The vertical screens of glass creates a play; adding a bar code like element of colour. The rest of the office space starts from the 7th floor onwards up to the 24th floor.
+
+Essentially a composition of a cylinder & two interlocking cuboids with a tapering top; the building stands tall at 110 m. Since the height to width facade ratio is huge; the building mass has been broken into two cuboids. One cuboid is composed in three different shades of panels are composed in 3 different shades; while the other is in a single monotone. This creates a moving visual matrix. The facade of the building is done up in a double glaze low E soft coat glass. The system for putting up the panels is a unitised system of construction. It is a 5 barrier system to prevent water from getting in. The three shades that have been used are Silver 20, Silver Grey 32 & Light Blue 52. 
+
+The structure is a large span column free space on the floor plate to cater to the requirements of IT offices. The front forms a large linear expanse of about 64m. This is also largely the north eastern direction creating ambient 'north' lighting within the office areas; while the service areas have been deliberately pushed to the south-west of the building. The lift are Mikonic-10 elevators with port technology; first­of-its-kind in India and the 8th in the world; when it was installed. 
+
+The landscape forms a complementary element to the buildings architecture.
+
+----
+
+License: 
+
+----
+
+Sort: 1
+
+----
+
+Uuid: dFkfWDpobZHPvlwB
+
+----
+
+Template: gallery-image

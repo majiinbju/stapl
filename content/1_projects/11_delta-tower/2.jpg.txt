@@ -1,0 +1,27 @@
+Alt: 
+
+----
+
+Caption:
+
+The proximity of the site to the upcoming Navi Mumbai airport decided the height of the buildings. Above the second floor the residential building runs in an L-shape, running parallel to the retail shopping and the roads below. The residential buiding consists of five towers with one corner wing flanked by two other wings on either side. Apartments face both the road and the podium landscape on the inner side. The 2 and 3 bedroom apartments face all the four directions. All the five wings have been visualy connected as one mass. The massing has been further distinguised by linear horizontal 
+
+lines on the fac;ade alternating with boxed balconies creating a geometry. 
+
+The building has been provided with a sewage treatment plant to recycle as much water as posibble. The roof of the building has been provided with solar panels that provide for the common electical loads of the project.
+
+----
+
+License: 
+
+----
+
+Sort: 1
+
+----
+
+Uuid: vpGM9HQhHK6jodbh
+
+----
+
+Template: gallery-image

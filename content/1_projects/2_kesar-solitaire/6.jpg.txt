@@ -1,0 +1,25 @@
+Alt: 
+
+----
+
+Caption:
+
+On the ground floor, facing the Palm Beach road, is an entrance driveway that is covered by a large glass canopy. The landscape has stepped lawn and a water element which complements the simple, straight-line architecture of the building. A large double height entrance lobby beyond the canopy, houses a seating lounge and waterfall. 
+
+Solitaire has been conceptualized and designed as a modern high-rise complete with a functional ease and an aesthetic edge. Completed in 2010, it stands out as a bold attempt to break the visual stereo-type of the immediate residential streetscape. It is an example of what can be achieved by integrating intelligent design and engineering within a limited paradigm.
+
+----
+
+License: 
+
+----
+
+Sort: 5
+
+----
+
+Uuid: ABXOEp3dXogDZCe0
+
+----
+
+Template: gallery-image
