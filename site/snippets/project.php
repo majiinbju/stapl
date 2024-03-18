@@ -8,7 +8,7 @@
 
 
 <?php if ($isMobile): ?>
-	<section class="project my-4">
+	<section class="project my-5">
 		<div class="carousel">
 			<ul class="ul draggable">
 				<!-- Project Tags -->

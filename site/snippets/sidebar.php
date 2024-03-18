@@ -13,6 +13,7 @@
 
 <div class="offcanvas offcanvas-start border-0" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasSide" aria-labelledby="offcanvasSideLabel" style="width: 150px;">
 	<nav class="d-flex flex-column sidebar mx-4 border-0 mt-5 pt-5 text-uppercase" id="sideNavigation">
+		<a href="<?= $site->url() ?>" class="nav-item my-1">Home</a>
 		<?php foreach ($site->children()->listed() as $item): ?>
 		<a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>" class="nav-item my-1" id="faderLink"><?= $item->title()->esc() ?></a>
 		<?php endforeach ?>

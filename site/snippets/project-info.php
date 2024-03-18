@@ -8,22 +8,10 @@
 
 <?php if ($isMobile): ?>
 		<li class="li project-info">
-				<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end mt-3">
-						<span class="icon">
-								<?php if ($project->icon()->isNotEmpty()): ?>
-										<?php if ($icon = $project->icon()): ?>
-												<img src="<?= $icon->crop(50)->url() ?>" loading="lazy" alt="<?= $icon->alt() ?>">
-										<?php endif ?>
-								<?php endif ?>
-						</span>
-						<div class="d-flex flex-column project-details align-items-md-start align-items-lg-end">
-								<span class="project-title"><?= $project->title()->esc() ?></span>
-								<span class="project-location"><?= $project->location() ?></span>
-						</div>
-				</div>
+			
 				<figure class="d-flex">
 						<?php if ($cover = $project->cover()): ?>
-								<img class="cover-img" src="<?= $cover->resize(null, 1080)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
+								<img class="cover-img" src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 						<?php endif ?>
 						<ul class="tags tagsMobile">
 								<!-- Tags content for mobile/tablet -->
@@ -55,6 +43,19 @@
 								</figcaption>
 						<?php endif ?>
 				</figure>
+				<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end my-3">
+						<span class="icon">
+								<?php if ($project->icon()->isNotEmpty()): ?>
+										<?php if ($icon = $project->icon()): ?>
+												<img src="<?= $icon->crop(50)->url() ?>" loading="lazy" alt="<?= $icon->alt() ?>">
+										<?php endif ?>
+								<?php endif ?>
+						</span>
+						<div class="d-flex flex-column project-details align-items-md-start align-items-lg-end">
+								<span class="project-title"><?= $project->title()->esc() ?></span>
+								<span class="project-location"><?= $project->location() ?></span>
+						</div>
+				</div>
 		</li>
 <?php else: ?>
 		<li class="li project-info">

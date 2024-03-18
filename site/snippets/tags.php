@@ -14,7 +14,7 @@
 				<span class="project-location"><?= $project->location() ?></span>
 			</div>
 		</div>
-		<div class="hidden">
+		<div class="hidden tagContainer">
 			
 			<ul class="tags">
 				<?php if ($project->typology()->isNotEmpty()): ?>

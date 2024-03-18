@@ -12,7 +12,7 @@
 @media only screen and (min-width: 1600px) {
  .projects {
     align-items: end;
- }x
+ }
 }
 
 /* Project Info */
@@ -88,7 +88,17 @@
   background-color: black;
 }
 
-
+/* Project Text */
+.summary {
+  /* line-height: 19px; */
+  letter-spacing: 0.56px;
+  min-width: 100px;
+  /* width: fit-content; */
+  max-width: fill-available;
+  font-weight: normal;
+  font-size: var(--body-text-size);
+  margin: 0 2rem;
+}
 
 /* Image styles */
 /* Figure style to stop offset on expansion */
@@ -105,21 +115,23 @@ figure img {
   object-fit: cover;
 }
 
-.cover-img {
-  height: 100%;
-}
 
 @media screen and (max-width: 1366px) {
   .project-info {
     display: flex;
-    height: 100%;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   figure {
     position: relative;
     height: 100%;
     margin: 0;
   }
+  .summary {
+    font-size: var(--mobile-body-text-size);
+    contain: content;
+    max-width: fit-content;
+  }
+
 }
 
 

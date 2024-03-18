@@ -29,7 +29,8 @@
   .carousel {
   display: flex;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   overflow: visible;
+  overflow-x: hidden;
   }
 }

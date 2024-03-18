@@ -10,7 +10,7 @@
 <main id="top">
 
 	<?php if ($isMobileOrTablet): ?>
-	<div class="container col-11 me-0">
+	<div class="container col-11">
 		<h1 class="pageTitle mb-5"><?= $page->title() ?></h1>
 		<span class="people-tag mb-5">
 			Partners
@@ -26,11 +26,11 @@
 						<?= $person->name() ?>
 						<?php endif ?>
 					</span>
-					<span class="people-tag">
+					<!-- <span class="people-tag">
 						<?php if ($person->position()->isNotEmpty()): ?>
 						<?= $person->position() ?>
 						<?php endif ?>
-					</span>
+					</span> -->
 				</a>
 				<div class="mt-3 collapse" id="collapse<?= $person->slug() ?>" style="transition: all 0.75s ease-in-out;">
 
