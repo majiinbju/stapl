@@ -7,7 +7,7 @@
 ?>
 
 <?php if ($isMobile): ?>
-		<li class="li project-info">
+		<li class="li project-info" id="projectInfo">
 			
 				<figure class="d-flex">
 						<?php if ($cover = $project->cover()): ?>

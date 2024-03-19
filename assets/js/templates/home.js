@@ -48,6 +48,8 @@ function shrinkProject(project) {
   activeProject = null;
 }
 
+
+
 sections.forEach((section) => {
   const carousel = section.querySelector(".carousel");
   const draggableElements = section.querySelectorAll(".draggable");
@@ -78,6 +80,18 @@ sections.forEach((section) => {
       }
     });
   };
+
+  // Mobile specific event listeners
+  if (screen.width < 1376) {
+      let firstChild = carousel.querySelector('ul').firstElementChild;
+     firstChild.addEventListener("click", (e) => {
+          gsap.to(carousel.querySelector('ul'), {
+              x: "-=300", // Move the carousel to the left by 300px
+              duration: 0.5, // Animation duration in seconds
+              ease: "power2.out" // Easing function for smoother animation
+          });
+      });
+  }
 
   // Check for screen width before adding desktop-specific event listeners
   if (screen.width > 1376) {

@@ -32,5 +32,11 @@
   margin-bottom: 0rem;
   overflow: visible;
   /* overflow-x: hidden; */
+    transition: var(--transition);
+  }
+
+  .slide-left {
+    transform: translateX(-300px);
+    transition: var(--transition);
   }
 }
