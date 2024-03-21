@@ -42,13 +42,13 @@ body {
 /* Header & Body Stylings */
 .pageTitle {
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: normal;
   padding-top: 5rem;
   font-size: 4.25rem;
 }
 .sectionTitle {
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: normal;
   padding-top: 5rem;
   font-size: 3rem;
 }
