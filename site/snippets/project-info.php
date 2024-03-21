@@ -11,7 +11,7 @@
 
 	<figure class="d-flex">
 		<?php if ($cover = $project->cover()): ?>
-		<img class="cover-img" src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
+		<img class="cover-img" src="<?= $cover->crop(1920, 1080)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 		<?php endif ?>
 		<ul class="tags tagsMobile">
 			<!-- Tags content for mobile/tablet -->
@@ -61,12 +61,12 @@
 <li class="li project-info">
 	<?php snippet('tags', compact('project')) ?>
 	<!-- Project Cover -->
-	<figure class="d-flex mx-4">
+	<figure class="d-flex mx-3">
 		<?php if ($cover = $project->cover()): ?>
-		<img class="cover-img" src="<?= $cover->crop(1280, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
+		<img class="cover-img" src="<?= $cover->crop(1920, 1080)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 		<?php endif ?>
 		<?php if ($project->text()->isNotEmpty()) : ?>
-		<figcaption class="hidden summary">
+		<figcaption class="hidden summary mx-4">
 			<?= $project->text()->kirbytextinline() ?>
 		</figcaption>
 		<?php endif ?>

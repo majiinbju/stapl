@@ -20,6 +20,7 @@
 }
 .contactList li {
   display: inline-block;
+  /* width: fit-content; */
 }
 .contact-container {
   width: 100%;

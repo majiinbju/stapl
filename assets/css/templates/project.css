@@ -1,7 +1,5 @@
 /* Projects Container */
 .projects {
-  /* Margin to offset the container from top navigation bar */
-  margin-top: 5rem;
   padding: 0rem;
   display: flex;
   flex-direction: column;
@@ -26,7 +24,6 @@
   height: 100%;
   margin: 0rem 1rem;
   /* Etc. */
-  line-height: 1.1;
   /* animation: fadeIn 0.75s ease-in-out; */
 }
 
@@ -47,8 +44,8 @@
   /* line-height: 19px; */
   color: var(--color-primary);
   letter-spacing: 0.56px;
-  min-width: 100px;
-  max-width: 600px;
+  min-width: 400px;
+  max-width: 900px;
   /* width: fit-content; */
   /* max-width: fill-available; */
   font-weight: normal;
@@ -176,6 +173,9 @@ figure img { /* Image Width */
     contain: content;
     min-width: 400px;
     min-width: 800px;
+  }
+  figcaption {
+
   }
 }
 
