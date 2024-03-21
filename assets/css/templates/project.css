@@ -8,11 +8,11 @@
   align-items: center;
   transition: transform 0.3s ease-in-out;
 }
-/* To fix center on larger screens */
-@media only screen and (min-width: 1600px) {
- .projects {
-    align-items: end;
- }
+
+
+/* Project Stylings */
+.project {
+  margin: 0.45rem 0;
 }
 
 /* Project Info */
@@ -30,67 +30,22 @@
   /* animation: fadeIn 0.75s ease-in-out; */
 }
 
+/* Project Typography */
 .project-title {
   font-size: var(--text-primary-size);
   text-transform: none;
   color: black;
 }
-
 .project-location {
   font-size: var(--text-secondary-size);
   color: gray;
   text-transform: uppercase;
   margin: 5px 0px;
 }
-
-/* Project Tags */
-/* Tags Container */
-.tags {
-  list-style-type: none;
-  margin-top: 1rem;
-  padding: 0;
-  font-size: var(--text-secondary-size);
-  text-transform: uppercase;
-}
-
-.tagContainer {
-  width: 310px;
-}
-
-/* Tag Container */
-.tags li {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-/* Tag Heading */
-.sub-heading {
-  color: var(--color-secondary);
-}
-
-/* Tag Text */
-.tag {
-  color: var(--color-primary);
-}
-
-/* Tags Mobile Container */
-.tagsMobile {
-  margin: 0rem 2rem;
-  min-width: 200px;
-  max-width: 300px;
-}
-/* Project Icon */
-.icon {
-  width: 2.2rem;
-  height: 2.2rem;
-  margin-bottom: 0.75rem;
-  background-color: black;
-}
-
 /* Project Text */
 .summary {
   /* line-height: 19px; */
+  color: var(--color-primary);
   letter-spacing: 0.56px;
   min-width: 100px;
   max-width: 600px;
@@ -100,41 +55,134 @@
   font-size: var(--body-text-size);
   margin: 0 2rem;
 }
+/* Tag Heading */
+.sub-heading {
+  color: var(--color-secondary);
+}
+.tags {
+  list-style-type: none;
+  margin-top: 1rem;
+  padding: 0;
+  font-size: var(--text-secondary-size);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* Project Tags */
+/* Tags Container */
+.tagContainer {
+  width: 310px;
+}
+/* Tags Mobile Container */
+.tagsMobile {
+  margin: 0rem 2rem;
+  min-width: 200px;
+  max-width: 300px;
+}
+/* Tag Items */
+.tags li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+
+/* Project Icon */
+.icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 0.75rem;
+  background-color: black;
+}
 
 /* Image styles */
-/* Figure style to stop offset on expansion */
-figure {
+figure { /* Figure style to stop offset on expansion */
   position: relative;
   height: auto;
   margin: 0;
 }
-
-/* Width for Images */
-figure img {
+figure img { /* Image Width */
   flex: 2 1 auto;
   /* height: 100%; */
   object-fit: cover;
 }
+/* Image behaviour on active state */
+.active .project-img {
+  /* height: auto; */
+}
+.cover-img {  /* Cover Image (.project-info) */
+  max-height: 100%;
+}
+.project-img { /* Gallery Images (.project-gallery) */
+  /* min-width: 50%; */
+  max-height: 80vh;
+  transition: var(--transition);
+}
 
-
+/* Mobile Stylings */
 @media screen and (max-width: 1366px) {
+  /* General Stylings */
+  .projects {
+    margin-top: 0;
+  }
+  .project {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  /* Reduce gap from project container to top */
+  .project:nth-child(1) {
+    margin-top: 1rem;
+  }
   .project-info {
     display: flex;
     flex-direction: column;
   }
+  .project-details {
+    height: 100%;
+    margin: 0rem 10px;
+  }
+
+  /* Tags */
+  .tagContainer {
+    /* height: 20%; */
+    width: 100%;
+    bottom: 0;
+    position: relative;
+  }
+
+  /* Image Stylings */
   figure {
     position: relative;
     height: 100%;
     margin: 0;
   }
+  .cover-img {
+    width: 92.5vw;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .project-img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Project Mobile Typography */
+  .project-title {
+    margin-bottom: 4px;
+  }
   .summary {
     font-size: var(--mobile-body-text-size);
     contain: content;
-    max-width: 800px;
-    overflow: clip;
-    /* max-width: fit-content; */
+    min-width: 400px;
+    min-width: 800px;
   }
-
 }
 
-
+/* Larger Screens Stylings */
+@media only screen and (min-width: 1600px) {
+ /* fix center */
+ .projects {
+    align-items: end;
+ }
+}

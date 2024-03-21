@@ -11,7 +11,7 @@
 
 /* Person Stylings */
 .person a {
-  text-decoration: none;
+  text-decoration: none; /* Remove default anchor styles*/
 }
 /* Person tag stylings */
 .people-tag {
@@ -26,7 +26,6 @@
   opacity: 0;
   transition: all 0.35s ease-in-out;
 }
-
 /* Image hover stylings */
 .person-anchor:hover + .img-anchor img {
   opacity: 1;
@@ -37,9 +36,10 @@
   position: fixed;
   /* background: red; */
 }
-/* Person's name */
+
+/* People Typography */
 .person-name {
-  font-size: var(--text-primary-size);
+  font-size: 15px;
   color: var(--color-primary);
   transition: all 0.25s ease-in-out;
 }
@@ -47,6 +47,11 @@
 .person-anchor:hover .person-name {
   transform: scale(1.5);
   transform-origin: bottom left;
+}
+.person-name:before {
+  content: '+ ';
+  font-size: 13px;
+  color: var(--color-secondary);
 }
 /* Styles for person description */
 .person-body {

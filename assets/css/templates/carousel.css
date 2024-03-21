@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 /* Main carousel */
 .carousel {
   display: flex;
@@ -20,6 +21,7 @@
   /* height: auto; */
   transition: var(--transition);
 }
+
 .img.active {
   /* width: 100%; */
 }
@@ -27,16 +29,23 @@
 
 @media screen and (max-width: 1366px) {
   .carousel {
-  display: flex;
-  width: 100%;
-  margin-bottom: 0rem;
-  overflow: visible;
-  /* overflow-x: hidden; */
+    display: flex;
+    width: 100%;
+    margin-bottom: 0rem;
+    overflow: visible;
+    /* overflow-x: hidden; */
     transition: var(--transition);
   }
 
+  /* Carousel Figure (for the carousels on Career & About page) */
+  .carouselFigure img {
+    max-width: 350px;
+  }
+
+  /* Animation for home page */
   .slide-left {
     transform: translateX(-300px);
     transition: var(--transition);
   }
+
 }

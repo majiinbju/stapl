@@ -1,14 +1,14 @@
 <?php snippet('header') ?>
 <main id="top">
 
-	<div class="container col-12" id="section">
+	<div class="container col-sm-12 col-lg-9" id="section">
 		<h1 class="pageTitle mx-1"><?= $page->title() ?></h1>
 		<!-- Text columns -->
 		<div class="d-sm-flex container-fluid my-5">
-			<p class="careers-body col-sm-12 col-lg-5 me-lg-5 me-sm-0">
+			<p class="bodyText col-sm-12 col-lg-5 me-lg-5 me-sm-0">
 				<?= $page->text()->kirbytextinline() ?>
 			</p>
-			<p class="careers-body col-sm-12 col-lg-5">
+			<p class="bodyText col-sm-12 col-lg-5">
 				<?= $page->text2()->kirbytextinline() ?>
 			</p>
 		</div>
@@ -22,10 +22,10 @@
 			</h2>
 			<!-- Section Text -->
 			<div class="d-sm-flex container-fluid my-5">
-				<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 careers-body">
+				<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 bodyText">
 					<?= $pageSection->Column1()->kirbytextinline() ?>
 				</p>
-				<p class="col-sm-12 col-lg-5 careers-body">
+				<p class="col-sm-12 col-lg-5 bodyText">
 					<?= $pageSection->Column1()->kirbytextinline() ?>
 				</p>
 			</div>
@@ -35,7 +35,7 @@
 					<?php foreach ($pageSection->images() as $image) : ?>
 					<li class="li">
 						<?php if ($image->alt()->isNotEmpty()) : ?>
-						<figure class="d-flex flex-column mx-2">
+						<figure class="carouselFigure d-flex flex-column mx-2">
 							<a href="<?= $image->link() ?>">
 								<img class="project-img" src="<?= $image->crop(500, 300)->url() ?>" alt="<?= $image->alt() ?>" />
 							</a>
@@ -44,7 +44,7 @@
 							</figcaption>
 						</figure>
 						<?php else: ?>
-						<figure class="d-flex mx-2 bg-gray-100">
+						<figure class="carouselFigure d-flex mx-2 bg-gray-100">
 							<img class="project-img" src="<?= $image->crop(500, 300)->url() ?>" alt="<?= $image->alt() ?>" />
 						</figure>
 						<?php endif ?>

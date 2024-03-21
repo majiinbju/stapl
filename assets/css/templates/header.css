@@ -120,6 +120,6 @@
 /* Default Mobile Stylings */
 @media screen and (max-width: 768px) {
   .top-bar {
-    /* background: none; */
+    background-color: none;
   }
 }

@@ -21,6 +21,6 @@ article h2 {
   width: 300px;
 }
 .article-body {
-  font-size: var(--body-text-size);
+  font-size: var(--text-primary-size);
   color: var(--color-secondary);
 }

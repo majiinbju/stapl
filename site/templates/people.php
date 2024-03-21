@@ -16,10 +16,10 @@
 			Partners
 		</span>
 		<!-- List of People -->
-		<ul class="people-list mt-5">
+		<ul class="people-list mt-1">
 			<?php foreach ($page->children() as $person): ?>
 			<!-- Person -->
-			<li class="d-flex flex-column person">
+			<li class="d-flex flex-column person my-1">
 				<a class="d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse<?= $person->slug() ?>" role="button" aria-expanded="false" aria-controls="collapsePerson">
 					<span class="person-name">
 						<?php if ($person->name()->isNotEmpty()): ?>
@@ -97,10 +97,11 @@
 			<?php endforeach ?>
 		</ul>
 	</div>
+	<?php endif ?>
+	
 	<div class="my-5 py-5 container d-flex justify-content-center">
 		<a href="#top" class="backToTop">Back to Top</a>
 	</div>
-	<?php endif ?>
 </main>
 
 <?php snippet('footer') ?>

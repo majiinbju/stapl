@@ -1,0 +1,57 @@
+/* Footer properties */
+.footer {
+  margin-bottom: 8rem;
+}
+.footer-text {
+  font-size: var(--text-secondary-size);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+.footer-text:hover {
+  color: var(--color-primary);
+}
+
+/* Contact navigation list */
+.contactList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.contactList li {
+  display: inline-block;
+}
+.contact-container {
+  width: 100%;
+}
+.contact-container > navbar a {
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: var(--text-secondary-size);
+  transition: all 0.25s ease-in-out;
+}
+.contact-container > navbar a:hover {
+  color: var(--color-primary);
+}
+
+/* Address modifier */
+.address:before {
+  content: "Navi Mumbai";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+/* Back to Top button */
+.backToTop {
+  font-size: var(--text-primary-size);
+  color: var(--color-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+.backToTop:hover {
+  color: var(--color-primary);
+}

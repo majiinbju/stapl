@@ -1,10 +1,5 @@
 @import "header.css";
 
-.careers-body {
-  font-size: var(--body-text-size);
-  color: var(--color-primary);
-}
-
 .jobTable {
   display: table;
   table-layout: fixed;

@@ -9,7 +9,7 @@ $isDesktop = !$isMobile && !$isTablet;
 <main id="top">
 
 	<?php if ($isMobile): ?>
-	<section class="container-fluid">
+	<section class="container col-12">
 		<h1 class="pageTitle mb-5">
 			<?= $page->title() ?>
 		</h1>
@@ -43,7 +43,7 @@ $isDesktop = !$isMobile && !$isTablet;
 		<?php endforeach ?>
 	</section>
 	<?php else: ?>
-	<section class="container w-75">
+	<section class="container col-sm-12 col-lg-9">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<?php foreach($page->children()->listed()->flip() as $article): ?>
 		<article class="my-5">

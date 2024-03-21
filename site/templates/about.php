@@ -3,11 +3,11 @@
 	<div class="container-fluid col-sm-12 col-lg-9">
 		<h1 class="pageTitle mx-2"><?= $page->title() ?></h1>
 		<div class="d-sm-flex container-fluid my-5">
-			<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 aboutBody">
+			<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 bodyText">
 				<?= $page->Column1()->kirbytextinline() ?>
 			</p>
 
-			<p class="col-sm-12 col-lg-5 aboutBody">
+			<p class="col-sm-12 col-lg-5 bodyText">
 				<?= $page->Column2()->kirbytextinline() ?>
 			</p>
 		</div>
@@ -21,10 +21,10 @@
 		</h2>
 		<!-- Section Text -->
 		<div class="d-sm-flex container-fluid my-5">
-			<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 aboutBody">
+			<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 bodyText">
 				<?= $aboutSection->Column1()->kirbytextinline() ?>
 			</p>
-			<p class="col-sm-12 col-lg-5 aboutBody">
+			<p class="col-sm-12 col-lg-5 bodyText">
 				<?= $aboutSection->Column1()->kirbytextinline() ?>
 			</p>
 		</div>
@@ -34,7 +34,7 @@
 				<?php foreach ($aboutSection->images() as $image) : ?>
 				<li class="li">
 					<?php if ($image->alt()->isNotEmpty()) : ?>
-					<figure class="d-flex flex-column mx-2">
+					<figure class="carouselFigure d-flex flex-column mx-2">
 						<a href="<?= $image->link() ?>">
 							<img class="project-img" src="<?= $image->crop(500, 300)->url() ?>" alt="<?= $image->alt() ?>" />
 						</a>
@@ -43,7 +43,7 @@
 						</figcaption>
 					</figure>
 					<?php else: ?>
-					<figure class="d-flex mx-2 bg-gray-100">
+					<figure class="carouselFigure d-flex mx-2 bg-gray-100">
 						<img class="project-img" src="<?= $image->crop(500, 300)->url() ?>" alt="<?= $image->alt() ?>" />
 					</figure>
 					<?php endif ?>

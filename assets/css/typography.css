@@ -1,0 +1,74 @@
+/* Custom font */
+@font-face {
+    font-family: Everett;
+    src: url("../type/everett.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: Everett;
+  src: url("../type/everett-medium.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Typography Variables */
+:root {
+/* Text Primary */
+--text-primary-size: 13px;
+--color-primary: #1b1b1b;
+/* Text Secondary */
+--text-secondary-size: 12px;
+--color-secondary: #898989;
+--color-secondary-hover: rgba(107, 107, 107, 1);
+/* Body Text */
+--body-text-size: 14px;
+--body-color: #1b1b1b;
+--mobile-body-text-size: 12px;
+/* Links */
+--link-text-size: 13px;
+}
+/* Body Typography */
+body {
+  font-family: Helvetica, ui-sans-serif, Arial;
+  vertical-align: baseline;
+  text-rendering: geometricPrecision;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Header & Body Stylings */
+.pageTitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-top: 5rem;
+  font-size: 4.25rem;
+}
+.sectionTitle {
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-top: 5rem;
+  font-size: 3rem;
+}
+.bodyText {
+  color: var(--body-color);
+  font-size: var(--body-text-size);
+  line-height: 1.3125;
+}
+
+/* Typography Mobile Stylings */
+@media screen and (max-width: 768px) {
+  .bodyText {
+    font-size: 16px;
+  }
+  .pageTitle {
+    padding-top: 1rem;
+    font-size: 3.25rem;
+  }
+  .sectionTitle {
+    padding-top: 1rem;
+    font-size: 2.75rem;
+  }
+}
