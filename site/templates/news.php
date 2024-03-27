@@ -25,7 +25,7 @@ $isDesktop = !$isMobile && !$isTablet;
 			<?php if ($cover = $article->image()): ?>
 			<img src="<?= $cover->crop(800)->url() ?>" alt="<?= $cover->alt() ?>" class="article-img w-100">
 			<?php endif ?>
-			<div class="d-flex flex-column my-5">
+			<div class="d-flex flex-column my-3 my-lg-5">
 				<!-- Title -->
 				<h2>
 					<?php if ($article->title()->isNotEmpty()): ?>
@@ -46,7 +46,7 @@ $isDesktop = !$isMobile && !$isTablet;
 	<section class="container col-sm-12 col-lg-9">
 		<h1 class="pageTitle"><?= $page->title() ?></h1>
 		<?php foreach($page->children()->listed()->flip() as $article): ?>
-		<article class="my-5">
+		<article class="my-3 my-lg-5">
 			<div class="d-flex">
 				<!-- Date -->
 				<?php if ($article->date()->isNotEmpty()): ?>

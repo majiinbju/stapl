@@ -2,7 +2,7 @@
 <main id="top">
 	<div class="container-fluid col-sm-12 col-lg-9">
 		<h1 class="pageTitle mx-2"><?= $page->title() ?></h1>
-		<div class="d-sm-flex container-fluid my-5">
+		<div class="d-sm-flex container-fluid my-3 my-lg-5">
 			<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 bodyText">
 				<?= $page->Column1()->kirbytextinline() ?>
 			</p>
@@ -20,7 +20,7 @@
 			<?= $aboutSection->title() ?>
 		</h2>
 		<!-- Section Text -->
-		<div class="d-sm-flex container-fluid my-5">
+		<div class="d-sm-flex container-fluid my-3 my-lg-5">
 			<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 bodyText">
 				<?= $aboutSection->Column1()->kirbytextinline() ?>
 			</p>

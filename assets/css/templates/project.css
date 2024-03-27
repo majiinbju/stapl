@@ -22,7 +22,7 @@
   /* Size */
   /* width: min-content; */
   height: 100%;
-  margin: 0rem 1rem;
+  margin-left: 1rem;
   /* Etc. */
   /* animation: fadeIn 0.75s ease-in-out; */
 }
@@ -45,7 +45,7 @@
   color: var(--color-primary);
   letter-spacing: 0.56px;
   min-width: 400px;
-  max-width: 900px;
+  max-width: 500px;
   /* width: fit-content; */
   /* max-width: fill-available; */
   font-weight: normal;
@@ -174,8 +174,9 @@ figure img { /* Image Width */
   .summary {
     font-size: var(--mobile-body-text-size);
     contain: content;
-    min-width: 400px;
-    min-width: 800px;
+    min-width: 200px;
+    max-width: 400px;
+    margin: 0rem;
   }
 }
 

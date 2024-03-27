@@ -4,7 +4,7 @@
 	<div class="container col-sm-12 col-lg-9" id="section">
 		<h1 class="pageTitle mx-1"><?= $page->title() ?></h1>
 		<!-- Text columns -->
-		<div class="d-sm-flex container-fluid my-5">
+		<div class="d-sm-flex container-fluid my-3 my-lg-5">
 			<p class="bodyText col-sm-12 col-lg-5 me-lg-5 me-sm-0">
 				<?= $page->text()->kirbytextinline() ?>
 			</p>
@@ -21,7 +21,7 @@
 				<?= $pageSection->title() ?>
 			</h2>
 			<!-- Section Text -->
-			<div class="d-sm-flex container-fluid my-5">
+			<div class="d-sm-flex container-fluid my-3 my-lg-5">
 				<p class="col-sm-12 col-lg-5 me-lg-5 me-sm-0 bodyText">
 					<?= $pageSection->Column1()->kirbytextinline() ?>
 				</p>
@@ -36,9 +36,9 @@
 					<li class="li">
 						<?php if ($image->alt()->isNotEmpty()) : ?>
 						<figure class="carouselFigure d-flex flex-column mx-2">
-							<a href="<?= $image->link() ?>">
+							
 								<img class="project-img" src="<?= $image->crop(500, 300)->url() ?>" alt="<?= $image->alt() ?>" />
-							</a>
+							
 							<figcaption class="sectionImageTitle mt-3">
 								<?= $image->title() ?>
 							</figcaption>
@@ -56,7 +56,7 @@
 		<?php endforeach ?>
 
 		<!-- Render Job Postings -->
-		<h2 class="sectionTitle my-5 py-5 mx-1">
+		<h2 class="sectionTitle my-3 my-lg-5 py-5 mx-1">
 			Open Jobs
 		</h2>
 

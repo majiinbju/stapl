@@ -166,6 +166,27 @@ sections.forEach((section) => {
       });
     });
     makeElementsDraggable(draggableElements);
+
+    section.addEventListener("click", (e) => {
+
+
+
+        const scrollPosition = section.offsetTop + (section.clientHeight - window.innerHeight) / 2;
+
+        gsap.to(window, {
+          duration: 0.75,
+          scrollTo: {
+            y: scrollPosition
+          },
+          ease: "power2.out",
+          onComplete: () => {
+            activeProject = section;
+            makeElementsDraggable(draggableElements);
+          },
+        });
+
+    });
+
   }
 
   // Check for screen width before adding desktop-specific event listeners

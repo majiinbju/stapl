@@ -38,7 +38,7 @@
 			<!-- Add other tag sections as needed -->
 		</ul>
 		<?php if ($project->text()->isNotEmpty()) : ?>
-		<figcaption class="hidden summary">
+		<figcaption class="hidden summary me-3">
 			<?= $project->text()->kirbytextinline() ?>
 		</figcaption>
 		<?php endif ?>
@@ -66,7 +66,7 @@
 		<img class="cover-img" src="<?= $cover->crop(1920, 1080)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 		<?php endif ?>
 		<?php if ($project->text()->isNotEmpty()) : ?>
-		<figcaption class="hidden summary mx-4">
+		<figcaption class="hidden summary">
 			<?= $project->text()->kirbytextinline() ?>
 		</figcaption>
 		<?php endif ?>
