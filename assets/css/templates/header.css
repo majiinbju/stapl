@@ -122,4 +122,8 @@
   .top-bar {
     background-color: none;
   }
+  .barIcon {
+    display: none;
+    font-size: 0;
+  }
 }

@@ -20,6 +20,7 @@ body {
   /* height: 0; */
   overflow-y: scroll;
   overflow-x: clip;
+  touch-action: none;
 }
 ::-webkit-scrollbar { width: 0 !important }
 .main {

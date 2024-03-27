@@ -166,6 +166,7 @@ sections.forEach((section) => {
         ease: "power2.out" // Easing function for smoother animation
       });
     });
+    makeElementsDraggable(draggableElements);
   }
 
   // Check for screen width before adding desktop-specific event listeners
