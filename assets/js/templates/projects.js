@@ -10,15 +10,14 @@ let activeProject = null;
 
 let startX = 0;
 let endX = 0;
-let dragX = 0;
+let dragX = 0; // New variable to store the drag distance
 
 function shrinkTo65vh(project) {
   const timeline = gsap.timeline({ defaults: { duration: 0.75, ease: "power2.out" } });
 
-  // Uncomment if necessary
-  // project.querySelectorAll(".draggable").forEach((element) => {
-  //   Draggable.get(element)?.kill();
-  // });
+  project.querySelectorAll(".draggable").forEach((element) => {
+    Draggable.get(element)?.kill();
+  });
 
   timeline.to(project, {
     height: "65vh",
@@ -76,6 +75,18 @@ function makeElementsDraggable(draggableElements) {
   });
 }
 
+function makeElementsNotDraggable() {
+  sections.forEach((section) => {
+    if (section !== activeProject) {
+      const draggableElements = section.querySelectorAll(".draggable");
+      draggableElements.forEach((element) => {
+        gsap.set(element, { pointerEvents: "none" });
+        Draggable.get(element)?.kill();
+      });
+    }
+  });
+}
+
 function expandProject(project) {
   gsap.to(window, {
     duration: 0.75,
@@ -91,7 +102,6 @@ function expandProject(project) {
         width: "100%",
         ease: "power2.out",
         onComplete: () => {
-          // Show hidden elements after expansion
           const hidden = project.querySelectorAll(".hidden");
           hidden.forEach((hide) => {
             hide.classList.add("showObject");
@@ -109,6 +119,7 @@ function expandProject(project) {
     height: "80vh",
     width: "100%",
     top: `calc(50% - 40vh)`,
+    // transformOrigin: "center center",
   });
 
   sections.forEach((s) => {
@@ -138,18 +149,6 @@ function expandProject(project) {
     },
     "-=0.75"
   );
-}
-
-function makeElementsNotDraggable() {
-  sections.forEach((section) => {
-    if (section !== activeProject) {
-      const draggableElements = section.querySelectorAll(".draggable");
-      draggableElements.forEach((element) => {
-        gsap.set(element, { pointerEvents: "none" });
-        Draggable.get(element)?.kill();
-      });
-    }
-  });
 }
 
 sections.forEach((section) => {
@@ -243,51 +242,77 @@ sections.forEach((section) => {
   });
 });
 
-// Variable to store the previous scroll position
-let prevScrollPos = window.pageYOffset;
-
-// Update the scroll event listener
 window.addEventListener("scroll", () => {
-  const currentScrollPos = window.pageYOffset;
-  let scrollDirection;
+  let isProjectInView = false;
 
-  // Determine the scroll direction
-    if (currentScrollPos > prevScrollPos) {
-      scrollDirection = "down"; // Scrolling down
-    } else {
-      scrollDirection = "up"; // Scrolling up
-    }
-
-    // Update the previous scroll position
-    prevScrollPos = currentScrollPos;
-
-    // Check if the active project is still visible in the viewport
-    const activeRect = activeProject.getBoundingClientRect();
-    const isProjectInView = activeRect.top >= 0 && activeRect.bottom <= window.innerHeight;
-
-    // Shrink the active project if it's no longer in view or if scrolling away
-    if (!isProjectInView || (scrollDirection === "down" && activeRect.top < 0) || (scrollDirection === "up" && activeRect.bottom > window.innerHeight)) {
-      shrinkTo65vh(activeProject);
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (activeProject === section && (rect.top > window.innerHeight || rect.bottom < 0)) {
+      shrinkProject(activeProject);
       activeProject.classList.remove("active");
       activeProject = null;
     }
-  });
 
-  window.addEventListener("wheel", (event) => {
-    const currentTime = new Date().getTime();
-    const isTrackpad = currentTime - lastTouch < 100;
-
-    if (!isDragging) {
-      const delta = event.deltaY || event.detail || -event.wheelDelta;
-
-      if (Math.abs(delta) > 1) {
-        if (isTrackpad || event.deltaX !== undefined || event.deltaY !== undefined) {
-          bodyElement.classList.add("expand");
-          setTimeout(() => {
-            bodyElement.classList.remove("expand");
-          }, 300);
-        }
-      }
+    if (section.classList.contains("active")) {
+      isProjectInView = true;
     }
   });
 
+  if (!isProjectInView) {
+    sections.forEach((section) => {
+      if (section.classList.contains("active")) {
+        section.classList.remove("active");
+      }
+    });
+  }
+});
+
+window.addEventListener("wheel", (event) => {
+  const currentTime = new Date().getTime();
+  const isTrackpad = currentTime - lastTouch < 100;
+
+  if (!isDragging) {
+    const delta = event.deltaY || event.detail || -event.wheelDelta;
+
+    if (Math.abs(delta) > 1) {
+      if (isTrackpad || event.deltaX !== undefined || event.deltaY !== undefined) {
+        bodyElement.classList.add("expand");
+        setTimeout(() => {
+          bodyElement.classList.remove("expand");
+        }, 300);
+      }
+    }
+  }
+});
+
+function easeScroll() {
+  const sx = window.pageXOffset;
+  const sy = window.pageYOffset;
+  let dx = sx;
+  let dy = sy;
+
+  if (activeProject && isDragging) {
+    if (!isProjectShrinking(activeProject)) {
+      dx = li(dx, sx, 0.07);
+      dy = li(dy, sy, 0.07);
+    }
+  } else {
+    dx = li(dx, sx, 0.07);
+    dy = li(dy, sy, 0.07);
+  }
+
+  dx = Math.floor(dx * 100) / 100;
+  dy = Math.floor(dy * 100) / 100;
+
+  mainElement.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
+
+  document.body.style.height = "0";
+  window.requestAnimationFrame(easeScroll);
+}
+
+function isProjectShrinking(project) {
+  const timeline = gsap.getTweensOf(project);
+  return timeline.some((tween) => tween.vars && tween.vars.height === "65vh");
+}
+
+window.requestAnimationFrame(easeScroll);
