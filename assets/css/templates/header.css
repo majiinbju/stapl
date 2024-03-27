@@ -3,6 +3,7 @@
   z-index: 10000000;
   /* height: 100px; */
   background-color: white;
+  touch-action: none;
 }
 
 /* Site Brand */

@@ -166,16 +166,16 @@ figure img { /* Image Width */
 
   /* Project Mobile Typography */
   .project-title {
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
+  }
+  .project-location {
+    margin: 0px 0px;
   }
   .summary {
     font-size: var(--mobile-body-text-size);
     contain: content;
     min-width: 400px;
     min-width: 800px;
-  }
-  figcaption {
-
   }
 }
 

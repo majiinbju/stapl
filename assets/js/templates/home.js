@@ -157,7 +157,7 @@ sections.forEach((section) => {
 
   // Mobile specific event listeners
   if (screen.width < 1376) {
-    const firstChild = carousel.querySelector('ul').firstElementChild;
+    const firstChild = carousel.querySelector('ul');
     firstChild.addEventListener("click", (e) => {
       gsap.to(carousel.querySelector('ul'), {
         x: "-=300", // Move the carousel to the left by 300px
