@@ -23,9 +23,9 @@
 --color-secondary: #898989;
 --color-secondary-hover: rgba(107, 107, 107, 1);
 /* Body Text */
---body-text-size: 14px;
+--body-text-size: 12px;
 --body-color: #1b1b1b;
---mobile-body-text-size: 12px;
+--mobile-body-text-size: 10px;
 /* Links */
 --link-text-size: 13px;
 }

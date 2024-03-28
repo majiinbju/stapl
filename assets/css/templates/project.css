@@ -44,8 +44,8 @@
   /* line-height: 19px; */
   color: var(--color-primary);
   letter-spacing: 0.56px;
-  min-width: 400px;
-  max-width: 500px;
+  min-width: 300px;
+  max-width: 400px;
   /* width: fit-content; */
   /* max-width: fill-available; */
   font-weight: normal;
@@ -123,8 +123,8 @@ figure img { /* Image Width */
     margin-top: 0;
   }
   .project {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
   /* Reduce gap from project container to top */
   .project:nth-child(1) {
@@ -133,6 +133,7 @@ figure img { /* Image Width */
   .project-info {
     display: flex;
     flex-direction: column;
+    margin-left: 0;
   }
   .project-details {
     height: 100%;
@@ -154,7 +155,7 @@ figure img { /* Image Width */
     margin: 0;
   }
   .cover-img {
-    width: 92.5vw;
+    width: 90vw;
     height: 100%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -175,7 +176,7 @@ figure img { /* Image Width */
     font-size: var(--mobile-body-text-size);
     contain: content;
     min-width: 200px;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0rem;
   }
 }

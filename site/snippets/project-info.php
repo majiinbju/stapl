@@ -11,7 +11,7 @@
 
 	<figure class="d-flex">
 		<?php if ($cover = $project->cover()): ?>
-		<img class="cover-img" src="<?= $cover->crop(1920, 1080)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
+		<img class="cover-img" src="<?= $cover->crop(1200, 800)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 		<?php endif ?>
 		<ul class="tags tagsMobile">
 			<!-- Tags content for mobile/tablet -->

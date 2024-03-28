@@ -56,7 +56,7 @@ function makeElementsDraggable(draggableElements) {
     Draggable.create(element, {
       type: "x",
       bounds: element.parentElement,
-      edgeResistance: 0.9,
+      edgeResistance: 1,
       onDrag: function () {
         gsap.set(element);
         dragX = this.x;
@@ -194,7 +194,7 @@ sections.forEach((section) => {
     carousel.addEventListener("mousedown", (e) => {
       if (section === activeProject) {
         isDragging = true;
-        startX = e.clientX || e.touches[0].clientX;
+        startX = e.clientX || (e.touches && e.touches[0].clientX);
         endX = startX;
       }
     });
@@ -202,7 +202,8 @@ sections.forEach((section) => {
     carousel.addEventListener("mouseup", (e) => {
       if (isDragging) {
         isDragging = false;
-        endX = e.clientX || e.changedTouches[0].clientX;
+        endX = e.clientX || (e.changedTouches && e.changedTouches.length > 0 ? e.changedTouches[0].clientX : 0);
+
 
         const distance = endX - startX;
         const momentum = 0;
