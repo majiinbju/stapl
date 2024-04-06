@@ -54,3 +54,7 @@ Icon
 # ---------------
 /assets/type/
 
+# Editor and HtAccess
+# ---------------
+.editorconfig
+.htaccess
