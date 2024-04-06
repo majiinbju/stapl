@@ -16,16 +16,16 @@
 /* Typography Variables */
 :root {
 /* Text Primary */
---text-primary-size: 13px;
+--text-primary-size: 13px; /* Project Titles */
 --color-primary: #1b1b1b;
 /* Text Secondary */
---text-secondary-size: 12px;
+--text-secondary-size: 12px; /* Project Location */
 --color-secondary: #898989;
 --color-secondary-hover: rgba(107, 107, 107, 1);
 /* Body Text */
---body-text-size: 12px;
+--body-text-size: 12px; /* Project Summary (text in the carousel) Text */
 --body-color: #1b1b1b;
---mobile-body-text-size: 10px;
+--mobile-body-text-size: 10.5px; /* Mobile Summary Text */
 /* Links */
 --link-text-size: 13px;
 }

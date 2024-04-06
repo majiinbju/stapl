@@ -175,8 +175,8 @@ figure img { /* Image Width */
   .summary {
     font-size: var(--mobile-body-text-size);
     contain: content;
-    min-width: 200px;
-    max-width: 500px;
+    min-width: 300px;
+    max-width: 600px;
     margin: 0rem;
   }
 }
