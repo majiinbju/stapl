@@ -15,9 +15,14 @@
  * More about models: https://getkirby.com/docs/guide/templates/page-models
  */
 class ProjectPage extends Page
-{
-	public function cover()
-	{
-		return $this->content()->get('cover')->toFile() ?? $this->image();
-	}
-}
+ {
+     public function cover()
+     {
+         return $this->content()->get('cover')->toFile() ?? $this->image();
+     }
+ 
+     public function icon()
+     {
+         return $this->content()->get('icon')->toFile();
+     }
+ }

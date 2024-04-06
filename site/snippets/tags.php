@@ -3,11 +3,9 @@
 	<!-- Project Information -->
 		<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end">
 			<span class="icon">
-				<?php if ($project->icon()->isNotEmpty()): ?>
 					<?php if ($icon = $project->icon()): ?>
-						<img src="<?= $icon->crop(50)->url() ?>" alt="<?= $icon->alt() ?>">
+							<img class="cover-img" src="<?= $icon->crop(100)->url() ?>" loading="lazy" alt="<?= $icon->alt() ?>">
 					<?php endif ?>
-				<?php endif ?>
 			</span>
 			<div class="d-flex flex-column project-details align-items-md-start align-items-lg-end">
 				<span class="project-title"><?= $project->title()->esc() ?></span>
