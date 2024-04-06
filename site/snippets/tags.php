@@ -51,6 +51,12 @@
 					<span class="tag"><?= $project->year() ?></span>
 				</li>
 				<?php endif ?>
+				<?php if ($project->year()->isNotEmpty()): ?>
+				<li class="d-flex flex-column align-items-end">
+					<span class="sub-heading">Developer</span>
+					<span class="tag"><?= $project->developer() ?></span>
+				</li>
+				<?php endif ?>
 			</ul>
 		</div>
 </div>

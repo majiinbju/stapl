@@ -45,11 +45,9 @@
 	</figure>
 	<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end my-3">
 		<span class="icon">
-			<?php if ($project->icon()->isNotEmpty()): ?>
-			<?php if ($icon = $project->icon()): ?>
-			<img src="<?= $icon->crop(50)->url() ?>" loading="lazy" alt="<?= $icon->alt() ?>">
-			<?php endif ?>
-			<?php endif ?>
+				<?php if ($icon = $project->icon()): ?>
+						<img class="icon-image" src="<?= $icon->crop(36)->url() ?>" loading="lazy" alt="<?= $icon->alt() ?>">
+				<?php endif ?>
 		</span>
 		<div class="d-flex flex-column project-details align-items-md-start align-items-lg-end">
 			<span class="project-title"><?= $project->title()->esc() ?></span>

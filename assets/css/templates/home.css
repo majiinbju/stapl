@@ -49,5 +49,8 @@ section.active {
     height: 30vh;
     width: 90%;
   }
+  .icon-image {
+    max-width: 100%;
+  }
 }
 
