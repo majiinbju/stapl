@@ -23,7 +23,7 @@ columns:
           icon:
             label: Icon
             type: files
-            help: Upload file named 'icon' – should have 100x100 dimension, preferably .png or .ico filetype.
+            help: Upload file named 'icon' – should have 100x100 dimension and be an .ico file.
             max: 1
             layout: cards
             info: "{{ file.dimensions }}"
@@ -100,5 +100,6 @@ columns:
         image:
           ratio: 1/1
           cover: true
+      files: true
 
 

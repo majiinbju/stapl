@@ -12,29 +12,25 @@ let startX = 0;
 let endX = 0;
 let dragX = 0; // New variable to store the drag distance
 
+// Shrink project
 function shrinkTo65vh(project) {
   const timeline = gsap.timeline({ defaults: { duration: 0.75, ease: "power2.out" } });
-
   project.querySelectorAll(".draggable").forEach((element) => {
     Draggable.get(element)?.kill();
   });
-
   timeline.to(project, {
     height: "65vh",
     onComplete: () => {
       // Add logic if needed
     },
   }, "-=0.75");
-
   project.classList.remove("shrink");
-
   sections.forEach((s) => {
     if (s !== project && s.classList.contains("active")) {
       s.classList.remove("active");
 
       timeline.to(
-        s,
-        {
+        s, {
           height: "65vh",
           onComplete: () => {
             gsap.set(s, { top: "auto" });
@@ -44,28 +40,26 @@ function shrinkTo65vh(project) {
       );
     }
   });
-
   activeProject = null;
 }
 
+// Enable Draggable
 function makeElementsDraggable(draggableElements) {
   draggableElements.forEach((element) => {
     gsap.set(element, { pointerEvents: "auto" });
     Draggable.get(element)?.kill();
-
     Draggable.create(element, {
       type: "x",
       bounds: element.parentElement,
       edgeResistance: 1,
-      onDrag: function () {
+      onDrag: function() {
         gsap.set(element);
         dragX = this.x;
       },
-      onRelease: function () {
+      onRelease: function() {
         // Add any necessary logic here when dragging ends
       },
     });
-
     if (activeProject && activeProject.classList.contains("shrink")) {
       Draggable.get(element).disable();
       gsap.set(element);
@@ -75,6 +69,7 @@ function makeElementsDraggable(draggableElements) {
   });
 }
 
+// Kill Draggable
 function makeElementsNotDraggable() {
   sections.forEach((section) => {
     if (section !== activeProject) {
@@ -87,9 +82,11 @@ function makeElementsNotDraggable() {
   });
 }
 
+// Expand Project
 function expandProject(project) {
   gsap.to(window, {
     duration: 0.75,
+    // Scroll to center
     scrollTo: {
       y: project.offsetTop + (window.innerHeight - project.clientHeight) / 2,
       offsetY: (window.innerHeight - project.clientHeight) / 2,
@@ -97,6 +94,7 @@ function expandProject(project) {
     ease: "power2.out",
     onComplete: () => {
       gsap.to(project, {
+        // Project properties on complete
         duration: 0.75,
         height: "80vh",
         width: "100%",
@@ -110,25 +108,20 @@ function expandProject(project) {
       });
     },
   });
-
   const expandTimeline = gsap.timeline({
     defaults: { duration: 0.75, ease: "power2.out" },
   });
-
   expandTimeline.to(project, {
     height: "80vh",
     width: "100%",
     top: `calc(50% - 40vh)`,
     // transformOrigin: "center center",
   });
-
   sections.forEach((s) => {
     if (s !== project && s.classList.contains("active")) {
       s.classList.remove("active");
-
       expandTimeline.to(
-        s,
-        {
+        s, {
           height: "65vh",
           width: "100%",
           onComplete: () => {
@@ -139,10 +132,8 @@ function expandProject(project) {
       );
     }
   });
-
   expandTimeline.to(
-    project,
-    {
+    project, {
       onComplete: () => {
         project.classList.add("active");
       },
@@ -154,40 +145,41 @@ function expandProject(project) {
 sections.forEach((section) => {
   const carousel = section.querySelector(".carousel");
   const draggableElements = section.querySelectorAll(".draggable");
-
   // Mobile specific event listeners
-  if (screen.width < 1376) {
-    const firstChild = carousel.querySelector('ul');
-    firstChild.addEventListener("click", (e) => {
-      gsap.to(carousel.querySelector('ul'), {
-        x: "-=300", // Move the carousel to the left by 300px
-        duration: 0.5, // Animation duration in seconds
-        ease: "power2.out" // Easing function for smoother animation
-      });
-    });
-    makeElementsDraggable(draggableElements);
+if (screen.width < 1376) {
+    let isFirstClick = true; // Boolean flag to track the first click/tap
 
     section.addEventListener("click", (e) => {
+      const scrollPosition = section.offsetTop + (section.clientHeight - window.innerHeight) / 2;
+      gsap.to(window, {
+        duration: 0.25, // Increase duration for smoother scroll
+        scrollTo: {
+          y: scrollPosition
+        },
+        ease: "power2.inOut", // Use ease-in-out for smoother transition
+        onComplete: () => {
+          // Scroll animation complete, now slide the carousel
+          gsap.to(carousel.querySelector('ul'), {
+            x: "-=300", // Move the carousel to the left by 300px
+            delay: isFirstClick ? 0.5 : 0, // Apply delay only on the first click/tap
+            duration: 0.75, // Adjust duration for smoother slide
+            ease: "power2.out" // Use power2 easing for smoother animation
+          });
 
+          // Set active project and make elements draggable after sliding
+          activeProject = section;
+          makeElementsDraggable(draggableElements);
 
-
-        const scrollPosition = section.offsetTop + (section.clientHeight - window.innerHeight) / 2;
-
-        gsap.to(window, {
-          duration: 0.75,
-          scrollTo: {
-            y: scrollPosition
-          },
-          ease: "power2.out",
-          onComplete: () => {
-            activeProject = section;
-            makeElementsDraggable(draggableElements);
-          },
-        });
-
+          isFirstClick = false; // Update the flag after the first click/tap
+        },
+      });
     });
 
+    makeElementsDraggable(draggableElements);
   }
+
+
+  // End of mobile specific event listeners
 
   // Check for screen width before adding desktop-specific event listeners
   if (screen.width > 1376) {
@@ -198,19 +190,15 @@ sections.forEach((section) => {
         endX = startX;
       }
     });
-
     carousel.addEventListener("mouseup", (e) => {
       if (isDragging) {
         isDragging = false;
         endX = e.clientX || (e.changedTouches && e.changedTouches.length > 0 ? e.changedTouches[0].clientX : 0);
-
-
         const distance = endX - startX;
         const momentum = 0;
         const duration = 750;
         const distanceWithMomentum = distance * momentum;
         const targetX = carousel.scrollLeft + distanceWithMomentum;
-
         gsap.to(carousel, {
           scrollLeft: targetX,
           duration: duration,
@@ -218,20 +206,16 @@ sections.forEach((section) => {
         });
       }
     });
-
     carousel.addEventListener("mouseleave", () => {
       isDragging = false;
     });
-
     section.addEventListener("click", (e) => {
       if (!isDragging && !section.classList.contains("active")) {
         if (activeProject && activeProject !== section) {
           shrinkTo65vh(activeProject);
           makeElementsNotDraggable();
         }
-
         const scrollPosition = section.offsetTop + (section.clientHeight - window.innerHeight) / 2;
-
         gsap.to(window, {
           duration: 0.75,
           scrollTo: {
@@ -253,20 +237,18 @@ sections.forEach((section) => {
     // Make elements draggable on mobile
     makeElementsDraggable(draggableElements);
   }
-
   section.addEventListener("touchstart", () => {
     isDragging = true;
   });
-
   section.addEventListener("touchend", () => {
     isDragging = false;
     lastTouch = new Date().getTime();
   });
 });
+// End of Desktop listeners
 
 window.addEventListener("scroll", () => {
   let isProjectInView = false;
-
   sections.forEach((section) => {
     const rect = section.getBoundingClientRect();
     if (activeProject === section && (rect.top > window.innerHeight || rect.bottom < 0)) {
@@ -274,12 +256,10 @@ window.addEventListener("scroll", () => {
       activeProject.classList.remove("active");
       activeProject = null;
     }
-
     if (section.classList.contains("active")) {
       isProjectInView = true;
     }
   });
-
   if (!isProjectInView) {
     sections.forEach((section) => {
       if (section.classList.contains("active")) {
@@ -292,10 +272,8 @@ window.addEventListener("scroll", () => {
 window.addEventListener("wheel", (event) => {
   const currentTime = new Date().getTime();
   const isTrackpad = currentTime - lastTouch < 100;
-
   if (!isDragging) {
     const delta = event.deltaY || event.detail || -event.wheelDelta;
-
     if (Math.abs(delta) > 1) {
       if (isTrackpad || event.deltaX !== undefined || event.deltaY !== undefined) {
         bodyElement.classList.add("expand");
@@ -312,7 +290,6 @@ function easeScroll() {
   const sy = window.pageYOffset;
   let dx = sx;
   let dy = sy;
-
   if (activeProject && isDragging) {
     if (!isProjectShrinking(activeProject)) {
       dx = li(dx, sx, 0.07);
@@ -322,12 +299,9 @@ function easeScroll() {
     dx = li(dx, sx, 0.07);
     dy = li(dy, sy, 0.07);
   }
-
   dx = Math.floor(dx * 100) / 100;
   dy = Math.floor(dy * 100) / 100;
-
   mainElement.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
-
   document.body.style.height = "0";
   window.requestAnimationFrame(easeScroll);
 }

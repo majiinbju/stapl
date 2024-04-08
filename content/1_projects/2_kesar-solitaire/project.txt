@@ -2,7 +2,7 @@ Title: Kesar Solitaire
 
 ----
 
-Icon: 
+Icon: - file://MsNAIrI3nXs0ENy8
 
 ----
 
