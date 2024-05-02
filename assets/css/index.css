@@ -33,7 +33,7 @@ main {
   touch-action: pan-y;
 }
 
-::-webkit-scrollbar { width: 0 !important }
+/* ::-webkit-scrollbar { width: 0 !important } */
 
 .main {
   width : 100%;
@@ -68,4 +68,5 @@ main {
   #top {
     /* padding-top: 120px; */
   }
+  ::-webkit-scrollbar { width: 0 !important }
 }

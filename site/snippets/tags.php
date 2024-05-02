@@ -1,5 +1,5 @@
 <!-- Project Tags -->
-<div class="d-flex flex-column align-items-md-start align-items-lg-end tagContainer mx-md-0 mx-lg-5">
+<div class="d-flex flex-column align-items-md-start align-items-lg-end tagContainer mx-md-0 mx-lg-4">
 	<!-- Project Information -->
 		<div class="d-flex flex-lg-column flex-sm-row align-items-md-start align-items-lg-end">
 			<span class="icon">

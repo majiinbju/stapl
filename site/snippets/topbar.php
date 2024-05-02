@@ -8,7 +8,7 @@
 		$pagination = $projects->pagination();
 		$aboutPage = page('about');
 ?>
-<nav class="top-bar top-0 w-100 position-sticky navbar navbar-expand-lg text-uppercase align-items-center justify-content-between mb-lg-5 mb-sm-0 p-0">
+<nav class="top-bar top-0 w-100 position-sticky navbar navbar-expand-lg text-uppercase align-items-center justify-content-between mb-lg-5 mb-sm-0 p-0" id="stickyNav">
 	<div class="container-fluid">
 
 		<!-- Stapl Logo -->
@@ -26,7 +26,7 @@
 				<?php foreach($aboutPage->navigation()->toStructure() as $nav): ?>
 				<!--  -->
 				<?php if($nav->children()->isNotEmpty()): ?>
-				<li class="nav-item mx-lg-3 dropdown">
+				<li class="nav-item mx-lg-5 px-lg-5 dropdown">
 					<a href="<?php echo $nav->url(); ?>" <?php e($nav->isOpen(), 'aria-current') ?> class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 						<?php echo $nav->text() ?>
 					</a>

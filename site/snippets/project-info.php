@@ -64,7 +64,7 @@
 		<img class="cover-img" src="<?= $cover->crop(1920, 1080)->url() ?>" loading="lazy" alt="<?= $cover->alt() ?>">
 		<?php endif ?>
 		<?php if ($project->text()->isNotEmpty()) : ?>
-		<figcaption class="hidden summary">
+		<figcaption class="hidden mx-md-0 mx-lg-4 summary">
 			<?= $project->text()->kirbytextinline() ?>
 		</figcaption>
 		<?php endif ?>
