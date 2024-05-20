@@ -28,7 +28,8 @@ body {
   /* touch-action: none; */
 }
 main {
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  /* Removed above line because of double scroll-bar issue */
   overflow-x: hidden;
   touch-action: pan-y;
 }
