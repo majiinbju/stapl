@@ -1,4 +1,4 @@
-<?php foreach ($project->images()->filter(function ($image) {
+<?php foreach ($project->images()->offset(1)->filter(function ($image) {
 		// Exclude images with file extension 'ico'
 		return $image->extension() !== 'ico';
 }) as $image): ?>

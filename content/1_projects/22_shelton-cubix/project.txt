@@ -2,7 +2,7 @@ Title: Shelton Cubix
 
 ----
 
-Icon: 
+Icon: - file://gZxFndSPgdx9Zq0y
 
 ----
 
@@ -31,6 +31,10 @@ Levels: G+12 Floors
 ----
 
 Location: Belapur, Navi Mumbai
+
+----
+
+Developer: 
 
 ----
 

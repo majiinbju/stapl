@@ -2,7 +2,7 @@ Title: Cyber One
 
 ----
 
-Icon: 
+Icon: - file://BVRT3Dd2QpSotlbb
 
 ----
 
@@ -31,6 +31,10 @@ Levels: G+24 Floors
 ----
 
 Location: Vashi, Navi Mumbai
+
+----
+
+Developer: Greenspace Developers
 
 ----
 

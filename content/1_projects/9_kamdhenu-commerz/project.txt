@@ -2,7 +2,7 @@ Title: Kamdhenu Commerz
 
 ----
 
-Icon: 
+Icon: - file://yPv0LkHAcp1DehIc
 
 ----
 
@@ -31,6 +31,10 @@ Levels: G+21 Floors
 ----
 
 Location: Kamdhenu Realities
+
+----
+
+Developer: Kamdhenu Realities
 
 ----
 

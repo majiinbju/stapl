@@ -2,7 +2,7 @@ Title: Satyam Imperial Heights
 
 ----
 
-Icon: 
+Icon: - file://27QsFm88AwY7liib
 
 ----
 
@@ -31,6 +31,10 @@ Levels: G+Stilt+Podium+37 Floors
 ----
 
 Location: Ghansoli, Navi Mumbai
+
+----
+
+Developer: Satyam Developers
 
 ----
 

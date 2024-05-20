@@ -2,7 +2,7 @@ Title: Delta Tower
 
 ----
 
-Icon: 
+Icon: - file://OtPmNYU12ES5kGRL
 
 ----
 
@@ -31,6 +31,10 @@ Levels: G+Stilt+13 Floors
 ----
 
 Location: Ulme, Navi Mumbai
+
+----
+
+Developer: Balaji Group
 
 ----
 

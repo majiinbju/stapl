@@ -2,7 +2,7 @@ Title: Shelton Sapphie
 
 ----
 
-Icon: 
+Icon: - file://IQhjPN9NTfUk6cIV
 
 ----
 
@@ -31,6 +31,10 @@ Levels: G + 13 Floors
 ----
 
 Location: C.B.D, Navi Mumbai
+
+----
+
+Developer: Shelton Group
 
 ----
 

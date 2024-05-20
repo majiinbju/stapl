@@ -1,0 +1,21 @@
+Title: Kirti
+
+----
+
+Slug: Kirti
+
+----
+
+Name: Kirti
+
+----
+
+Position: Draughtsman
+
+----
+
+Description: Draughtsman
+
+----
+
+Uuid: Xr4Ws39RJlWxWZnO

@@ -83,11 +83,31 @@ Navigation:
 
 ----
 
-Column1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Column1:
+
+Twenty years back commenced a journey. A professional journey that has seen a progression, from an idea to a person, from a person to a team and from a team to an organised network. This book marks that milestone of twenty years of our arduous effort to deliver simplistic, yet stimulating pieces of architecture. 
+
+Our journey started in the year 1999. The first few years of architectural practice whizzed past and laid foundations and stepping stones for our future. Work done in the earlier years was small in scale, yet had direction, purpose and meaningful impact 
+It was not until 2002, that the office graduated from doing small scale projects and entered the domain of mid-size projects. The years to follow strengthened our presence in the region of Navi Mumbai. 
+
+Along with work, we, as an office also grew in numbers. During this phase our core area of work was Residential architecture. 
+
+**Post 2006**, there was no looking back. Projects grew in scale and in numbers. Large scale residential projects became our forte. To offset the growing demand for work; our team grew Typology of work also changed from residential-centric, to commercial based architecture. 
+
+Commercial architecture was both intriguing and challenging. It was unexplored territory but we were willing to walk the path with bated breath.
 
 ----
 
-Column2: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Column2:
+
+201O marked the year we shifted base to our new office. The new office gave us the comfort of space we had longed for and the professionaledge we required, in short, an address we are proud of. From there on our region of work expanded to other cities and states in the coming years. Work continued to pour in since our office had raised the bar for Design and Detail for both Residential and Commercial architecture. 
+
+By, **2012** we were left with no choice but to expand our office, again; in both space & numbers to cater to the projects that we had undertaken. There was work, and a lot of it We had to maintain high standards of Design in aesthetic and space planning; and even higher standards of Design in detail and execution. My travels abroad, experiencing space and built-form in other parts of the world, largely contributed to our office philosophy. 
+
+2019 marks twenty years of our architectural practice. Our focus, ambition and goals over the ever changing social and economic needs, have been the same. That is to deliver buildings that far surpass their visualised formats. So caught up were we in the frenzy of work, that there was never any time to pause and document what we were doing. Just about a year back we finally decided, that now it was about time. 
+
+Few of our selected works have formed the content of this book, showcasing twenty years of our team's sweat and toil. Putting it together has been a joy, and a project in itself It is a document of our design thinking; intended to share this conscious dream that we have built, so far. I hope you enjoy looking thru'. 
+SOYUZ TALIB
 
 ----
 

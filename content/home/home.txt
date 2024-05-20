@@ -2,36 +2,6 @@ Title: Home
 
 ----
 
-Email: 
-
-----
-
-Navigation:
-
-- 
-  children: [ ]
-  text: Email +
-  url: '#'
-  popup: false
-  uuid: zbsiergswbm
-  title: Email
-- 
-  children: [ ]
-  text: Social +
-  url: ""
-  popup: false
-  uuid: znj65wvhizi
-  title: Social
-- 
-  children: [ ]
-  text: Offices +
-  url: ""
-  popup: false
-  uuid: 41qucnzm88u
-  title: Offices
-
-----
-
 Headline: Welcome to Stapl
 
 ----

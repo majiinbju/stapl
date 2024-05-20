@@ -2,7 +2,7 @@ Title: Greenscape Cyber Square
 
 ----
 
-Icon: 
+Icon: - file://sBGlVtpb7HWEarKO
 
 ----
 
@@ -31,6 +31,10 @@ Levels:
 ----
 
 Location: 
+
+----
+
+Developer: 
 
 ----
 
