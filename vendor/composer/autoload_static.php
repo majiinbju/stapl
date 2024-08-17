@@ -429,6 +429,7 @@ class ComposerStaticInit7c4e882abcae4bbcd59c1221aba0b6a1
         'Kirby\\Toolkit\\Query' => __DIR__ . '/../..' . '/kirby/src/Toolkit/Query.php',
         'Kirby\\Toolkit\\Silo' => __DIR__ . '/../..' . '/kirby/src/Toolkit/Silo.php',
         'Kirby\\Toolkit\\Str' => __DIR__ . '/../..' . '/kirby/src/Toolkit/Str.php',
+        'Kirby\\Toolkit\\SymmetricCrypto' => __DIR__ . '/../..' . '/kirby/src/Toolkit/SymmetricCrypto.php',
         'Kirby\\Toolkit\\Tpl' => __DIR__ . '/../..' . '/kirby/src/Toolkit/Tpl.php',
         'Kirby\\Toolkit\\V' => __DIR__ . '/../..' . '/kirby/src/Toolkit/V.php',
         'Kirby\\Toolkit\\View' => __DIR__ . '/../..' . '/kirby/src/Toolkit/View.php',
